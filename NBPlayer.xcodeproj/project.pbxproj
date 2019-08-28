@@ -1,0 +1,1077 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0418B98923163ABF00EAEA5A /* kkplayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0418B98823163ABF00EAEA5A /* kkplayer.framework */; };
+		04287EB822EAA49700EE0203 /* NBFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04287EB622EAA49700EE0203 /* NBFileManager.m */; };
+		04287EC022EAAAD100EE0203 /* NSObject+QFBHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04287EBE22EAAAD100EE0203 /* NSObject+QFBHUD.m */; };
+		04287EC322EAAC6300EE0203 /* NSString+isNullString.m in Sources */ = {isa = PBXBuildFile; fileRef = 04287EC122EAAC6300EE0203 /* NSString+isNullString.m */; };
+		04797D8122E1E4E900A71DB1 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04797D8022E1E4E900A71DB1 /* AppDelegate.mm */; };
+		04797D8722E1E4E900A71DB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04797D8522E1E4E900A71DB1 /* Main.storyboard */; };
+		04797D8922E1E4EB00A71DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04797D8822E1E4EB00A71DB1 /* Assets.xcassets */; };
+		04797D8C22E1E4EB00A71DB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04797D8A22E1E4EB00A71DB1 /* LaunchScreen.storyboard */; };
+		04797D8F22E1E4EB00A71DB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04797D8E22E1E4EB00A71DB1 /* main.m */; };
+		04797D9922E1E4EB00A71DB1 /* NBPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04797D9822E1E4EB00A71DB1 /* NBPlayerTests.m */; };
+		04797DA422E1E4EB00A71DB1 /* NBPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04797DA322E1E4EB00A71DB1 /* NBPlayerUITests.m */; };
+		04797DC822E1E51500A71DB1 /* NBTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04797DC222E1E51500A71DB1 /* NBTabbarViewController.m */; };
+		04797DCA22E1E51500A71DB1 /* NBViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04797DC622E1E51500A71DB1 /* NBViewModel.m */; };
+		04797DCE22E1E51B00A71DB1 /* UIColor+QFColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04797DCD22E1E51B00A71DB1 /* UIColor+QFColor.m */; };
+		04797EB622E1E7D900A71DB1 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04797EB522E1E7D900A71DB1 /* MediaPlayer.framework */; };
+		04797EB822E1E7E000A71DB1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04797EB722E1E7E000A71DB1 /* AudioToolbox.framework */; };
+		04797EBA22E1E7E800A71DB1 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04797EB922E1E7E700A71DB1 /* VideoToolbox.framework */; };
+		04797EBC22E1E7EF00A71DB1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04797EBB22E1E7EF00A71DB1 /* OpenGLES.framework */; };
+		04797EC022E1E80000A71DB1 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04797EBF22E1E80000A71DB1 /* libbz2.tbd */; };
+		04797EC222E1E80700A71DB1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04797EC122E1E80700A71DB1 /* libz.tbd */; };
+		04C4AD8A22E69BAF006E5213 /* NBCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AD8922E69BAF006E5213 /* NBCameraViewController.m */; };
+		04C4AD9122E69DBD006E5213 /* NBMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AD9022E69DBD006E5213 /* NBMyViewController.m */; };
+		04C4AD9422E69DD9006E5213 /* NBMyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AD9322E69DD9006E5213 /* NBMyViewModel.m */; };
+		04C4AD9722E69E1C006E5213 /* NBCameraViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AD9622E69E1C006E5213 /* NBCameraViewModel.m */; };
+		04C9269622E700D50015ED5B /* GlobalConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9269522E700D50015ED5B /* GlobalConstant.m */; };
+		04C9269922E703910015ED5B /* LearnCoobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9269822E703910015ED5B /* LearnCoobjc.m */; };
+		3039996194EF99E127C70597 /* Pods_NBPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1EAD7EDA1D25FCEB8BB639 /* Pods_NBPlayerTests.framework */; };
+		8B7431C8A2C034002DDF5D7B /* Pods_NBPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8576711BE984D0E3B6378DA9 /* Pods_NBPlayer.framework */; };
+		CADD67C322E3F7C600D4265F /* UIViewController+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD67C222E3F7C600D4265F /* UIViewController+ViewModel.m */; };
+		CADD67D622E4002300D4265F /* NBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD67D522E4002300D4265F /* NBNavigationController.m */; };
+		CADD67F122E4140A00D4265F /* TabBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CADD67F022E4140A00D4265F /* TabBar.xcassets */; };
+		CADD67FC22E46ACA00D4265F /* NBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD67FB22E46ACA00D4265F /* NBHomeViewController.m */; };
+		CADD67FF22E46C9F00D4265F /* NBHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD67FE22E46C9F00D4265F /* NBHomeViewModel.m */; };
+		CADD681122EB447A00D4265F /* input.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CADD681022EB447A00D4265F /* input.mp4 */; };
+		CF7B77435D7FF948452A4F27 /* Pods_NBPlayerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EB88F4006C77B200AEE0076 /* Pods_NBPlayerUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04797D9522E1E4EB00A71DB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04797D7422E1E4E900A71DB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04797D7B22E1E4E900A71DB1;
+			remoteInfo = NBPlayer;
+		};
+		04797DA022E1E4EB00A71DB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04797D7422E1E4E900A71DB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04797D7B22E1E4E900A71DB1;
+			remoteInfo = NBPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0418B95A23161C6500EAEA5A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0418B98823163ABF00EAEA5A /* kkplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = kkplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04287EB622EAA49700EE0203 /* NBFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBFileManager.m; sourceTree = "<group>"; };
+		04287EB722EAA49700EE0203 /* NBFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBFileManager.h; sourceTree = "<group>"; };
+		04287EBE22EAAAD100EE0203 /* NSObject+QFBHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+QFBHUD.m"; sourceTree = "<group>"; };
+		04287EBF22EAAAD100EE0203 /* NSObject+QFBHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+QFBHUD.h"; sourceTree = "<group>"; };
+		04287EC122EAAC6300EE0203 /* NSString+isNullString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+isNullString.m"; sourceTree = "<group>"; };
+		04287EC222EAAC6300EE0203 /* NSString+isNullString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+isNullString.h"; sourceTree = "<group>"; };
+		0457286C69758C421F2F6EC7 /* Pods-NBPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NBPlayer/Pods-NBPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		04797D7C22E1E4E900A71DB1 /* NBPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04797D7F22E1E4E900A71DB1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04797D8022E1E4E900A71DB1 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		04797D8622E1E4E900A71DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04797D8822E1E4EB00A71DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04797D8B22E1E4EB00A71DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04797D8D22E1E4EB00A71DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04797D8E22E1E4EB00A71DB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04797D9422E1E4EB00A71DB1 /* NBPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04797D9822E1E4EB00A71DB1 /* NBPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBPlayerTests.m; sourceTree = "<group>"; };
+		04797D9A22E1E4EB00A71DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04797D9F22E1E4EB00A71DB1 /* NBPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04797DA322E1E4EB00A71DB1 /* NBPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBPlayerUITests.m; sourceTree = "<group>"; };
+		04797DA522E1E4EB00A71DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04797DC122E1E51500A71DB1 /* NBTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBTabbarViewController.h; sourceTree = "<group>"; };
+		04797DC222E1E51500A71DB1 /* NBTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBTabbarViewController.m; sourceTree = "<group>"; };
+		04797DC522E1E51500A71DB1 /* NBViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBViewModel.h; sourceTree = "<group>"; };
+		04797DC622E1E51500A71DB1 /* NBViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBViewModel.m; sourceTree = "<group>"; };
+		04797DCC22E1E51B00A71DB1 /* UIColor+QFColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+QFColor.h"; sourceTree = "<group>"; };
+		04797DCD22E1E51B00A71DB1 /* UIColor+QFColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+QFColor.m"; sourceTree = "<group>"; };
+		04797EB322E1E75A00A71DB1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		04797EB522E1E7D900A71DB1 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		04797EB722E1E7E000A71DB1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		04797EB922E1E7E700A71DB1 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		04797EBB22E1E7EF00A71DB1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		04797EBD22E1E7F800A71DB1 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		04797EBF22E1E80000A71DB1 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		04797EC122E1E80700A71DB1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		04C4AD8822E69BAF006E5213 /* NBCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBCameraViewController.h; sourceTree = "<group>"; };
+		04C4AD8922E69BAF006E5213 /* NBCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBCameraViewController.m; sourceTree = "<group>"; };
+		04C4AD8F22E69DBD006E5213 /* NBMyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBMyViewController.h; sourceTree = "<group>"; };
+		04C4AD9022E69DBD006E5213 /* NBMyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBMyViewController.m; sourceTree = "<group>"; };
+		04C4AD9222E69DD9006E5213 /* NBMyViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBMyViewModel.h; sourceTree = "<group>"; };
+		04C4AD9322E69DD9006E5213 /* NBMyViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBMyViewModel.m; sourceTree = "<group>"; };
+		04C4AD9522E69E1C006E5213 /* NBCameraViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBCameraViewModel.h; sourceTree = "<group>"; };
+		04C4AD9622E69E1C006E5213 /* NBCameraViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBCameraViewModel.m; sourceTree = "<group>"; };
+		04C9269422E700D50015ED5B /* GlobalConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalConstant.h; sourceTree = "<group>"; };
+		04C9269522E700D50015ED5B /* GlobalConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalConstant.m; sourceTree = "<group>"; };
+		04C9269722E703910015ED5B /* LearnCoobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LearnCoobjc.h; path = NBPlayer/globalConstant/LearnCoobjc.h; sourceTree = SOURCE_ROOT; };
+		04C9269822E703910015ED5B /* LearnCoobjc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LearnCoobjc.m; path = NBPlayer/globalConstant/LearnCoobjc.m; sourceTree = SOURCE_ROOT; };
+		1EB88F4006C77B200AEE0076 /* Pods_NBPlayerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBPlayerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E1EAD7EDA1D25FCEB8BB639 /* Pods_NBPlayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBPlayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC30E77EB83A3107166CD84 /* Pods-NBPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBPlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NBPlayerTests/Pods-NBPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8576711BE984D0E3B6378DA9 /* Pods_NBPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6889A7527B5F8E146CB05EF /* Pods-NBPlayerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBPlayerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NBPlayerUITests/Pods-NBPlayerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AA2E769B96CE805F8E03E24C /* Pods-NBPlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBPlayerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NBPlayerUITests/Pods-NBPlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF5B71C525FA6AD12D0EE562 /* Pods-NBPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-NBPlayer/Pods-NBPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		C30E0519F6104EE33124AC8D /* Pods-NBPlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBPlayerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NBPlayerTests/Pods-NBPlayerTests.release.xcconfig"; sourceTree = "<group>"; };
+		CADD67C122E3F7C600D4265F /* UIViewController+ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ViewModel.h"; sourceTree = "<group>"; };
+		CADD67C222E3F7C600D4265F /* UIViewController+ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ViewModel.m"; sourceTree = "<group>"; };
+		CADD67D422E4002300D4265F /* NBNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBNavigationController.h; sourceTree = "<group>"; };
+		CADD67D522E4002300D4265F /* NBNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBNavigationController.m; sourceTree = "<group>"; };
+		CADD67D722E408E200D4265F /* NBPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NBPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
+		CADD67F022E4140A00D4265F /* TabBar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TabBar.xcassets; sourceTree = "<group>"; };
+		CADD67FA22E46ACA00D4265F /* NBHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBHomeViewController.h; sourceTree = "<group>"; };
+		CADD67FB22E46ACA00D4265F /* NBHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBHomeViewController.m; sourceTree = "<group>"; };
+		CADD67FD22E46C9F00D4265F /* NBHomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBHomeViewModel.h; sourceTree = "<group>"; };
+		CADD67FE22E46C9F00D4265F /* NBHomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBHomeViewModel.m; sourceTree = "<group>"; };
+		CADD681022EB447A00D4265F /* input.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = input.mp4; sourceTree = "<group>"; };
+		CADD688A22EBE5A000D4265F /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavutil.a; sourceTree = "<group>"; };
+		CADD688F22EBE5A000D4265F /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04797D7922E1E4E900A71DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0418B98923163ABF00EAEA5A /* kkplayer.framework in Frameworks */,
+				04797EC222E1E80700A71DB1 /* libz.tbd in Frameworks */,
+				04797EC022E1E80000A71DB1 /* libbz2.tbd in Frameworks */,
+				04797EBC22E1E7EF00A71DB1 /* OpenGLES.framework in Frameworks */,
+				04797EBA22E1E7E800A71DB1 /* VideoToolbox.framework in Frameworks */,
+				04797EB822E1E7E000A71DB1 /* AudioToolbox.framework in Frameworks */,
+				04797EB622E1E7D900A71DB1 /* MediaPlayer.framework in Frameworks */,
+				8B7431C8A2C034002DDF5D7B /* Pods_NBPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04797D9122E1E4EB00A71DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3039996194EF99E127C70597 /* Pods_NBPlayerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04797D9C22E1E4EB00A71DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF7B77435D7FF948452A4F27 /* Pods_NBPlayerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04287EB922EAA9F800EE0203 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				04287EB722EAA49700EE0203 /* NBFileManager.h */,
+				04287EB622EAA49700EE0203 /* NBFileManager.m */,
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
+		04797D7322E1E4E900A71DB1 = {
+			isa = PBXGroup;
+			children = (
+				04797D7E22E1E4E900A71DB1 /* NBPlayer */,
+				04797D9722E1E4EB00A71DB1 /* NBPlayerTests */,
+				04797DA222E1E4EB00A71DB1 /* NBPlayerUITests */,
+				04797D7D22E1E4E900A71DB1 /* Products */,
+				04797EB422E1E7D900A71DB1 /* Frameworks */,
+				F65604E03983D32E79EAA579 /* Pods */,
+				04E8A22E2316582500CCE52B /* Recovered References */,
+			);
+			sourceTree = "<group>";
+		};
+		04797D7D22E1E4E900A71DB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04797D7C22E1E4E900A71DB1 /* NBPlayer.app */,
+				04797D9422E1E4EB00A71DB1 /* NBPlayerTests.xctest */,
+				04797D9F22E1E4EB00A71DB1 /* NBPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04797D7E22E1E4E900A71DB1 /* NBPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				04287EB922EAA9F800EE0203 /* tool */,
+				04C9269322E700AD0015ED5B /* globalConstant */,
+				CADD67F222E46A0B00D4265F /* nbmain */,
+				04797DCB22E1E51B00A71DB1 /* catagory */,
+				04797DBE22E1E51500A71DB1 /* base */,
+				04797D7F22E1E4E900A71DB1 /* AppDelegate.h */,
+				04797D8022E1E4E900A71DB1 /* AppDelegate.mm */,
+				04797D8522E1E4E900A71DB1 /* Main.storyboard */,
+				04797D8822E1E4EB00A71DB1 /* Assets.xcassets */,
+				04797D8A22E1E4EB00A71DB1 /* LaunchScreen.storyboard */,
+				04797D8D22E1E4EB00A71DB1 /* Info.plist */,
+				CADD681022EB447A00D4265F /* input.mp4 */,
+				04797D8E22E1E4EB00A71DB1 /* main.m */,
+				04797EB322E1E75A00A71DB1 /* PrefixHeader.pch */,
+			);
+			path = NBPlayer;
+			sourceTree = "<group>";
+		};
+		04797D9722E1E4EB00A71DB1 /* NBPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				04797D9822E1E4EB00A71DB1 /* NBPlayerTests.m */,
+				04797D9A22E1E4EB00A71DB1 /* Info.plist */,
+			);
+			path = NBPlayerTests;
+			sourceTree = "<group>";
+		};
+		04797DA222E1E4EB00A71DB1 /* NBPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04797DA322E1E4EB00A71DB1 /* NBPlayerUITests.m */,
+				04797DA522E1E4EB00A71DB1 /* Info.plist */,
+			);
+			path = NBPlayerUITests;
+			sourceTree = "<group>";
+		};
+		04797DBE22E1E51500A71DB1 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				CADD67F022E4140A00D4265F /* TabBar.xcassets */,
+				04797DC122E1E51500A71DB1 /* NBTabbarViewController.h */,
+				04797DC222E1E51500A71DB1 /* NBTabbarViewController.m */,
+				04797DC522E1E51500A71DB1 /* NBViewModel.h */,
+				04797DC622E1E51500A71DB1 /* NBViewModel.m */,
+				CADD67C122E3F7C600D4265F /* UIViewController+ViewModel.h */,
+				CADD67C222E3F7C600D4265F /* UIViewController+ViewModel.m */,
+				CADD67D422E4002300D4265F /* NBNavigationController.h */,
+				CADD67D522E4002300D4265F /* NBNavigationController.m */,
+				CADD67D722E408E200D4265F /* NBPlayer-Bridging-Header.h */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		04797DCB22E1E51B00A71DB1 /* catagory */ = {
+			isa = PBXGroup;
+			children = (
+				04287EC222EAAC6300EE0203 /* NSString+isNullString.h */,
+				04287EC122EAAC6300EE0203 /* NSString+isNullString.m */,
+				04287EBF22EAAAD100EE0203 /* NSObject+QFBHUD.h */,
+				04287EBE22EAAAD100EE0203 /* NSObject+QFBHUD.m */,
+				04797DCC22E1E51B00A71DB1 /* UIColor+QFColor.h */,
+				04797DCD22E1E51B00A71DB1 /* UIColor+QFColor.m */,
+			);
+			path = catagory;
+			sourceTree = "<group>";
+		};
+		04797EB422E1E7D900A71DB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0418B98823163ABF00EAEA5A /* kkplayer.framework */,
+				04797EC122E1E80700A71DB1 /* libz.tbd */,
+				04797EBF22E1E80000A71DB1 /* libbz2.tbd */,
+				04797EBD22E1E7F800A71DB1 /* libiconv.tbd */,
+				04797EBB22E1E7EF00A71DB1 /* OpenGLES.framework */,
+				04797EB922E1E7E700A71DB1 /* VideoToolbox.framework */,
+				04797EB722E1E7E000A71DB1 /* AudioToolbox.framework */,
+				04797EB522E1E7D900A71DB1 /* MediaPlayer.framework */,
+				8576711BE984D0E3B6378DA9 /* Pods_NBPlayer.framework */,
+				2E1EAD7EDA1D25FCEB8BB639 /* Pods_NBPlayerTests.framework */,
+				1EB88F4006C77B200AEE0076 /* Pods_NBPlayerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04C4AD8422E69B82006E5213 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		04C4AD8522E69B8A006E5213 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04C4AD9522E69E1C006E5213 /* NBCameraViewModel.h */,
+				04C4AD9622E69E1C006E5213 /* NBCameraViewModel.m */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		04C4AD8622E69B93006E5213 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		04C4AD8722E69B98006E5213 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C4AD8822E69BAF006E5213 /* NBCameraViewController.h */,
+				04C4AD8922E69BAF006E5213 /* NBCameraViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		04C4AD8B22E69D8E006E5213 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C4AD8F22E69DBD006E5213 /* NBMyViewController.h */,
+				04C4AD9022E69DBD006E5213 /* NBMyViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		04C4AD8C22E69D9F006E5213 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		04C4AD8D22E69DA4006E5213 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		04C4AD8E22E69DAB006E5213 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04C4AD9222E69DD9006E5213 /* NBMyViewModel.h */,
+				04C4AD9322E69DD9006E5213 /* NBMyViewModel.m */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		04C9269322E700AD0015ED5B /* globalConstant */ = {
+			isa = PBXGroup;
+			children = (
+				04C9269422E700D50015ED5B /* GlobalConstant.h */,
+				04C9269522E700D50015ED5B /* GlobalConstant.m */,
+			);
+			path = globalConstant;
+			sourceTree = "<group>";
+		};
+		04E8A22E2316582500CCE52B /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				CADD688A22EBE5A000D4265F /* libavutil.a */,
+				CADD688F22EBE5A000D4265F /* libswresample.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		CADD67F222E46A0B00D4265F /* nbmain */ = {
+			isa = PBXGroup;
+			children = (
+				CADD67F522E46A8400D4265F /* my */,
+				CADD67F422E46A7100D4265F /* camare */,
+				CADD67F322E46A6900D4265F /* home */,
+			);
+			path = nbmain;
+			sourceTree = "<group>";
+		};
+		CADD67F322E46A6900D4265F /* home */ = {
+			isa = PBXGroup;
+			children = (
+				CADD67F922E46AA600D4265F /* model */,
+				CADD67F822E46A9C00D4265F /* viewModel */,
+				CADD67F722E46A9700D4265F /* view */,
+				CADD67F622E46A8E00D4265F /* controller */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		CADD67F422E46A7100D4265F /* camare */ = {
+			isa = PBXGroup;
+			children = (
+				04C4AD8722E69B98006E5213 /* controller */,
+				04C4AD8622E69B93006E5213 /* view */,
+				04C4AD8522E69B8A006E5213 /* viewModel */,
+				04C4AD8422E69B82006E5213 /* model */,
+			);
+			path = camare;
+			sourceTree = "<group>";
+		};
+		CADD67F522E46A8400D4265F /* my */ = {
+			isa = PBXGroup;
+			children = (
+				04C4AD8E22E69DAB006E5213 /* viewModel */,
+				04C4AD8D22E69DA4006E5213 /* model */,
+				04C4AD8C22E69D9F006E5213 /* view */,
+				04C4AD8B22E69D8E006E5213 /* controller */,
+			);
+			path = my;
+			sourceTree = "<group>";
+		};
+		CADD67F622E46A8E00D4265F /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				CADD67FA22E46ACA00D4265F /* NBHomeViewController.h */,
+				CADD67FB22E46ACA00D4265F /* NBHomeViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		CADD67F722E46A9700D4265F /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		CADD67F822E46A9C00D4265F /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CADD67FD22E46C9F00D4265F /* NBHomeViewModel.h */,
+				CADD67FE22E46C9F00D4265F /* NBHomeViewModel.m */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		CADD67F922E46AA600D4265F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				04C9269722E703910015ED5B /* LearnCoobjc.h */,
+				04C9269822E703910015ED5B /* LearnCoobjc.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F65604E03983D32E79EAA579 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0457286C69758C421F2F6EC7 /* Pods-NBPlayer.debug.xcconfig */,
+				BF5B71C525FA6AD12D0EE562 /* Pods-NBPlayer.release.xcconfig */,
+				6BC30E77EB83A3107166CD84 /* Pods-NBPlayerTests.debug.xcconfig */,
+				C30E0519F6104EE33124AC8D /* Pods-NBPlayerTests.release.xcconfig */,
+				AA2E769B96CE805F8E03E24C /* Pods-NBPlayerUITests.debug.xcconfig */,
+				A6889A7527B5F8E146CB05EF /* Pods-NBPlayerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04797D7B22E1E4E900A71DB1 /* NBPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04797DA822E1E4EB00A71DB1 /* Build configuration list for PBXNativeTarget "NBPlayer" */;
+			buildPhases = (
+				87A05B648EB690769E9176C6 /* [CP] Check Pods Manifest.lock */,
+				04797D7822E1E4E900A71DB1 /* Sources */,
+				04797D7922E1E4E900A71DB1 /* Frameworks */,
+				04797D7A22E1E4E900A71DB1 /* Resources */,
+				19857725EBA1E38B8342AB75 /* [CP] Embed Pods Frameworks */,
+				0418B95A23161C6500EAEA5A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NBPlayer;
+			productName = NBPlayer;
+			productReference = 04797D7C22E1E4E900A71DB1 /* NBPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04797D9322E1E4EB00A71DB1 /* NBPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04797DAB22E1E4EB00A71DB1 /* Build configuration list for PBXNativeTarget "NBPlayerTests" */;
+			buildPhases = (
+				51D4F8EF513BE3AF21B4A724 /* [CP] Check Pods Manifest.lock */,
+				04797D9022E1E4EB00A71DB1 /* Sources */,
+				04797D9122E1E4EB00A71DB1 /* Frameworks */,
+				04797D9222E1E4EB00A71DB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04797D9622E1E4EB00A71DB1 /* PBXTargetDependency */,
+			);
+			name = NBPlayerTests;
+			productName = NBPlayerTests;
+			productReference = 04797D9422E1E4EB00A71DB1 /* NBPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04797D9E22E1E4EB00A71DB1 /* NBPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04797DAE22E1E4EB00A71DB1 /* Build configuration list for PBXNativeTarget "NBPlayerUITests" */;
+			buildPhases = (
+				A0FE0F931A2E48DD57C04BFD /* [CP] Check Pods Manifest.lock */,
+				04797D9B22E1E4EB00A71DB1 /* Sources */,
+				04797D9C22E1E4EB00A71DB1 /* Frameworks */,
+				04797D9D22E1E4EB00A71DB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04797DA122E1E4EB00A71DB1 /* PBXTargetDependency */,
+			);
+			name = NBPlayerUITests;
+			productName = NBPlayerUITests;
+			productReference = 04797D9F22E1E4EB00A71DB1 /* NBPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04797D7422E1E4E900A71DB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Mac;
+				TargetAttributes = {
+					04797D7B22E1E4E900A71DB1 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+					04797D9322E1E4EB00A71DB1 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 04797D7B22E1E4E900A71DB1;
+					};
+					04797D9E22E1E4EB00A71DB1 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 04797D7B22E1E4E900A71DB1;
+					};
+				};
+			};
+			buildConfigurationList = 04797D7722E1E4E900A71DB1 /* Build configuration list for PBXProject "NBPlayer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04797D7322E1E4E900A71DB1;
+			productRefGroup = 04797D7D22E1E4E900A71DB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04797D7B22E1E4E900A71DB1 /* NBPlayer */,
+				04797D9322E1E4EB00A71DB1 /* NBPlayerTests */,
+				04797D9E22E1E4EB00A71DB1 /* NBPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04797D7A22E1E4E900A71DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04797D8C22E1E4EB00A71DB1 /* LaunchScreen.storyboard in Resources */,
+				04797D8922E1E4EB00A71DB1 /* Assets.xcassets in Resources */,
+				CADD681122EB447A00D4265F /* input.mp4 in Resources */,
+				CADD67F122E4140A00D4265F /* TabBar.xcassets in Resources */,
+				04797D8722E1E4E900A71DB1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04797D9222E1E4EB00A71DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04797D9D22E1E4EB00A71DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19857725EBA1E38B8342AB75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NBPlayer/Pods-NBPlayer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KMNavigationBarTransition/KMNavigationBarTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/LEEAlert/LEEAlert.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/cocore/cocore.framework",
+				"${BUILT_PRODUCTS_DIR}/coobjc/coobjc.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KMNavigationBarTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LEEAlert.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cocore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/coobjc.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NBPlayer/Pods-NBPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51D4F8EF513BE3AF21B4A724 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NBPlayerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87A05B648EB690769E9176C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NBPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0FE0F931A2E48DD57C04BFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NBPlayerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04797D7822E1E4E900A71DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CADD67D622E4002300D4265F /* NBNavigationController.m in Sources */,
+				04C9269922E703910015ED5B /* LearnCoobjc.m in Sources */,
+				04797DC822E1E51500A71DB1 /* NBTabbarViewController.m in Sources */,
+				CADD67C322E3F7C600D4265F /* UIViewController+ViewModel.m in Sources */,
+				04287EC022EAAAD100EE0203 /* NSObject+QFBHUD.m in Sources */,
+				04C9269622E700D50015ED5B /* GlobalConstant.m in Sources */,
+				04287EC322EAAC6300EE0203 /* NSString+isNullString.m in Sources */,
+				04287EB822EAA49700EE0203 /* NBFileManager.m in Sources */,
+				04797D8F22E1E4EB00A71DB1 /* main.m in Sources */,
+				04C4AD8A22E69BAF006E5213 /* NBCameraViewController.m in Sources */,
+				CADD67FC22E46ACA00D4265F /* NBHomeViewController.m in Sources */,
+				04797D8122E1E4E900A71DB1 /* AppDelegate.mm in Sources */,
+				04797DCA22E1E51500A71DB1 /* NBViewModel.m in Sources */,
+				04C4AD9722E69E1C006E5213 /* NBCameraViewModel.m in Sources */,
+				04C4AD9122E69DBD006E5213 /* NBMyViewController.m in Sources */,
+				04C4AD9422E69DD9006E5213 /* NBMyViewModel.m in Sources */,
+				04797DCE22E1E51B00A71DB1 /* UIColor+QFColor.m in Sources */,
+				CADD67FF22E46C9F00D4265F /* NBHomeViewModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04797D9022E1E4EB00A71DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04797D9922E1E4EB00A71DB1 /* NBPlayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04797D9B22E1E4EB00A71DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04797DA422E1E4EB00A71DB1 /* NBPlayerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04797D9622E1E4EB00A71DB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04797D7B22E1E4E900A71DB1 /* NBPlayer */;
+			targetProxy = 04797D9522E1E4EB00A71DB1 /* PBXContainerItemProxy */;
+		};
+		04797DA122E1E4EB00A71DB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04797D7B22E1E4E900A71DB1 /* NBPlayer */;
+			targetProxy = 04797DA022E1E4EB00A71DB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04797D8522E1E4E900A71DB1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04797D8622E1E4E900A71DB1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04797D8A22E1E4EB00A71DB1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04797D8B22E1E4EB00A71DB1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04797DA622E1E4EB00A71DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		04797DA722E1E4EB00A71DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04797DA922E1E4EB00A71DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0457286C69758C421F2F6EC7 /* Pods-NBPlayer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XRQ3MA22VC;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NBPlayer/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = NBPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hehe.li.NBPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NBPlayer/base/NBPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		04797DAA22E1E4EB00A71DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF5B71C525FA6AD12D0EE562 /* Pods-NBPlayer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XRQ3MA22VC;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/NBPlayer/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = NBPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hehe.li.NBPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NBPlayer/base/NBPlayer-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		04797DAC22E1E4EB00A71DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BC30E77EB83A3107166CD84 /* Pods-NBPlayerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XRQ3MA22VC;
+				INFOPLIST_FILE = NBPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hehe.li.NBPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NBPlayer.app/NBPlayer";
+			};
+			name = Debug;
+		};
+		04797DAD22E1E4EB00A71DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C30E0519F6104EE33124AC8D /* Pods-NBPlayerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XRQ3MA22VC;
+				INFOPLIST_FILE = NBPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hehe.li.NBPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NBPlayer.app/NBPlayer";
+			};
+			name = Release;
+		};
+		04797DAF22E1E4EB00A71DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA2E769B96CE805F8E03E24C /* Pods-NBPlayerUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XRQ3MA22VC;
+				INFOPLIST_FILE = NBPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hehe.li.NBPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NBPlayer;
+			};
+			name = Debug;
+		};
+		04797DB022E1E4EB00A71DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6889A7527B5F8E146CB05EF /* Pods-NBPlayerUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XRQ3MA22VC;
+				INFOPLIST_FILE = NBPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hehe.li.NBPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NBPlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04797D7722E1E4E900A71DB1 /* Build configuration list for PBXProject "NBPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04797DA622E1E4EB00A71DB1 /* Debug */,
+				04797DA722E1E4EB00A71DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04797DA822E1E4EB00A71DB1 /* Build configuration list for PBXNativeTarget "NBPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04797DA922E1E4EB00A71DB1 /* Debug */,
+				04797DAA22E1E4EB00A71DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04797DAB22E1E4EB00A71DB1 /* Build configuration list for PBXNativeTarget "NBPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04797DAC22E1E4EB00A71DB1 /* Debug */,
+				04797DAD22E1E4EB00A71DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04797DAE22E1E4EB00A71DB1 /* Build configuration list for PBXNativeTarget "NBPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04797DAF22E1E4EB00A71DB1 /* Debug */,
+				04797DB022E1E4EB00A71DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04797D7422E1E4E900A71DB1 /* Project object */;
+}

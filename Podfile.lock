@@ -1,0 +1,36 @@
+PODS:
+  - cocore (1.2.0)
+  - coobjc (1.2.0):
+    - cocore (~> 1.2.0)
+  - KMNavigationBarTransition (1.1.5)
+  - LEEAlert (1.2.6)
+  - Masonry (1.1.0)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - coobjc
+  - KMNavigationBarTransition
+  - LEEAlert
+  - Masonry
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - cocore
+    - coobjc
+    - KMNavigationBarTransition
+    - LEEAlert
+    - Masonry
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  cocore: cc9d76229458f286a632d9cecb63bd699bd3529d
+  coobjc: 090a460e32e90d0e820e64c31cf7b79dece51a7c
+  KMNavigationBarTransition: 7a52c9bc25b39b6e3343e980b453facee1591b82
+  LEEAlert: 8a612d6c50b74c84cebda2a9b16eeb18535b6782
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 327f2fc7beacf1bc7975858d900ddc6ae57ac7d3
+
+COCOAPODS: 1.5.3

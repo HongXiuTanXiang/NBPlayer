@@ -1,0 +1,21 @@
+//
+//  PrefixHeader.pch
+//  NBPlayer
+//
+//  Created by Mac on 2019/7/19.
+//  Copyright © 2019年 Mac. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define MAS_SHORTHAND
+#import "UIColor+QFColor.h"
+#import "UIViewController+ViewModel.h"
+#import "Masonry.h"
+#import "coobjc.h"
+#import "GlobalConstant.h"
+#import "LearnCoobjc.h"
+#import "NSObject+QFBHUD.h"
+
+#endif /* PrefixHeader_pch */

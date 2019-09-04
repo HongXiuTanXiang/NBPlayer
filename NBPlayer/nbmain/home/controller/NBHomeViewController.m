@@ -27,14 +27,22 @@
     
     _homeVmodel = (NBHomeViewModel*)self.vmodel;
     
-    NSArray *files = [self.homeVmodel loadDocumentLibraryFile];
-    for (NSString *file in files) {
-        NSLog(@"%@",file);
-    }
-    
+
     [self setupUI];
+    
+    [self bindSignal];
 }
 
+
+-(void)bindSignal{
+    @weakify(self)
+    [self.homeVmodel.videsSuj subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
+        [self.tableView reloadData];
+    }];
+    
+    [self.homeVmodel loadDocumentLibraryFile];
+}
 
 
 -(void)setupUI{
@@ -62,12 +70,14 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 30;
+    return self.homeVmodel.videoArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NBVideoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NBVideoTableViewCell"];
+    VideoMessage *meg = self.homeVmodel.videoArray[indexPath.row];
     
+    [cell updateCell:meg];
     return cell;
 }
 

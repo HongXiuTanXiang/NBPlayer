@@ -7,6 +7,7 @@
 
 #import "NBVideoTableViewCell.h"
 
+
 @interface NBVideoTableViewCell()
 @property(nonatomic, strong) UIImageView *iconView;
 @property(nonatomic, strong) UILabel *videoTitleLab;
@@ -17,6 +18,13 @@
 @end
 
 @implementation NBVideoTableViewCell
+
+
+-(void)updateCell:(VideoMessage*)vmsg{
+    self.videoTitleLab.text = vmsg.name;
+    self.videoTimeLab.text = vmsg.timeLength;
+    self.fileEditTimeLab.text = vmsg.editTime;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -43,10 +51,9 @@
     _iconView.image = [UIImage imageNamed:@"apple_logo"];
     [self.contentView addSubview:self.iconView];
     [self.iconView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.contentView).offset(10);
-        make.top.mas_equalTo(self.contentView).offset(10);
-        make.bottom.mas_equalTo(self.contentView).offset(-10);
-        make.height.mas_equalTo(80);
+        make.left.mas_equalTo(self.contentView.mas_left).offset(10);
+        make.top.mas_equalTo(self.contentView.mas_top).offset(10);
+        make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-10);
         make.width.mas_equalTo(80);
     }];
     
@@ -55,7 +62,7 @@
     [self.contentView addSubview:_arrowView];
     [_arrowView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(self.contentView.mas_right).offset(-10);
-        make.centerY.mas_equalTo(self.contentView);
+        make.centerY.mas_equalTo(self.contentView.mas_centerY);
         make.height.mas_equalTo(20);
         make.width.mas_equalTo(20);
     }];
@@ -66,7 +73,7 @@
         make.left.mas_equalTo(self.iconView.mas_right).offset(10);
         make.top.mas_equalTo(self.iconView.mas_top);
         make.height.mas_equalTo(18);
-        make.right.mas_equalTo(self.contentView);
+        make.right.mas_equalTo(self.contentView.mas_right);
     }];
     
     _fileEditTimeLab = [UILabel labelWithText:@"2019-09-04" fontName:kFontRegular fontSize:14 fontColor:[UIColor darkGrayColor] textAlignment:NSTextAlignmentLeft];
@@ -75,7 +82,7 @@
         make.left.mas_equalTo(self.iconView.mas_right).offset(10);
         make.top.mas_equalTo(_videoTitleLab.mas_bottom).offset(10);
         make.height.mas_equalTo(18);
-        make.right.mas_equalTo(self.contentView);
+        make.right.mas_equalTo(self.contentView.mas_right);
     }];
     
     _videoTimeLab = [UILabel labelWithText:@"2019-09-04 18:11" fontName:kFontRegular fontSize:14 fontColor:[UIColor darkGrayColor] textAlignment:NSTextAlignmentLeft];
@@ -84,7 +91,7 @@
         make.left.mas_equalTo(self.iconView.mas_right).offset(10);
         make.top.mas_equalTo(_fileEditTimeLab.mas_bottom).offset(10);
         make.height.mas_equalTo(15);
-        make.right.mas_equalTo(self.contentView);
+        make.right.mas_equalTo(self.contentView.mas_right);
     }];
 }
 

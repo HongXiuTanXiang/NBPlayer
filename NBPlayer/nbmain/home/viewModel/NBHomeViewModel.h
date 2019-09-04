@@ -12,7 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NBHomeViewModel : NBViewModel
 
--(NSArray *)loadDocumentLibraryFile;
+@property(nonatomic, strong) RACSubject *videsSuj;
+@property(nonatomic, strong) NSMutableArray *videoArray;
+
+-(void)loadDocumentLibraryFile;
 
 @end
 

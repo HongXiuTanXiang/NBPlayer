@@ -37,6 +37,7 @@
 		04D3DC77231F81CA00557B52 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC76231F81CA00557B52 /* UIButton+Extension.m */; };
 		04D3DC7A231F81F600557B52 /* UIFont+QFFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC79231F81F600557B52 /* UIFont+QFFont.m */; };
 		04D3DC7D231F821E00557B52 /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC7B231F821D00557B52 /* UIImage+ImageWithColor.m */; };
+		04D3DC80231F8EDA00557B52 /* VideoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC7F231F8EDA00557B52 /* VideoMessage.m */; };
 		3039996194EF99E127C70597 /* Pods_NBPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1EAD7EDA1D25FCEB8BB639 /* Pods_NBPlayerTests.framework */; };
 		8B7431C8A2C034002DDF5D7B /* Pods_NBPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8576711BE984D0E3B6378DA9 /* Pods_NBPlayer.framework */; };
 		CADD67C322E3F7C600D4265F /* UIViewController+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD67C222E3F7C600D4265F /* UIViewController+ViewModel.m */; };
@@ -136,6 +137,8 @@
 		04D3DC79231F81F600557B52 /* UIFont+QFFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+QFFont.m"; sourceTree = "<group>"; };
 		04D3DC7B231F821D00557B52 /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
 		04D3DC7C231F821E00557B52 /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
+		04D3DC7E231F8EDA00557B52 /* VideoMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VideoMessage.h; path = NBPlayer/nbmain/home/VideoMessage.h; sourceTree = SOURCE_ROOT; };
+		04D3DC7F231F8EDA00557B52 /* VideoMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = VideoMessage.m; path = NBPlayer/nbmain/home/VideoMessage.m; sourceTree = SOURCE_ROOT; };
 		1EB88F4006C77B200AEE0076 /* Pods_NBPlayerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBPlayerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1EAD7EDA1D25FCEB8BB639 /* Pods_NBPlayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBPlayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC30E77EB83A3107166CD84 /* Pods-NBPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBPlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NBPlayerTests/Pods-NBPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -477,6 +480,8 @@
 			children = (
 				04C9269722E703910015ED5B /* LearnCoobjc.h */,
 				04C9269822E703910015ED5B /* LearnCoobjc.m */,
+				04D3DC7E231F8EDA00557B52 /* VideoMessage.h */,
+				04D3DC7F231F8EDA00557B52 /* VideoMessage.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -757,6 +762,7 @@
 				04C4AD9422E69DD9006E5213 /* NBMyViewModel.m in Sources */,
 				04797DCE22E1E51B00A71DB1 /* UIColor+QFColor.m in Sources */,
 				CADD67FF22E46C9F00D4265F /* NBHomeViewModel.m in Sources */,
+				04D3DC80231F8EDA00557B52 /* VideoMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

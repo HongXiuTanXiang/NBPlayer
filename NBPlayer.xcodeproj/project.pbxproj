@@ -38,6 +38,10 @@
 		04D3DC7A231F81F600557B52 /* UIFont+QFFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC79231F81F600557B52 /* UIFont+QFFont.m */; };
 		04D3DC7D231F821E00557B52 /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC7B231F821D00557B52 /* UIImage+ImageWithColor.m */; };
 		04D3DC80231F8EDA00557B52 /* VideoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC7F231F8EDA00557B52 /* VideoMessage.m */; };
+		04D3DC89231F9E3F00557B52 /* VideoPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC88231F9E3F00557B52 /* VideoPlayViewController.m */; };
+		04D3DC8C231F9EC300557B52 /* VideoPlayViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC8B231F9EC300557B52 /* VideoPlayViewModel.m */; };
+		04D3DC90231FA86F00557B52 /* UINavigationController+Jump.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC8F231FA86F00557B52 /* UINavigationController+Jump.m */; };
+		04D3DC93231FC06D00557B52 /* MediaControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC92231FC06D00557B52 /* MediaControlView.m */; };
 		3039996194EF99E127C70597 /* Pods_NBPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1EAD7EDA1D25FCEB8BB639 /* Pods_NBPlayerTests.framework */; };
 		8B7431C8A2C034002DDF5D7B /* Pods_NBPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8576711BE984D0E3B6378DA9 /* Pods_NBPlayer.framework */; };
 		CADD67C322E3F7C600D4265F /* UIViewController+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD67C222E3F7C600D4265F /* UIViewController+ViewModel.m */; };
@@ -139,6 +143,14 @@
 		04D3DC7C231F821E00557B52 /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
 		04D3DC7E231F8EDA00557B52 /* VideoMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VideoMessage.h; path = NBPlayer/nbmain/home/VideoMessage.h; sourceTree = SOURCE_ROOT; };
 		04D3DC7F231F8EDA00557B52 /* VideoMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = VideoMessage.m; path = NBPlayer/nbmain/home/VideoMessage.m; sourceTree = SOURCE_ROOT; };
+		04D3DC87231F9E3F00557B52 /* VideoPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlayViewController.h; sourceTree = "<group>"; };
+		04D3DC88231F9E3F00557B52 /* VideoPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlayViewController.m; sourceTree = "<group>"; };
+		04D3DC8A231F9EC300557B52 /* VideoPlayViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlayViewModel.h; sourceTree = "<group>"; };
+		04D3DC8B231F9EC300557B52 /* VideoPlayViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlayViewModel.m; sourceTree = "<group>"; };
+		04D3DC8E231FA86F00557B52 /* UINavigationController+Jump.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Jump.h"; sourceTree = "<group>"; };
+		04D3DC8F231FA86F00557B52 /* UINavigationController+Jump.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Jump.m"; sourceTree = "<group>"; };
+		04D3DC91231FC06D00557B52 /* MediaControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaControlView.h; sourceTree = "<group>"; };
+		04D3DC92231FC06D00557B52 /* MediaControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaControlView.m; sourceTree = "<group>"; };
 		1EB88F4006C77B200AEE0076 /* Pods_NBPlayerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBPlayerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1EAD7EDA1D25FCEB8BB639 /* Pods_NBPlayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBPlayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC30E77EB83A3107166CD84 /* Pods-NBPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBPlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NBPlayerTests/Pods-NBPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -301,6 +313,8 @@
 				04287EBE22EAAAD100EE0203 /* NSObject+QFBHUD.m */,
 				04797DCC22E1E51B00A71DB1 /* UIColor+QFColor.h */,
 				04797DCD22E1E51B00A71DB1 /* UIColor+QFColor.m */,
+				04D3DC8E231FA86F00557B52 /* UINavigationController+Jump.h */,
+				04D3DC8F231FA86F00557B52 /* UINavigationController+Jump.m */,
 			);
 			path = catagory;
 			sourceTree = "<group>";
@@ -396,6 +410,51 @@
 			path = globalConstant;
 			sourceTree = "<group>";
 		};
+		04D3DC81231F9DE100557B52 /* videoPlay */ = {
+			isa = PBXGroup;
+			children = (
+				04D3DC86231F9E1B00557B52 /* model */,
+				04D3DC85231F9E1300557B52 /* view */,
+				04D3DC83231F9DF500557B52 /* viewModel */,
+				04D3DC82231F9DEB00557B52 /* controller */,
+			);
+			path = videoPlay;
+			sourceTree = "<group>";
+		};
+		04D3DC82231F9DEB00557B52 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				04D3DC87231F9E3F00557B52 /* VideoPlayViewController.h */,
+				04D3DC88231F9E3F00557B52 /* VideoPlayViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		04D3DC83231F9DF500557B52 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04D3DC8A231F9EC300557B52 /* VideoPlayViewModel.h */,
+				04D3DC8B231F9EC300557B52 /* VideoPlayViewModel.m */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		04D3DC85231F9E1300557B52 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				04D3DC91231FC06D00557B52 /* MediaControlView.h */,
+				04D3DC92231FC06D00557B52 /* MediaControlView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		04D3DC86231F9E1B00557B52 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		04E8A22E2316582500CCE52B /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +467,7 @@
 		CADD67F222E46A0B00D4265F /* nbmain */ = {
 			isa = PBXGroup;
 			children = (
+				04D3DC81231F9DE100557B52 /* videoPlay */,
 				CADD67F522E46A8400D4265F /* my */,
 				CADD67F422E46A7100D4265F /* camare */,
 				CADD67F322E46A6900D4265F /* home */,
@@ -748,11 +808,15 @@
 				04D3DC7A231F81F600557B52 /* UIFont+QFFont.m in Sources */,
 				04D3DC77231F81CA00557B52 /* UIButton+Extension.m in Sources */,
 				04287EC022EAAAD100EE0203 /* NSObject+QFBHUD.m in Sources */,
+				04D3DC89231F9E3F00557B52 /* VideoPlayViewController.m in Sources */,
 				04C9269622E700D50015ED5B /* GlobalConstant.m in Sources */,
 				04287EC322EAAC6300EE0203 /* NSString+isNullString.m in Sources */,
+				04D3DC90231FA86F00557B52 /* UINavigationController+Jump.m in Sources */,
 				04287EB822EAA49700EE0203 /* NBFileManager.m in Sources */,
 				04D3DC7D231F821E00557B52 /* UIImage+ImageWithColor.m in Sources */,
 				04797D8F22E1E4EB00A71DB1 /* main.m in Sources */,
+				04D3DC8C231F9EC300557B52 /* VideoPlayViewModel.m in Sources */,
+				04D3DC93231FC06D00557B52 /* MediaControlView.m in Sources */,
 				04C4AD8A22E69BAF006E5213 /* NBCameraViewController.m in Sources */,
 				CADD67FC22E46ACA00D4265F /* NBHomeViewController.m in Sources */,
 				04797D8122E1E4E900A71DB1 /* AppDelegate.mm in Sources */,

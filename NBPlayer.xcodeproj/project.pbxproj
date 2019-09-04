@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0418B98923163ABF00EAEA5A /* kkplayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0418B98823163ABF00EAEA5A /* kkplayer.framework */; };
 		04287EB822EAA49700EE0203 /* NBFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04287EB622EAA49700EE0203 /* NBFileManager.m */; };
 		04287EC022EAAAD100EE0203 /* NSObject+QFBHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04287EBE22EAAAD100EE0203 /* NSObject+QFBHUD.m */; };
 		04287EC322EAAC6300EE0203 /* NSString+isNullString.m in Sources */ = {isa = PBXBuildFile; fileRef = 04287EC122EAAC6300EE0203 /* NSString+isNullString.m */; };
@@ -33,6 +32,11 @@
 		04C4AD9722E69E1C006E5213 /* NBCameraViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AD9622E69E1C006E5213 /* NBCameraViewModel.m */; };
 		04C9269622E700D50015ED5B /* GlobalConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9269522E700D50015ED5B /* GlobalConstant.m */; };
 		04C9269922E703910015ED5B /* LearnCoobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9269822E703910015ED5B /* LearnCoobjc.m */; };
+		04D3DC5F231F780C00557B52 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D3DC5E231F780C00557B52 /* IJKMediaFramework.framework */; };
+		04D3DC64231F7E5300557B52 /* NBVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC63231F7E5300557B52 /* NBVideoTableViewCell.m */; };
+		04D3DC77231F81CA00557B52 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC76231F81CA00557B52 /* UIButton+Extension.m */; };
+		04D3DC7A231F81F600557B52 /* UIFont+QFFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC79231F81F600557B52 /* UIFont+QFFont.m */; };
+		04D3DC7D231F821E00557B52 /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC7B231F821D00557B52 /* UIImage+ImageWithColor.m */; };
 		3039996194EF99E127C70597 /* Pods_NBPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1EAD7EDA1D25FCEB8BB639 /* Pods_NBPlayerTests.framework */; };
 		8B7431C8A2C034002DDF5D7B /* Pods_NBPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8576711BE984D0E3B6378DA9 /* Pods_NBPlayer.framework */; };
 		CADD67C322E3F7C600D4265F /* UIViewController+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD67C222E3F7C600D4265F /* UIViewController+ViewModel.m */; };
@@ -123,6 +127,15 @@
 		04C9269522E700D50015ED5B /* GlobalConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalConstant.m; sourceTree = "<group>"; };
 		04C9269722E703910015ED5B /* LearnCoobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LearnCoobjc.h; path = NBPlayer/globalConstant/LearnCoobjc.h; sourceTree = SOURCE_ROOT; };
 		04C9269822E703910015ED5B /* LearnCoobjc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LearnCoobjc.m; path = NBPlayer/globalConstant/LearnCoobjc.m; sourceTree = SOURCE_ROOT; };
+		04D3DC5E231F780C00557B52 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		04D3DC62231F7E5300557B52 /* NBVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBVideoTableViewCell.h; sourceTree = "<group>"; };
+		04D3DC63231F7E5300557B52 /* NBVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBVideoTableViewCell.m; sourceTree = "<group>"; };
+		04D3DC75231F81CA00557B52 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
+		04D3DC76231F81CA00557B52 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
+		04D3DC78231F81F500557B52 /* UIFont+QFFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+QFFont.h"; sourceTree = "<group>"; };
+		04D3DC79231F81F600557B52 /* UIFont+QFFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+QFFont.m"; sourceTree = "<group>"; };
+		04D3DC7B231F821D00557B52 /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
+		04D3DC7C231F821E00557B52 /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
 		1EB88F4006C77B200AEE0076 /* Pods_NBPlayerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBPlayerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1EAD7EDA1D25FCEB8BB639 /* Pods_NBPlayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBPlayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC30E77EB83A3107166CD84 /* Pods-NBPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBPlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NBPlayerTests/Pods-NBPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,10 +164,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0418B98923163ABF00EAEA5A /* kkplayer.framework in Frameworks */,
 				04797EC222E1E80700A71DB1 /* libz.tbd in Frameworks */,
 				04797EC022E1E80000A71DB1 /* libbz2.tbd in Frameworks */,
 				04797EBC22E1E7EF00A71DB1 /* OpenGLES.framework in Frameworks */,
+				04D3DC5F231F780C00557B52 /* IJKMediaFramework.framework in Frameworks */,
 				04797EBA22E1E7E800A71DB1 /* VideoToolbox.framework in Frameworks */,
 				04797EB822E1E7E000A71DB1 /* AudioToolbox.framework in Frameworks */,
 				04797EB622E1E7D900A71DB1 /* MediaPlayer.framework in Frameworks */,
@@ -216,6 +229,7 @@
 		04797D7E22E1E4E900A71DB1 /* NBPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				04D3DC5E231F780C00557B52 /* IJKMediaFramework.framework */,
 				04287EB922EAA9F800EE0203 /* tool */,
 				04C9269322E700AD0015ED5B /* globalConstant */,
 				CADD67F222E46A0B00D4265F /* nbmain */,
@@ -272,6 +286,12 @@
 		04797DCB22E1E51B00A71DB1 /* catagory */ = {
 			isa = PBXGroup;
 			children = (
+				04D3DC7C231F821E00557B52 /* UIImage+ImageWithColor.h */,
+				04D3DC7B231F821D00557B52 /* UIImage+ImageWithColor.m */,
+				04D3DC78231F81F500557B52 /* UIFont+QFFont.h */,
+				04D3DC79231F81F600557B52 /* UIFont+QFFont.m */,
+				04D3DC75231F81CA00557B52 /* UIButton+Extension.h */,
+				04D3DC76231F81CA00557B52 /* UIButton+Extension.m */,
 				04287EC222EAAC6300EE0203 /* NSString+isNullString.h */,
 				04287EC122EAAC6300EE0203 /* NSString+isNullString.m */,
 				04287EBF22EAAAD100EE0203 /* NSObject+QFBHUD.h */,
@@ -437,6 +457,8 @@
 		CADD67F722E46A9700D4265F /* view */ = {
 			isa = PBXGroup;
 			children = (
+				04D3DC62231F7E5300557B52 /* NBVideoTableViewCell.h */,
+				04D3DC63231F7E5300557B52 /* NBVideoTableViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -618,6 +640,7 @@
 				"${BUILT_PRODUCTS_DIR}/KMNavigationBarTransition/KMNavigationBarTransition.framework",
 				"${BUILT_PRODUCTS_DIR}/LEEAlert/LEEAlert.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/cocore/cocore.framework",
 				"${BUILT_PRODUCTS_DIR}/coobjc/coobjc.framework",
@@ -629,6 +652,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KMNavigationBarTransition.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LEEAlert.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cocore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/coobjc.framework",
@@ -711,14 +735,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D3DC64231F7E5300557B52 /* NBVideoTableViewCell.m in Sources */,
 				CADD67D622E4002300D4265F /* NBNavigationController.m in Sources */,
 				04C9269922E703910015ED5B /* LearnCoobjc.m in Sources */,
 				04797DC822E1E51500A71DB1 /* NBTabbarViewController.m in Sources */,
 				CADD67C322E3F7C600D4265F /* UIViewController+ViewModel.m in Sources */,
+				04D3DC7A231F81F600557B52 /* UIFont+QFFont.m in Sources */,
+				04D3DC77231F81CA00557B52 /* UIButton+Extension.m in Sources */,
 				04287EC022EAAAD100EE0203 /* NSObject+QFBHUD.m in Sources */,
 				04C9269622E700D50015ED5B /* GlobalConstant.m in Sources */,
 				04287EC322EAAC6300EE0203 /* NSString+isNullString.m in Sources */,
 				04287EB822EAA49700EE0203 /* NBFileManager.m in Sources */,
+				04D3DC7D231F821E00557B52 /* UIImage+ImageWithColor.m in Sources */,
 				04797D8F22E1E4EB00A71DB1 /* main.m in Sources */,
 				04C4AD8A22E69BAF006E5213 /* NBCameraViewController.m in Sources */,
 				CADD67FC22E46ACA00D4265F /* NBHomeViewController.m in Sources */,
@@ -904,6 +932,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = XRQ3MA22VC;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/NBPlayer",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NBPlayer/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "";
@@ -934,6 +968,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = XRQ3MA22VC;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/NBPlayer",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NBPlayer/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "";

@@ -7,7 +7,8 @@
 //
 
 #import "NBHomeViewController.h"
-#import "NBFileManager.h"
+#import "NBHomeViewModel.h"
+#import "NBVideoTableViewCell.h"
 
 
 
@@ -16,17 +17,22 @@
 @property (strong ,nonatomic) UITableView *tableView;
 
 
+
 @end
 
 @implementation NBHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _homeVmodel = (NBHomeViewModel*)self.vmodel;
+    
+    NSArray *files = [self.homeVmodel loadDocumentLibraryFile];
+    for (NSString *file in files) {
+        NSLog(@"%@",file);
+    }
+    
     [self setupUI];
-    
-
-
-    
 }
 
 
@@ -43,7 +49,9 @@
     if (!_tableView) {
         _tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.backgroundColor = [UIColor whiteColor];
-        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+        [_tableView registerClass:[NBVideoTableViewCell class] forCellReuseIdentifier:@"NBVideoTableViewCell"];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
     }
     return _tableView;
 }
@@ -58,16 +66,18 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+    NBVideoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NBVideoTableViewCell"];
+    
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
+    return 100;
 }
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
 
 
 

@@ -10,4 +10,9 @@
 
 @implementation NBHomeViewModel
 
+-(NSArray *)loadDocumentLibraryFile{
+    NSString *document = [NBFileManager pathForDocumentsDirectory];
+    return [NBFileManager listFilesInDirectoryAtPath:document deep:true];
+}
+
 @end

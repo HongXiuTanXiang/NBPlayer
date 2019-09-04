@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NBHomeViewModel : NBViewModel
 
+-(NSArray *)loadDocumentLibraryFile;
+
 @end
 
 NS_ASSUME_NONNULL_END

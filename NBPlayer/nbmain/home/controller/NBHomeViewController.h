@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NBHomeViewController : UIViewController
 
+@property(nonatomic, strong) NBHomeViewModel *homeVmodel;
+
 @end
 
 NS_ASSUME_NONNULL_END

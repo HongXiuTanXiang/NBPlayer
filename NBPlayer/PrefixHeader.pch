@@ -17,5 +17,8 @@
 #import "GlobalConstant.h"
 #import "LearnCoobjc.h"
 #import "NSObject+QFBHUD.h"
+#import "NBFileManager.h"
+#import "UIButton+Extension.h"
+#import "UIFont+QFFont.h"
 
 #endif /* PrefixHeader_pch */

@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "NBTabbarViewController.h"
-#import <kkplayer/kkplayer.h>
 
 
 @interface AppDelegate ()

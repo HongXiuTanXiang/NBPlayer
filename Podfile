@@ -17,6 +17,8 @@ pod 'LEEAlert'
 
 pod 'SVProgressHUD'
 
+pod 'ReactiveObjC'
+
   target 'NBPlayerTests' do
     inherit! :search_paths
     # Pods for testing

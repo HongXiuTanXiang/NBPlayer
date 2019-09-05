@@ -16,6 +16,7 @@
 #import <pop/POP.h>
 
 #define BAR_HEIGHT 38
+#define BACK_HEIGHT 28
 
 @interface MediaControlView()
 
@@ -62,10 +63,24 @@
     [self addSubview:self.hubView];
     
     
-    self.topBar.frame = CGRectMake(0, 0, self.bounds.size.width, 0);
-    self.bottomBar.frame = CGRectMake(0, self.bounds.size.height, self.bounds.size.width, 0);
-    self.hubView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
+    self.topBar.frame = CGRectMake(0, 0, self.bounds.size.width, BAR_HEIGHT);
+    self.topBar.alpha = 0;
     
+    self.bottomBar.frame = CGRectMake(0, self.bounds.size.height - BAR_HEIGHT, self.bounds.size.width, BAR_HEIGHT);
+    self.bottomBar.alpha = 0;
+    
+    self.hubView.frame = CGRectMake(0, BAR_HEIGHT, self.bounds.size.width, self.bounds.size.height - BAR_HEIGHT);
+
+    // 同时设置这两个位置,才能保证视图位置的正确
+    self.topBar.layer.anchorPoint = CGPointMake(0.5, 0);
+    self.topBar.layer.position = CGPointMake(self.bounds.size.width/2, 0);
+    
+    self.bottomBar.layer.anchorPoint = CGPointMake(0.5, 1.0);
+    self.bottomBar.layer.position = CGPointMake(self.bounds.size.width/2, self.bounds.size.height);
+    
+    self.backBtn = [[UIButton alloc]initWithFrame:CGRectMake(8, (CGFloat)(BAR_HEIGHT - BACK_HEIGHT)/2.0, BACK_HEIGHT, BACK_HEIGHT)];
+    [self.backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+    [self.topBar addSubview:self.backBtn];
     
 }
 
@@ -75,54 +90,63 @@
 
 -(void)topBarAndBottomBarAnimation{
     if (self.barHide) {
-        self.topBar.layer.anchorPoint = CGPointMake(0.5, 0);
-        POPBasicAnimation *animation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerSize];
-        animation.fromValue = [NSValue valueWithCGSize:CGSizeMake( self.bounds.size.width, 0)];
-        animation.toValue = [NSValue valueWithCGSize:CGSizeMake( self.bounds.size.width, BAR_HEIGHT)];
-        animation.duration  = 0.25;
-        animation.beginTime = CACurrentMediaTime();
-        animation.repeatCount = 0;
-        animation.removedOnCompletion = false;
-        [self.topBar.layer pop_addAnimation:animation forKey:@"TopBarSize"];
         
-        self.bottomBar.layer.anchorPoint = CGPointMake(0.5, 1.0);
-        POPBasicAnimation *animation1 = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerSize];
-        animation1.fromValue = [NSValue valueWithCGSize:CGSizeMake( self.bounds.size.width, 0)];
-        animation1.toValue = [NSValue valueWithCGSize:CGSizeMake( self.bounds.size.width, BAR_HEIGHT)];
-        animation1.duration  = 0.25;
-        animation1.beginTime = CACurrentMediaTime();
-        animation1.repeatCount = 0;
-        animation1.removedOnCompletion = false;
-        [self.bottomBar.layer pop_addAnimation:animation1 forKey:@"BottomBarSize"];
+        [UIView animateWithDuration:0.25 animations:^{
+            self.topBar.alpha = 1;
+            self.bottomBar.alpha = 1;
+        }];
         
+        CABasicAnimation *anima = [CABasicAnimation animation];
+        anima.keyPath = @"transform.scale.y";
+        anima.fromValue = @(0);
+        anima.toValue = @(1);
+        anima.duration = 0.25;
+        anima.removedOnCompletion = false;
+        anima.fillMode = kCAFillModeForwards;
+        anima.beginTime = CACurrentMediaTime();
+        anima.repeatCount = 0;
+        [self.topBar.layer addAnimation:anima forKey:@"topscaley"];
+        
+        
+        CABasicAnimation *anima1 = [CABasicAnimation animation];
+        anima1.keyPath = @"transform.scale.y";
+        anima1.fromValue = @(0);
+        anima1.toValue = @(1);
+        anima1.duration = 0.25;
+        anima1.removedOnCompletion = false;
+        anima1.fillMode = kCAFillModeForwards;
+        anima1.beginTime = CACurrentMediaTime();
+        anima1.repeatCount = 0;
+        [self.bottomBar.layer addAnimation:anima1 forKey:@"bottomscaley"];
+
         self.barHide = false;
     } else {
         
-        self.topBar.layer.anchorPoint = CGPointMake(0.5, 0);
-        POPBasicAnimation *animation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerSize];
-        animation.fromValue = [NSValue valueWithCGSize:CGSizeMake( self.bounds.size.width, BAR_HEIGHT)];
-        animation.toValue = [NSValue valueWithCGSize:CGSizeMake( self.bounds.size.width, 0)];
-        animation.duration  = 0.25;
-        animation.beginTime = CACurrentMediaTime();
-        animation.repeatCount = 0;
-        animation.removedOnCompletion = false;
-        [self.topBar.layer pop_addAnimation:animation forKey:@"TopBarSize"];
+        CABasicAnimation *anima = [CABasicAnimation animation];
+        anima.keyPath = @"transform.scale.y";
+        anima.fromValue = @(1);
+        anima.toValue = @(0);
+        anima.duration = 0.25;
+        anima.removedOnCompletion = false;
+        anima.fillMode = kCAFillModeForwards;
+        anima.beginTime = CACurrentMediaTime();
+        anima.repeatCount = 0;
+        [self.topBar.layer addAnimation:anima forKey:@"topscaley"];
         
-        
-        self.bottomBar.layer.anchorPoint = CGPointMake(0.5, 1.0);
-        POPBasicAnimation *animation1 = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerSize];
-        animation1.fromValue = [NSValue valueWithCGSize:CGSizeMake( self.bounds.size.width, BAR_HEIGHT)];
-        animation1.toValue = [NSValue valueWithCGSize:CGSizeMake( self.bounds.size.width, 0)];
-        animation1.duration  = 0.25;
-        animation1.beginTime = CACurrentMediaTime();
-        animation1.repeatCount = 0;
-        animation1.removedOnCompletion = false;
-        [self.bottomBar.layer pop_addAnimation:animation1 forKey:@"BottomBarSize"];
+        CABasicAnimation *anima1 = [CABasicAnimation animation];
+        anima1.keyPath = @"transform.scale.y";
+        anima1.fromValue = @(1);
+        anima1.toValue = @(0);
+        anima1.duration = 0.25;
+        anima1.removedOnCompletion = false;
+        anima1.fillMode = kCAFillModeForwards;
+        anima1.beginTime = CACurrentMediaTime();
+        anima1.repeatCount = 0;
+        [self.bottomBar.layer addAnimation:anima1 forKey:@"bottomscaley"];
         
         self.barHide = true;
-        
     }
-    
+
 
     
 }

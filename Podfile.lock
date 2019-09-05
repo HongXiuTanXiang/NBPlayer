@@ -5,6 +5,7 @@ PODS:
   - KMNavigationBarTransition (1.1.5)
   - LEEAlert (1.2.6)
   - Masonry (1.1.0)
+  - pop (1.0.12)
   - ReactiveObjC (3.1.1)
   - SVProgressHUD (2.2.5)
 
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - KMNavigationBarTransition
   - LEEAlert
   - Masonry
+  - pop (~> 1.0)
   - ReactiveObjC
   - SVProgressHUD
 
@@ -23,6 +25,7 @@ SPEC REPOS:
     - KMNavigationBarTransition
     - LEEAlert
     - Masonry
+    - pop
     - ReactiveObjC
     - SVProgressHUD
 
@@ -32,9 +35,10 @@ SPEC CHECKSUMS:
   KMNavigationBarTransition: 7a52c9bc25b39b6e3343e980b453facee1591b82
   LEEAlert: 8a612d6c50b74c84cebda2a9b16eeb18535b6782
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 8d7d1e89da48d9beb699980f02f3f3f215004bf5
+PODFILE CHECKSUM: ce54ba77b5f21c11d33c52d46e48529be318d010
 
 COCOAPODS: 1.5.3

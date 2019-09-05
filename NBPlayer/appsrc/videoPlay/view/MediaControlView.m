@@ -7,6 +7,9 @@
 //
 
 #import "MediaControlView.h"
+#import <pop/POP.h>
+
+#define BAR_HEIGHT 38
 
 @interface MediaControlView()
 
@@ -22,6 +25,7 @@
 @property(nonatomic, strong) UIView *topBar;
 @property(nonatomic, strong) UIView *bottomBar;
 @property(nonatomic, strong) UIButton *hubView;
+@property(nonatomic, assign) BOOL barHide;
 
 @end
 
@@ -30,6 +34,7 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self setupUI];
+        _barHide = true;
     }
     return self;
 }
@@ -38,10 +43,10 @@
 {
     
     _topBar = [[UIView alloc]init];
-    _topBar.backgroundColor = [UIColor colorWithHexString:@"#000000" alpha:0.7];
+    _topBar.backgroundColor = [UIColor colorWithHexString:@"#A9A9A9    " alpha:0.6];
     
     _bottomBar = [[UIView alloc]init];
-    _bottomBar.backgroundColor = [UIColor colorWithHexString:@"#000000" alpha:0.7];
+    _bottomBar.backgroundColor = [UIColor colorWithHexString:@"#A9A9A9    " alpha:0.6];
     
     _hubView = [UIButton buttonWithTitle:@"" fontName:kFontRegular fontSize:0 bgImageColor:[UIColor clearColor] titleColor:[UIColor clearColor] target:self action:@selector(hubViewDidClick:)];
     _hubView.backgroundColor = [UIColor clearColor];
@@ -50,12 +55,36 @@
     [self addSubview:self.bottomBar];
     [self addSubview:self.hubView];
     
-    _topBar.frame = CGRectMake(0, 0, self.bounds.size.width, 44);
-    _bottomBar.frame = CGRectMake(0, self.bounds.size.height - 44, self.bounds.size.width, 44);
-    _hubView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
+    self.topBar.layer.anchorPoint = CGPointMake(0.5, 1.0);
+    self.bottomBar.layer.anchorPoint = CGPointMake(0, 0);
+    
+    self.topBar.frame = CGRectMake(0, 0, self.bounds.size.width, 0);
+    self.bottomBar.frame = CGRectMake(0, self.bounds.size.height - BAR_HEIGHT, self.bounds.size.width, 0);
+    self.hubView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
+    
+    
 }
 
 -(void)hubViewDidClick:(UIButton*)btn{
+    [self topBarAndBottomBarAnimation];
+}
+
+-(void)topBarAndBottomBarAnimation{
+    if (self.barHide) {
+        [UIView animateWithDuration:0.5 animations:^{
+//            self.topBar.frame = CGRectMake(0, 0, self.bounds.size.width, BAR_HEIGHT);
+            self.bottomBar.frame = CGRectMake(0, self.bounds.size.height - BAR_HEIGHT, self.bounds.size.width, BAR_HEIGHT);
+        }];
+        self.barHide = false;
+    } else {
+        
+        [UIView animateWithDuration:0.5 animations:^{
+//            self.topBar.frame = CGRectMake(0, 0, self.bounds.size.width, 0);
+            self.bottomBar.frame = CGRectMake(0, self.bounds.size.height - BAR_HEIGHT, self.bounds.size.width, 0);
+        }];
+        self.barHide = true;
+        
+    }
     
 }
 

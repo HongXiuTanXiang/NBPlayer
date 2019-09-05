@@ -247,7 +247,7 @@
 				04D3DC5E231F780C00557B52 /* IJKMediaFramework.framework */,
 				04287EB922EAA9F800EE0203 /* tool */,
 				04C9269322E700AD0015ED5B /* globalConstant */,
-				CADD67F222E46A0B00D4265F /* nbmain */,
+				CADD67F222E46A0B00D4265F /* appsrc */,
 				04797DCB22E1E51B00A71DB1 /* catagory */,
 				04797DBE22E1E51500A71DB1 /* base */,
 				04797D7F22E1E4E900A71DB1 /* AppDelegate.h */,
@@ -464,7 +464,7 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		CADD67F222E46A0B00D4265F /* nbmain */ = {
+		CADD67F222E46A0B00D4265F /* appsrc */ = {
 			isa = PBXGroup;
 			children = (
 				04D3DC81231F9DE100557B52 /* videoPlay */,
@@ -472,7 +472,7 @@
 				CADD67F422E46A7100D4265F /* camare */,
 				CADD67F322E46A6900D4265F /* home */,
 			);
-			path = nbmain;
+			path = appsrc;
 			sourceTree = "<group>";
 		};
 		CADD67F322E46A6900D4265F /* home */ = {
@@ -709,6 +709,7 @@
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/cocore/cocore.framework",
 				"${BUILT_PRODUCTS_DIR}/coobjc/coobjc.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -721,6 +722,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cocore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/coobjc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

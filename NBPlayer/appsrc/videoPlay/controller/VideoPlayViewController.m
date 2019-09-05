@@ -8,11 +8,13 @@
 
 #import "VideoPlayViewController.h"
 #import <IJKMediaFramework/IJKMediaFramework.h>
+#import "MediaControlView.h"
 
 
 @interface VideoPlayViewController ()<UINavigationControllerDelegate>
 @property(nonatomic, strong) IJKFFMoviePlayerController *player;
 @property(nonatomic, strong) VideoPlayViewModel *viewModel;
+@property(nonatomic, strong) MediaControlView *controlView;
 
 @end
 
@@ -26,10 +28,12 @@
     self.view.backgroundColor = [UIColor whiteColor];
     _viewModel = (VideoPlayViewModel*)self.vmodel;
     
+    [IJKFFMoviePlayerController setLogReport:YES];
+    [IJKFFMoviePlayerController setLogLevel:k_IJK_LOG_DEBUG];
+    
     IJKFFOptions *options = [IJKFFOptions optionsByDefault];
     self.player = [[IJKFFMoviePlayerController alloc]initWithContentURL:self.viewModel.videourl withOptions:options];
 
-    self.player.view.frame = self.view.bounds;
     self.player.scalingMode = IJKMPMovieScalingModeAspectFit;
     self.player.shouldAutoplay = YES;
     [self.view addSubview:self.player.view];
@@ -41,6 +45,12 @@
         make.centerY.mas_equalTo(self.view.centerY);
         make.height.mas_equalTo(self.view.mas_width).multipliedBy(0.618);
     }];
+    
+    [self.player.view layoutIfNeeded];
+    
+    self.controlView = [[MediaControlView alloc]initWithFrame: self.player.view.bounds];
+    [self.player.view addSubview:self.controlView];
+    
     
     
 }

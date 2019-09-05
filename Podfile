@@ -19,6 +19,8 @@ pod 'SVProgressHUD'
 
 pod 'ReactiveObjC'
 
+pod 'pop', '~> 1.0'
+
   target 'NBPlayerTests' do
     inherit! :search_paths
     # Pods for testing

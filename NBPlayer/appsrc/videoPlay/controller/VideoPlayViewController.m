@@ -49,6 +49,7 @@
     [self.player.view layoutIfNeeded];
     
     self.controlView = [[MediaControlView alloc]initWithFrame: self.player.view.bounds];
+    self.controlView.delegatePlayer = self.player;
     [self.player.view addSubview:self.controlView];
     
     

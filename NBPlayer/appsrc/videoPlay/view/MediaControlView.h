@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <IJKMediaFramework/IJKMediaFramework.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,6 +15,7 @@ typedef enum : NSUInteger {
     MediaControlPlayStatusPlay,
     MediaControlPlayStatusPause,
     MediaControlPlayStatusStop,
+    MediaControlPlayStatusComplete,
 } MediaControlPlayStatus;
 
 typedef enum : NSUInteger {
@@ -38,6 +40,10 @@ typedef enum : NSUInteger {
 @end
 
 @interface MediaControlView : UIView
+
+@property(nonatomic, weak) id <MediaControlViewDelegate>delegate;
+@property(nonatomic, assign) MediaControlScreenStatus screenStatus;
+@property(nonatomic,weak) id<IJKMediaPlayback> delegatePlayer;
 
 @end
 

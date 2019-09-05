@@ -71,10 +71,15 @@
 
 -(void)topBarAndBottomBarAnimation{
     if (self.barHide) {
-        [UIView animateWithDuration:0.5 animations:^{
-//            self.topBar.frame = CGRectMake(0, 0, self.bounds.size.width, BAR_HEIGHT);
-            self.bottomBar.frame = CGRectMake(0, self.bounds.size.height - BAR_HEIGHT, self.bounds.size.width, BAR_HEIGHT);
-        }];
+        POPBasicAnimation *animation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerSize];
+        animation.fromValue = [NSValue valueWithCGSize:CGSizeMake( self.bounds.size.width, 0)];
+        animation.toValue = [NSValue valueWithCGSize:CGSizeMake( self.bounds.size.width, BAR_HEIGHT)];
+        animation.duration  = 2.0;
+        animation.beginTime = CACurrentMediaTime();
+        animation.repeatCount = 0;
+        animation.removedOnCompletion = false;
+        [self.topBar.layer pop_addAnimation:animation forKey:@"TopBarSize"];
+        
         self.barHide = false;
     } else {
         
@@ -85,6 +90,8 @@
         self.barHide = true;
         
     }
+    
+
     
 }
 

@@ -36,6 +36,7 @@
 
     self.player.scalingMode = IJKMPMovieScalingModeAspectFit;
     self.player.shouldAutoplay = YES;
+    self.player.playbackRate = 1.0f;
     [self.view addSubview:self.player.view];
     
     [self.player.view makeConstraints:^(MASConstraintMaker *make) {

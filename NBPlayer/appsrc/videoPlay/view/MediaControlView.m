@@ -35,19 +35,37 @@
 @property(nonatomic, strong) UIButton *hubView;
 @property(nonatomic, assign) BOOL barHide;
 @property(nonatomic, assign) BOOL isMediaSliderBeingDragged;
+@property(nonatomic, strong) UIProgressView *cacheProgress;
+
+@property(nonatomic, assign) MediaControlPlayStatus playStatus;
+@property(nonatomic, assign) MediaControlScreenStatus screenStatus;
 
 
 @end
 
 @implementation MediaControlView
 
+-(MediaControlPlayStatus)getMediaPlayStatus{
+    return self.playStatus;
+}
+
+-(MediaControlScreenStatus)getMediaSreenStatus{
+    return self.screenStatus;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self setupUI];
         _barHide = true;
         _screenStatus = MediaControlScreenStatusNormal;
+        _playStatus = MediaControlPlayStatusPlay;
+        [self addMediaObserver];
     }
     return self;
+}
+
+-(void)dealloc{
+    [self removeMediaObserver];
 }
 
 -(void)setupUI
@@ -89,8 +107,8 @@
     
     self.playBtn = [[UIButton alloc]init];
     self.playBtn.frame = CGRectMake(8, (CGFloat)(BAR_HEIGHT - BACK_HEIGHT)/2.0, BACK_HEIGHT, BACK_HEIGHT);
-    [self.playBtn setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
-    [self.playBtn setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateSelected];
+    [self.playBtn setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
+    [self.playBtn setImage:[UIImage imageNamed:@"play"] forState:UIControlStateSelected];
     [self.playBtn addTarget:self action:@selector(playButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.bottomBar addSubview:self.playBtn];
     
@@ -100,12 +118,12 @@
     [self.fullScreenBtn addTarget:self action:@selector(fullScreenBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.bottomBar addSubview:self.fullScreenBtn];
     
-    self.timeStartLab = [UILabel labelWithText:@"19:90" fontName:kFontRegular fontSize:14 fontColor:[UIColor nbOringe] textAlignment:NSTextAlignmentLeft];
+    self.timeStartLab = [UILabel labelWithText:@"--:--" fontName:kFontRegular fontSize:14 fontColor:[UIColor nbOringe] textAlignment:NSTextAlignmentLeft];
     self.timeStartLab.frame = CGRectMake(8+BACK_HEIGHT+3, (CGFloat)(BAR_HEIGHT-19)/2.0, 60, 19);
     self.timeStartLab.numberOfLines = 1;
     [self.bottomBar addSubview:self.timeStartLab];
     
-    self.timeEndLab = [UILabel labelWithText:@"19:90" fontName:kFontRegular fontSize:14 fontColor:[UIColor nbOringe] textAlignment:NSTextAlignmentRight];
+    self.timeEndLab = [UILabel labelWithText:@"--:--" fontName:kFontRegular fontSize:14 fontColor:[UIColor nbOringe] textAlignment:NSTextAlignmentRight];
     self.timeEndLab.frame = CGRectMake(self.bounds.size.width - 8 - BACK_HEIGHT - 3 - 60, (BAR_HEIGHT-19)/2.0, 60, 19);
     self.timeEndLab.numberOfLines = 1;
     [self.bottomBar addSubview:self.timeEndLab];
@@ -123,10 +141,20 @@
     [self.progressSlider addTarget:self action:@selector(sliderUIControlEventValueChanged) forControlEvents:UIControlEventValueChanged];
     
     self.progressSlider.minimumTrackTintColor = [UIColor nbOringe];
-    self.progressSlider.maximumTrackTintColor = [UIColor darkGrayColor];
+    self.progressSlider.maximumTrackTintColor = [UIColor colorWithHexString:@"#F5F5F5" alpha:0.3];
     CGFloat proW = self.bounds.size.width - 2* (8+BACK_HEIGHT+3 + 60);
     self.progressSlider.frame = CGRectMake(8+BACK_HEIGHT+3 + 60, (CGFloat)(BAR_HEIGHT - BACK_HEIGHT)/2,  proW, BACK_HEIGHT);
+    
+    self.cacheProgress = [[UIProgressView alloc]init];
+    self.cacheProgress.progressTintColor = [UIColor colorWithHexString:@"#90EE90"];
+    self.cacheProgress.trackTintColor = [UIColor clearColor];
+    self.cacheProgress.backgroundColor = [UIColor clearColor];
+    self.cacheProgress.frame = CGRectMake(8 + BACK_HEIGHT + 3 + 60 +2, (CGFloat)(BAR_HEIGHT - 2)/2,  proW, 2);
+    self.progressSlider.backgroundColor = [UIColor clearColor];
+    [self.bottomBar addSubview:self.cacheProgress];
     [self.bottomBar addSubview:self.progressSlider];
+    
+    
     self.progressSlider.thumbTintColor = [UIColor nbOringe];
     // 通常状态下
     [self.progressSlider setThumbImage:[UIImage imageNamed:@"iconfont-yuandian"] forState:UIControlStateNormal];
@@ -134,7 +162,36 @@
     // 滑动状态下
     [self.progressSlider setThumbImage:[UIImage imageNamed:@"iconfont-yuandian"] forState:UIControlStateHighlighted];
     
-    IJKFFIOStatCompleteRegister(ijk_io_callback);
+    self.videoTitleLab = [UILabel labelWithText:@"标题" fontName:kFontRegular fontSize:14 fontColor:[UIColor nbOringe] textAlignment:NSTextAlignmentLeft];
+    self.videoTitleLab.frame = CGRectMake(8 + BACK_HEIGHT + 3, (CGFloat)(BAR_HEIGHT - BACK_HEIGHT)/2.0, BACK_HEIGHT, BACK_HEIGHT);
+    [self.topBar addSubview:self.videoTitleLab];
+    
+    self.chageRateBtn = [[UIButton alloc]init];
+    self.chageRateBtn.frame = CGRectMake(self.bounds.size.width - 70, (BAR_HEIGHT - BACK_HEIGHT)/2.0, 60, BACK_HEIGHT);
+    self.chageRateBtn.backgroundColor = [UIColor clearColor];
+    [self.chageRateBtn setTitle:@"1.0" forState:UIControlStateNormal];
+    [self.chageRateBtn setTitleColor:[UIColor nbOringe] forState:UIControlStateNormal];
+    [self.chageRateBtn addTarget:self action:@selector(changeRateButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.topBar addSubview:self.chageRateBtn];
+    
+}
+float rate = 1.0f;
+-(void)changeRateButtonClick:(UIButton*)btn{
+    rate = (float)[self.delegatePlayer playbackRate];
+    if (rate == 0.8f) {
+        rate = 1.0;
+    } else if (rate == 1.0f) {
+        rate = 1.25f;
+    } else if (rate == 1.25f) {
+        rate = 1.5;
+    } else if (rate == 1.5f) {
+        rate = 2.0;
+    } else if (rate == 2.0f) {
+        rate = 0.8;
+    }
+    
+    [self.delegatePlayer setPlaybackRate:rate];
+    [self.chageRateBtn setTitle:[NSString stringWithFormat:@"%.1f",rate] forState:UIControlStateNormal];
 }
 
 void ijk_io_callback(const char *url,
@@ -154,6 +211,8 @@ void ijk_io_callback(const char *url,
 -(void)sliderUIControlEventTouchUpOutside{
     [self endDragMediaSlider];
 }
+
+// MARK: ------快进----
 -(void)sliderUIControlEventTouchUpInside{
     self.delegatePlayer.currentPlaybackTime = self.progressSlider.value;
     [self endDragMediaSlider];
@@ -167,6 +226,11 @@ void ijk_io_callback(const char *url,
 
 -(void)fullScreenBtnClick:(UIButton*)btn{
     if (self.delegate && [self.delegate respondsToSelector:@selector(fullScreenButtonDidClick:screenStatus:)]) {
+        if (self.screenStatus == MediaControlScreenStatusNormal) {
+            self.screenStatus = MediaControlScreenStatusFullScreen;
+        } else {
+            self.screenStatus = MediaControlScreenStatusFullScreen;
+        }
         [self.delegate fullScreenButtonDidClick:btn screenStatus:self.screenStatus];
     }
 }
@@ -174,10 +238,22 @@ void ijk_io_callback(const char *url,
 -(void)playButtonClick:(UIButton*)btn{
     btn.selected = !btn.selected;
     if (btn.selected) {
+        
+        self.playStatus = MediaControlPlayStatusPause;
+        if ([self.delegatePlayer isPlaying]) {
+            [self.delegatePlayer pause];
+        }
+        
         if (self.delegate && [self.delegate respondsToSelector:@selector(playPauseButtonDidClick:playStatus:)]) {
             [self.delegate playPauseButtonDidClick:btn playStatus:MediaControlPlayStatusPause];
         }
     } else {
+        if (self.playStatus == MediaControlPlayStatusComplete) {
+            self.progressSlider.value = 0;
+        }
+        self.playStatus = MediaControlPlayStatusPlay;
+        [self.delegatePlayer play];
+        [self refreshMediaControl];
         if (self.delegate && [self.delegate respondsToSelector:@selector(playPauseButtonDidClick:playStatus:)]) {
             [self.delegate playPauseButtonDidClick:btn playStatus:MediaControlPlayStatusPlay];
         }
@@ -254,8 +330,6 @@ void ijk_io_callback(const char *url,
         self.barHide = true;
     }
 
-
-    
 }
 
 
@@ -274,46 +348,51 @@ void ijk_io_callback(const char *url,
     [self refreshMediaControl];
 }
 
+-(void)setDelegatePlayer:(id<IJKMediaPlayback>)delegatePlayer{
+    _delegatePlayer = delegatePlayer;
+}
 
 - (void)refreshMediaControl
 {
     // duration
-    NSTimeInterval duration = self.delegatePlayer.duration;
-    NSInteger intDuration = duration + 0.5;
-    if (intDuration > 0) {
-        self.progressSlider.maximumValue = duration;
-        self.timeEndLab.text = [NSString stringWithFormat:@"%02d:%02d", (int)(intDuration / 60), (int)(intDuration % 60)];
-    } else {
-        self.timeEndLab.text = @"--:--";
-        self.progressSlider.maximumValue = 1.0f;
+    NSInteger intDuration = ceil(self.delegatePlayer.duration);
+
+    self.timeEndLab.text = [NSString stringWithFormat:@"%02d:%02d", (int)(intDuration / 60), (int)(intDuration % 60)];
+    
+    self.cacheProgress.progress = (float)self.delegatePlayer.playableDuration /(float)self.delegatePlayer.duration;
+    
+    if (!self.isMediaSliderBeingDragged) {
+        if (self.playStatus == MediaControlPlayStatusComplete) {
+            self.progressSlider.value = 1.0;
+            return;
+        }
+        self.progressSlider.value = self.delegatePlayer.currentPlaybackTime/self.delegatePlayer.duration;
     }
     
     
-    // position
-    NSTimeInterval position;
-    if (_isMediaSliderBeingDragged) {
-        position = self.progressSlider.value;
-    } else {
-        position = self.delegatePlayer.currentPlaybackTime;
-    }
-    NSInteger intPosition = position + 0.5;
-    if (intDuration > 0) {
-        self.progressSlider.value = position;
-    } else {
-        self.progressSlider.value = 0.0f;
-    }
+    NSInteger intPosition = ceilf(self.delegatePlayer.currentPlaybackTime);
     self.timeStartLab.text = [NSString stringWithFormat:@"%02d:%02d", (int)(intPosition / 60), (int)(intPosition % 60)];
     
-    
-    // status
-    BOOL isPlaying = [self.delegatePlayer isPlaying];
-
-    
-    
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(refreshMediaControl) object:nil];
-    if (!self.barHide) {
-        [self performSelector:@selector(refreshMediaControl) withObject:nil afterDelay:0.5];
+    
+    if (!self.barHide && self.playStatus != MediaControlPlayStatusComplete) {
+        [self performSelector:@selector(refreshMediaControl) withObject:nil afterDelay:0.1];
     }
 }
+
+-(void)addMediaObserver{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(videoComplete) name:IJKMPMoviePlayerPlaybackDidFinishNotification object:nil];
+}
+
+-(void)removeMediaObserver{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:IJKMPMoviePlayerPlaybackDidFinishNotification object:nil];
+}
+
+-(void)videoComplete{
+    self.playStatus = MediaControlPlayStatusComplete;
+    self.progressSlider.value = 1.0;
+    self.playBtn.selected = !self.playBtn.selected;
+}
+
 
 @end

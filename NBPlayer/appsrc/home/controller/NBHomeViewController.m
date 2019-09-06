@@ -89,7 +89,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //http://video-oss.qiaofangyun.com/uatTest_companyasdf123sa1s/video/2019/08/13/1565676969.292076/A5B177F0-0872-4785-ABB4-E3F245952754L0001.mp4
     VideoMessage *meg = self.homeVmodel.videoArray[indexPath.row];
-    NSURL *fileUrl = [NSURL URLWithString:@"http://video-oss.qiaofangyun.com/uatTest_companyasdf123sa1s/video/2019/08/13/1565676969.292076/A5B177F0-0872-4785-ABB4-E3F245952754L0001.mp4"];
+    NSURL *fileUrl = [NSURL fileURLWithPath:meg.filePath];
     VideoPlayViewModel *videovm = [[VideoPlayViewModel alloc]initWithUrl:fileUrl];
     VideoPlayViewController *videovc = [[VideoPlayViewController alloc]initwithViewModel:videovm];
     [self.navigationController pushViewController:videovc animated:true];

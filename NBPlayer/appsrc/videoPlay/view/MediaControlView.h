@@ -31,19 +31,18 @@ typedef enum : NSUInteger {
 
 -(void)fullScreenButtonDidClick:(UIButton*)fullBtn screenStatus: (MediaControlScreenStatus)status;
 
--(void)videoRateDidChangeTo:(double)rate;
-
 -(void)backButtonDidClick:(UIButton*)backBtn;
-
--(void)seekBarDidSlideToProgress:(double)rogress;
 
 @end
 
 @interface MediaControlView : UIView
 
 @property(nonatomic, weak) id <MediaControlViewDelegate>delegate;
-@property(nonatomic, assign) MediaControlScreenStatus screenStatus;
 @property(nonatomic,weak) id<IJKMediaPlayback> delegatePlayer;
+
+
+-(MediaControlPlayStatus)getMediaPlayStatus;
+-(MediaControlScreenStatus)getMediaSreenStatus;
 
 @end
 

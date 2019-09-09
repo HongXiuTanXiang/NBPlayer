@@ -1,9 +1,9 @@
 //
-//  NSObject+QFBHUD.m
-//  QFBAPP
+//  NBHomeViewController.m
+//  NBPlayer
 //
-//  Created by Mac on 2017/9/21.
-//  Copyright © 2017年 YIXun. All rights reserved.
+//  Created by yushang on 2019/7/21.
+//  Copyright © 2019 Mac. All rights reserved.
 //
 
 #import "NSObject+QFBHUD.h"
@@ -152,6 +152,26 @@
     .LeeHeaderColor(oringeColor)
     .LeeShow();
     
+}
+
+
++(void)openQFAppSetting{
+    CGFloat systemVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
+    if (systemVersion >= 8.0 && systemVersion < 10.0) {  // iOS8.0 和 iOS9.0
+        NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+        if ([[UIApplication sharedApplication] canOpenURL:url]) {
+            [[UIApplication sharedApplication] openURL:url];
+        }
+        
+    }else if (systemVersion >= 10.0) {  // iOS10.0及以后
+        NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+        if ([[UIApplication sharedApplication] canOpenURL:url]) {
+            if (@available(iOS 10.0, *)) {
+                [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+                }];
+            }
+        }
+    }
 }
 
 @end

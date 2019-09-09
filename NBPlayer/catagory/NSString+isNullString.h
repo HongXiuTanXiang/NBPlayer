@@ -1,9 +1,9 @@
 //
-//  NSString+isNullString.h
-//  QFBAPP
+//  NBHomeViewController.m
+//  NBPlayer
 //
-//  Created by yushang on 2019/5/21.
-//  Copyright © 2019 YIXun. All rights reserved.
+//  Created by yushang on 2019/7/21.
+//  Copyright © 2019 Mac. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -1,9 +1,9 @@
 //
-//  NSObject+QFBHUD.h
-//  QFBAPP
+//  NBHomeViewController.m
+//  NBPlayer
 //
-//  Created by Mac on 2017/9/21.
-//  Copyright © 2017年 YIXun. All rights reserved.
+//  Created by yushang on 2019/7/21.
+//  Copyright © 2019 Mac. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -76,5 +76,8 @@
                cancle: (NSString*)cancle
                  sure: (NSString*)sure
          cancleAction: (void(^)(void))cancleBlock sureAction: (void(^)(void))sureBlock;
+
+/**打开APP设置*/
++(void)openQFAppSetting;
 
 @end

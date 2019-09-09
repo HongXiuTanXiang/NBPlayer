@@ -1,9 +1,9 @@
 //
-//  UIColor+QFColor.m
-//  QFBAPP
+//  NBHomeViewController.m
+//  NBPlayer
 //
-//  Created by 无常先生 on 2018/5/22.
-//  Copyright © 2018年 YIXun. All rights reserved.
+//  Created by yushang on 2019/7/21.
+//  Copyright © 2019 Mac. All rights reserved.
 //
 
 #import "UIColor+QFColor.h"

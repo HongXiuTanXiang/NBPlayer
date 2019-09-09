@@ -41,5 +41,9 @@
 	</array>
 	<key>UIFileSharingEnabled</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>需要访问相机才能使用扫码功能</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>需要访问您的相册</string>
 </dict>
 </plist>

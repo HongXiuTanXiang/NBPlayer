@@ -31,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [UINavigationBar appearance].tintColor = [UIColor nbOringe];
 }
 
 

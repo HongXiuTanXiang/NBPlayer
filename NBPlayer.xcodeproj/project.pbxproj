@@ -29,6 +29,15 @@
 		04C158912322318A006D7D57 /* VideoHorizontallyVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C158902322318A006D7D57 /* VideoHorizontallyVideoVC.m */; };
 		04C15894232235E0006D7D57 /* RotationAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C15892232235E0006D7D57 /* RotationAnimator.m */; };
 		04C158972322397C006D7D57 /* VideoHorizontallyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C158962322397C006D7D57 /* VideoHorizontallyViewModel.m */; };
+		04C1589F2325E067006D7D57 /* WBQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1589D2325E067006D7D57 /* WBQRCodeVC.m */; };
+		04C158A22325E0B2006D7D57 /* ScanSuccessJumpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C158A02325E0B2006D7D57 /* ScanSuccessJumpVC.m */; };
+		04C158A52325E17A006D7D57 /* SGWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C158A32325E17A006D7D57 /* SGWebView.m */; };
+		04C158A82325E361006D7D57 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C158A72325E361006D7D57 /* UIBarButtonItem+Extension.m */; };
+		04C158AB2325E3DE006D7D57 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C158A92325E3DD006D7D57 /* UIView+Extension.m */; };
+		04C158B52325E7BD006D7D57 /* SGQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04C158AE2325E7BD006D7D57 /* SGQRCode.bundle */; };
+		04C158B62325E7BD006D7D57 /* SGQRCodeObtainConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C158AF2325E7BD006D7D57 /* SGQRCodeObtainConfigure.m */; };
+		04C158B72325E7BD006D7D57 /* SGQRCodeObtain.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C158B32325E7BD006D7D57 /* SGQRCodeObtain.m */; };
+		04C158B82325E7BD006D7D57 /* SGQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C158B42325E7BD006D7D57 /* SGQRCodeScanView.m */; };
 		04C4AD8A22E69BAF006E5213 /* NBCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AD8922E69BAF006E5213 /* NBCameraViewController.m */; };
 		04C4AD9122E69DBD006E5213 /* NBMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AD9022E69DBD006E5213 /* NBMyViewController.m */; };
 		04C4AD9422E69DD9006E5213 /* NBMyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AD9322E69DD9006E5213 /* NBMyViewModel.m */; };
@@ -129,6 +138,24 @@
 		04C15893232235E0006D7D57 /* RotationAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationAnimator.h; sourceTree = "<group>"; };
 		04C158952322397C006D7D57 /* VideoHorizontallyViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoHorizontallyViewModel.h; sourceTree = "<group>"; };
 		04C158962322397C006D7D57 /* VideoHorizontallyViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoHorizontallyViewModel.m; sourceTree = "<group>"; };
+		04C1589D2325E067006D7D57 /* WBQRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBQRCodeVC.m; sourceTree = "<group>"; };
+		04C1589E2325E067006D7D57 /* WBQRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBQRCodeVC.h; sourceTree = "<group>"; };
+		04C158A02325E0B2006D7D57 /* ScanSuccessJumpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanSuccessJumpVC.m; sourceTree = "<group>"; };
+		04C158A12325E0B2006D7D57 /* ScanSuccessJumpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanSuccessJumpVC.h; sourceTree = "<group>"; };
+		04C158A32325E17A006D7D57 /* SGWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGWebView.m; sourceTree = "<group>"; };
+		04C158A42325E17A006D7D57 /* SGWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGWebView.h; sourceTree = "<group>"; };
+		04C158A62325E361006D7D57 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		04C158A72325E361006D7D57 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		04C158A92325E3DD006D7D57 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		04C158AA2325E3DD006D7D57 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		04C158AD2325E7BD006D7D57 /* SGQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCode.h; sourceTree = "<group>"; };
+		04C158AE2325E7BD006D7D57 /* SGQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SGQRCode.bundle; sourceTree = "<group>"; };
+		04C158AF2325E7BD006D7D57 /* SGQRCodeObtainConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeObtainConfigure.m; sourceTree = "<group>"; };
+		04C158B02325E7BD006D7D57 /* SGQRCodeObtain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeObtain.h; sourceTree = "<group>"; };
+		04C158B12325E7BD006D7D57 /* SGQRCodeScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeScanView.h; sourceTree = "<group>"; };
+		04C158B22325E7BD006D7D57 /* SGQRCodeObtainConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGQRCodeObtainConfigure.h; sourceTree = "<group>"; };
+		04C158B32325E7BD006D7D57 /* SGQRCodeObtain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeObtain.m; sourceTree = "<group>"; };
+		04C158B42325E7BD006D7D57 /* SGQRCodeScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeScanView.m; sourceTree = "<group>"; };
 		04C4AD8822E69BAF006E5213 /* NBCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBCameraViewController.h; sourceTree = "<group>"; };
 		04C4AD8922E69BAF006E5213 /* NBCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBCameraViewController.m; sourceTree = "<group>"; };
 		04C4AD8F22E69DBD006E5213 /* NBMyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBMyViewController.h; sourceTree = "<group>"; };
@@ -253,6 +280,7 @@
 		04797D7E22E1E4E900A71DB1 /* NBPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				04C158AC2325E7BD006D7D57 /* SGQRCode */,
 				04D3DC5E231F780C00557B52 /* IJKMediaFramework.framework */,
 				04287EB922EAA9F800EE0203 /* tool */,
 				04C9269322E700AD0015ED5B /* globalConstant */,
@@ -312,6 +340,10 @@
 		04797DCB22E1E51B00A71DB1 /* catagory */ = {
 			isa = PBXGroup;
 			children = (
+				04C158AA2325E3DD006D7D57 /* UIView+Extension.h */,
+				04C158A92325E3DD006D7D57 /* UIView+Extension.m */,
+				04C158A62325E361006D7D57 /* UIBarButtonItem+Extension.h */,
+				04C158A72325E361006D7D57 /* UIBarButtonItem+Extension.m */,
 				04D3DC7C231F821E00557B52 /* UIImage+ImageWithColor.h */,
 				04D3DC7B231F821D00557B52 /* UIImage+ImageWithColor.m */,
 				04D3DC78231F81F500557B52 /* UIFont+QFFont.h */,
@@ -344,6 +376,58 @@
 				1EB88F4006C77B200AEE0076 /* Pods_NBPlayerUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04C158982325E023006D7D57 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				04C1589C2325E053006D7D57 /* viewModel */,
+				04C1589A2325E045006D7D57 /* view */,
+				04C158992325E035006D7D57 /* controller */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		04C158992325E035006D7D57 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C158A12325E0B2006D7D57 /* ScanSuccessJumpVC.h */,
+				04C158A02325E0B2006D7D57 /* ScanSuccessJumpVC.m */,
+				04C1589E2325E067006D7D57 /* WBQRCodeVC.h */,
+				04C1589D2325E067006D7D57 /* WBQRCodeVC.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		04C1589A2325E045006D7D57 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				04C158A42325E17A006D7D57 /* SGWebView.h */,
+				04C158A32325E17A006D7D57 /* SGWebView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		04C1589C2325E053006D7D57 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		04C158AC2325E7BD006D7D57 /* SGQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				04C158AD2325E7BD006D7D57 /* SGQRCode.h */,
+				04C158AE2325E7BD006D7D57 /* SGQRCode.bundle */,
+				04C158AF2325E7BD006D7D57 /* SGQRCodeObtainConfigure.m */,
+				04C158B02325E7BD006D7D57 /* SGQRCodeObtain.h */,
+				04C158B12325E7BD006D7D57 /* SGQRCodeScanView.h */,
+				04C158B22325E7BD006D7D57 /* SGQRCodeObtainConfigure.h */,
+				04C158B32325E7BD006D7D57 /* SGQRCodeObtain.m */,
+				04C158B42325E7BD006D7D57 /* SGQRCodeScanView.m */,
+			);
+			path = SGQRCode;
 			sourceTree = "<group>";
 		};
 		04C4AD8422E69B82006E5213 /* model */ = {
@@ -493,6 +577,7 @@
 		CADD67F222E46A0B00D4265F /* appsrc */ = {
 			isa = PBXGroup;
 			children = (
+				04C158982325E023006D7D57 /* QRCode */,
 				04D3DC81231F9DE100557B52 /* videoPlay */,
 				CADD67F522E46A8400D4265F /* my */,
 				CADD67F422E46A7100D4265F /* camare */,
@@ -686,6 +771,7 @@
 				04797D8C22E1E4EB00A71DB1 /* LaunchScreen.storyboard in Resources */,
 				04797D8922E1E4EB00A71DB1 /* Assets.xcassets in Resources */,
 				CADD681122EB447A00D4265F /* input.mp4 in Resources */,
+				04C158B52325E7BD006D7D57 /* SGQRCode.bundle in Resources */,
 				CADD67F122E4140A00D4265F /* TabBar.xcassets in Resources */,
 				04797D8722E1E4E900A71DB1 /* Main.storyboard in Resources */,
 			);
@@ -818,14 +904,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				04D3DC64231F7E5300557B52 /* NBVideoTableViewCell.m in Sources */,
+				04C158A22325E0B2006D7D57 /* ScanSuccessJumpVC.m in Sources */,
+				04C1589F2325E067006D7D57 /* WBQRCodeVC.m in Sources */,
 				CADD67D622E4002300D4265F /* NBNavigationController.m in Sources */,
 				04C9269922E703910015ED5B /* LearnCoobjc.m in Sources */,
 				04C158912322318A006D7D57 /* VideoHorizontallyVideoVC.m in Sources */,
 				04797DC822E1E51500A71DB1 /* NBTabbarViewController.m in Sources */,
+				04C158B62325E7BD006D7D57 /* SGQRCodeObtainConfigure.m in Sources */,
 				CADD67C322E3F7C600D4265F /* UIViewController+ViewModel.m in Sources */,
 				04D3DC7A231F81F600557B52 /* UIFont+QFFont.m in Sources */,
 				04D3DC77231F81CA00557B52 /* UIButton+Extension.m in Sources */,
+				04C158AB2325E3DE006D7D57 /* UIView+Extension.m in Sources */,
 				04287EC022EAAAD100EE0203 /* NSObject+QFBHUD.m in Sources */,
+				04C158A52325E17A006D7D57 /* SGWebView.m in Sources */,
 				04D3DC89231F9E3F00557B52 /* VideoPlayViewController.m in Sources */,
 				04C9269622E700D50015ED5B /* GlobalConstant.m in Sources */,
 				04CE6C622320AEE4004FF6F6 /* VideoMessage.m in Sources */,
@@ -842,11 +933,14 @@
 				04C15894232235E0006D7D57 /* RotationAnimator.m in Sources */,
 				04797D8122E1E4E900A71DB1 /* AppDelegate.mm in Sources */,
 				04797DCA22E1E51500A71DB1 /* NBViewModel.m in Sources */,
+				04C158A82325E361006D7D57 /* UIBarButtonItem+Extension.m in Sources */,
 				04C4AD9722E69E1C006E5213 /* NBCameraViewModel.m in Sources */,
 				04C4AD9122E69DBD006E5213 /* NBMyViewController.m in Sources */,
 				04C4AD9422E69DD9006E5213 /* NBMyViewModel.m in Sources */,
 				04797DCE22E1E51B00A71DB1 /* UIColor+QFColor.m in Sources */,
+				04C158B72325E7BD006D7D57 /* SGQRCodeObtain.m in Sources */,
 				CADD67FF22E46C9F00D4265F /* NBHomeViewModel.m in Sources */,
+				04C158B82325E7BD006D7D57 /* SGQRCodeScanView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

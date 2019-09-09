@@ -10,6 +10,9 @@
 #import "NBHomeViewModel.h"
 #import "NBVideoTableViewCell.h"
 #import "VideoPlayViewController.h"
+#import "UIBarButtonItem+Extension.h"
+#import <AVFoundation/AVFoundation.h>
+#import "WBQRCodeVC.h"
 
 
 @interface NBHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -32,8 +35,69 @@
     
     [self bindSignal];
     
+    [self rightNavItem];
+    
 }
 
+-(void)rightNavItem{
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTitle:@"扫码" titleColor:[UIColor nbOringe] image:@"" target:self action:@selector(rightItemClick)];
+    
+}
+
+-(void)rightItemClick{
+    WBQRCodeVC *WBVC = [[WBQRCodeVC alloc] init];
+    [self QRCodeScanVC:WBVC];
+}
+
+- (void)QRCodeScanVC:(UIViewController *)scanVC {
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    if (device) {
+        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+        switch (status) {
+            case AVAuthorizationStatusNotDetermined: {
+                [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+                    if (granted) {
+                        dispatch_sync(dispatch_get_main_queue(), ^{
+                            [self.navigationController pushViewController:scanVC animated:YES];
+                        });
+                        NSLog(@"用户第一次同意了访问相机权限 - - %@", [NSThread currentThread]);
+                    } else {
+                        NSLog(@"用户第一次拒绝了访问相机权限 - - %@", [NSThread currentThread]);
+                    }
+                }];
+                break;
+            }
+            case AVAuthorizationStatusAuthorized: {
+                [self.navigationController pushViewController:scanVC animated:YES];
+                break;
+            }
+            case AVAuthorizationStatusDenied: {
+                
+                [self showAlertTitle:@"温馨提示" content:@"请去-> [设置 - 隐私 - 相机 - NBPlayer] 打开访问开关" cancle:@"" sure:@"" cancleAction:^{
+                    
+                } sureAction:^{
+                    [NSObject openQFAppSetting];
+                }];
+
+                break;
+            }
+            case AVAuthorizationStatusRestricted: {
+                NSLog(@"因为系统原因, 无法访问相册");
+                break;
+            }
+                
+            default:
+                break;
+        }
+        return;
+    }
+    
+    [self showAlertTitle:@"温馨提示" content:@"未检测到您的摄像头" cancle:@"取消" sure:@"确定" cancleAction:^{
+        
+    } sureAction:^{
+        
+    }];
+}
 
 -(void)bindSignal{
     @weakify(self)

@@ -9,7 +9,7 @@
 #import "VideoHorizontallyVideoVC.h"
 #import "RotationAnimator.h"
 #import "MediaControlView.h"
-#import "VideoHorizontallyViewModel.h"
+#import "ScanSuccessJumpVC.h"
 
 @interface VideoHorizontallyVideoVC ()<MediaControlViewDelegate>
 
@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor lightGrayColor];
     _viewModel = (VideoHorizontallyViewModel*)self.vmodel;
     
     _customAnimator = [[RotationAnimator alloc]init];
@@ -49,12 +49,13 @@
         make.bottom.mas_equalTo(self.view);
     }];
     
+    [self addNotifi];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    CGFloat statusBarH = [UIApplication sharedApplication].statusBarFrame.size.height;
-    self.controlView = [[MediaControlView alloc]initWithFrame:CGRectMake(0, statusBarH, self.view.bounds.size.width, self.view.bounds.size.height - statusBarH)];
+    self.controlView = [[MediaControlView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     self.controlView.delegatePlayer = self.player;
     self.controlView.delegate = self;
     [self.view addSubview:self.controlView];
@@ -68,6 +69,10 @@
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+}
+
+-(void)dealloc{
+    [self removeMovieNotificationObservers];
 }
 
 -(void)playPauseButtonDidClick:(UIButton*)playBtn playStatus:(MediaControlPlayStatus)status{
@@ -90,7 +95,7 @@
 
 -(BOOL)prefersStatusBarHidden{
     
-    return NO;
+    return true;
 }
 
 -(BOOL)shouldAutorotate{
@@ -111,6 +116,77 @@
 -(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
     
     return UIInterfaceOrientationLandscapeRight;
+}
+
+-(void)addNotifi{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(loadStateDidChange:)
+                                                 name:IJKMPMoviePlayerLoadStateDidChangeNotification
+                                               object:_player];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackDidFinish:)
+                                                 name:IJKMPMoviePlayerPlaybackDidFinishNotification
+                                               object:_player];
+}
+
+- (void)loadStateDidChange:(NSNotification*)notification
+{
+    //    MPMovieLoadStateUnknown        = 0,
+    //    MPMovieLoadStatePlayable       = 1 << 0,
+    //    MPMovieLoadStatePlaythroughOK  = 1 << 1, // Playback will be automatically started in this state when shouldAutoplay is YES
+    //    MPMovieLoadStateStalled        = 1 << 2, // Playback will be automatically paused in this state, if started
+    
+    IJKMPMovieLoadState loadState = _player.loadState;
+    
+    if ((loadState & IJKMPMovieLoadStateUnknown) == 0) {
+        
+    }
+}
+
+-(void)dealVideoError{
+    [self showAlertTitle:@"温馨提示" content:@"视频地址异常,播放失败,是否使用浏览器打开?" cancle:@"" sure:@"" cancleAction:^{
+        [self.navigationController popViewControllerAnimated:true];
+    } sureAction:^{
+        BOOL canopen = [[UIApplication sharedApplication]canOpenURL:self.viewModel.videourl];
+        if (canopen) {
+            [[UIApplication sharedApplication]openURL:self.viewModel.videourl options:@{} completionHandler:nil];
+        }
+    }];
+}
+
+- (void)moviePlayBackDidFinish:(NSNotification*)notification
+{
+    //    MPMovieFinishReasonPlaybackEnded,
+    //    MPMovieFinishReasonPlaybackError,
+    //    MPMovieFinishReasonUserExited
+    int reason = [[[notification userInfo] valueForKey:IJKMPMoviePlayerPlaybackDidFinishReasonUserInfoKey] intValue];
+    
+    switch (reason)
+    {
+        case IJKMPMovieFinishReasonPlaybackEnded:
+            NSLog(@"playbackStateDidChange: IJKMPMovieFinishReasonPlaybackEnded: %d\n", reason);
+            break;
+            
+        case IJKMPMovieFinishReasonUserExited:
+            NSLog(@"playbackStateDidChange: IJKMPMovieFinishReasonUserExited: %d\n", reason);
+            break;
+            
+        case IJKMPMovieFinishReasonPlaybackError:
+            [self dealVideoError];
+            break;
+        default:
+            NSLog(@"playbackPlayBackDidFinish: ???: %d\n", reason);
+            break;
+    }
+}
+
+/* Remove the movie notification observers from the movie object. */
+-(void)removeMovieNotificationObservers
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:IJKMPMoviePlayerLoadStateDidChangeNotification object:_player];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:IJKMPMoviePlayerPlaybackDidFinishNotification object:_player];
+
 }
 
 @end

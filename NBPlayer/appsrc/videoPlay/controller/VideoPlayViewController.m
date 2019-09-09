@@ -28,7 +28,7 @@
     
     self.navigationController.delegate = self;
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor lightGrayColor];
     _viewModel = (VideoPlayViewModel*)self.vmodel;
     
     _customAnimator = [[RotationAnimator alloc]init];

@@ -9,6 +9,7 @@
 #import "WBQRCodeVC.h"
 #import "SGQRCode.h"
 #import "ScanSuccessJumpVC.h"
+#import "VideoHorizontallyVideoVC.h"
 
 
 @interface WBQRCodeVC () {
@@ -72,16 +73,28 @@
     } completion:^{
         [self dismissLoading];
     }];
+    @weakify(self)
     [obtain setBlockWithQRCodeObtainScanResult:^(SGQRCodeObtain *obtain, NSString *result) {
+        @strongify(self)
         if (result) {
             [obtain stopRunning];
             weakSelf.stop = YES;
             [obtain playSoundName:@"SGQRCode.bundle/sound.caf"];
 
-            ScanSuccessJumpVC *jumpVC = [[ScanSuccessJumpVC alloc] init];
-            jumpVC.comeFromVC = ScanSuccessJumpComeFromWB;
-            jumpVC.jump_URL = result;
-            [weakSelf.navigationController pushViewController:jumpVC animated:YES];
+            NSURL *videoUrl = [NSURL URLWithString:result];
+            if (!videoUrl) {
+                [self showAlertTitle:@"温馨提示" content: @"视频地址出错" cancle:nil sure:nil
+                        cancleAction:^{
+                           [self dismissViewControllerAnimated:true completion:nil];
+                        } sureAction:^{
+                            [self dismissViewControllerAnimated:true completion:nil];
+                        }];
+                return ;
+            }
+           VideoHorizontallyViewModel *vm = [[VideoHorizontallyViewModel alloc]initWithUrl:videoUrl];
+            VideoHorizontallyVideoVC *vc = [[VideoHorizontallyVideoVC alloc]initwithViewModel:vm];
+            [self presentViewController:vc animated:true completion:nil];
+
         }
     }];
 }

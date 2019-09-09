@@ -8,6 +8,7 @@
 
 #import "ScanSuccessJumpVC.h"
 #import "SGWebView.h"
+#import "UIBarButtonItem+Extension.h"
 
 @interface ScanSuccessJumpVC () <SGWebViewDelegate>
 @property (nonatomic , strong) SGWebView *webView;
@@ -30,12 +31,8 @@
 }
 
 - (void)setupNavigationItem {
-    UIButton *left_Button = [[UIButton alloc] init];
-    [left_Button setTitle:@"back" forState:UIControlStateNormal];
-    [left_Button setTitleColor:[UIColor colorWithRed: 21/ 255.0f green: 126/ 255.0f blue: 251/ 255.0f alpha:1.0] forState:(UIControlStateNormal)];
-    [left_Button sizeToFit];
-    [left_Button addTarget:self action:@selector(left_BarButtonItemAction) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *left_BarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:left_Button];
+
+    UIBarButtonItem *left_BarButtonItem = [UIBarButtonItem itemWithTitle:@"返回" titleColor:[UIColor nbOringe] image:@"" target:self action:@selector(left_BarButtonItemAction)];
     self.navigationItem.leftBarButtonItem = left_BarButtonItem;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemRefresh) target:self action:@selector(right_BarButtonItemAction)];
@@ -43,11 +40,11 @@
 
 - (void)left_BarButtonItemAction {
     if (self.comeFromVC == ScanSuccessJumpComeFromWB) {
-        [self.navigationController popViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:true completion:nil];
     }
     
     if (self.comeFromVC == ScanSuccessJumpComeFromWC) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:true completion:nil];
     }
 }
 

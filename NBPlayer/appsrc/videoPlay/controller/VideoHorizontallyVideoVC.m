@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5" alpha:0.4];
     _viewModel = (VideoHorizontallyViewModel*)self.vmodel;
     
     _customAnimator = [[RotationAnimator alloc]init];
@@ -44,7 +44,7 @@
     
     [self.player.view makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.view);
-        make.top.mas_equalTo(self.view).offset(20);
+        make.top.mas_equalTo(self.view);
         make.right.mas_equalTo(self.view);
         make.bottom.mas_equalTo(self.view);
     }];

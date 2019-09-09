@@ -93,6 +93,7 @@
             }
            VideoHorizontallyViewModel *vm = [[VideoHorizontallyViewModel alloc]initWithUrl:videoUrl];
             VideoHorizontallyVideoVC *vc = [[VideoHorizontallyVideoVC alloc]initwithViewModel:vm];
+            vc.shouldClosed = true;
             [self presentViewController:vc animated:true completion:nil];
 
         }

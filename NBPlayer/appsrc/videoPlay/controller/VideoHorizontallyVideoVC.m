@@ -91,6 +91,10 @@
     if (self.popBackBlock) {
         self.popBackBlock(self.player);
     }
+    
+    if (self.shouldClosed) {
+        [self.player shutdown];
+    }
 }
 
 -(BOOL)prefersStatusBarHidden{

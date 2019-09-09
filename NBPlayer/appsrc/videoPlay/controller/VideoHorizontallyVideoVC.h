@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface VideoHorizontallyVideoVC : UIViewController
 @property(nonatomic, strong) IJKFFMoviePlayerController *player;
+@property(nonatomic, assign) BOOL shouldClosed;
 @end
 
 NS_ASSUME_NONNULL_END

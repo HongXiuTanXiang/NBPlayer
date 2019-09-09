@@ -58,15 +58,20 @@ void exchangeMethod(Class aClass,Class bClass, SEL oldSEL, SEL newSEL) {
 + (void)hook {
     exchangeMethod([self class],
                    [self class],
-                   @selector(navigationBar:shouldPopItem:),
-                   @selector(hook_navigationBar:shouldPopItem:));
+                   @selector(navigationBar: shouldPopItem:),
+                   @selector(kk_navigationBar:shouldPopItem:));
 }
 
-- (void)hook_navigationBar:(id)arg1 shouldPopItem:(id)arg2 {
+
+- (void)kk_navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item{
     
+    if (self.topViewController.popBackBlock) {
+        self.topViewController.popBackBlock(nil);
+    }
     self.tabBarController.tabBar.hidden = false;
-    [self performSelector:@selector(hook_navigationBar:shouldPopItem:) withObject:arg1 withObject:arg2];
+    [self kk_navigationBar:navigationBar shouldPopItem:item];
 }
+
 
 
 

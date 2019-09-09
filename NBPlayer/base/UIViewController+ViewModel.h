@@ -12,11 +12,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void (^PopBackBlock)(id _Nullable arg1);
+
 @interface UIViewController (ViewModel)
 
 @property (strong ,nonatomic) NBViewModel *vmodel;
 
+@property(nonatomic, strong) PopBackBlock popBackBlock;
+
 - (instancetype)initwithViewModel: (NBViewModel*)vmodel;
+
+
+
 
 @end
 

@@ -33,4 +33,26 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
+
+- (BOOL)shouldAutorotate{
+    
+    return [[self.viewControllers lastObject] shouldAutorotate];
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    
+    return [[self.viewControllers lastObject] supportedInterfaceOrientations];
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    
+    return [[self.viewControllers lastObject] preferredInterfaceOrientationForPresentation];
+}
+
+-(BOOL)prefersStatusBarHidden{
+    
+    return [[self.viewControllers lastObject] prefersStatusBarHidden];
+}
+
+
 @end

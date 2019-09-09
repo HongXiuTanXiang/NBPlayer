@@ -19,6 +19,14 @@
    return objc_getAssociatedObject(self, @selector(vmodel));
 }
 
+-(void)setPopBackBlock:(PopBackBlock)popBackBlock{
+    objc_setAssociatedObject(self, @selector(popBackBlock), popBackBlock, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+-(PopBackBlock)popBackBlock{
+   return objc_getAssociatedObject(self, @selector(popBackBlock));
+}
+
 - (instancetype)initwithViewModel: (NBViewModel*)vmodel{
     UIViewController *somevc = [[[self class] alloc]initWithNibName:nil bundle:nil];
     if (somevc) {
@@ -26,5 +34,7 @@
     }
     return somevc;
 }
+
+
 
 @end

@@ -38,7 +38,7 @@
 @property(nonatomic, strong) UIProgressView *cacheProgress;
 
 @property(nonatomic, assign) MediaControlPlayStatus playStatus;
-@property(nonatomic, assign) MediaControlScreenStatus screenStatus;
+
 
 
 @end
@@ -49,8 +49,13 @@
     return self.playStatus;
 }
 
--(MediaControlScreenStatus)getMediaSreenStatus{
-    return self.screenStatus;
+-(void)setScreenStatus:(MediaControlScreenStatus)screenStatus{
+    _screenStatus = screenStatus;
+    if (_screenStatus == MediaControlScreenStatusFullScreen) {
+        [self.fullScreenBtn setImage:[UIImage imageNamed:@"Fullscreen"] forState:UIControlStateNormal];
+    } {
+        [self.fullScreenBtn setImage:[UIImage imageNamed:@"exitfullscreen"] forState:UIControlStateNormal];
+    }
 }
 
 - (instancetype)initWithFrame:(CGRect)frame{
@@ -141,7 +146,7 @@
     [self.progressSlider addTarget:self action:@selector(sliderUIControlEventValueChanged) forControlEvents:UIControlEventValueChanged];
     
     self.progressSlider.minimumTrackTintColor = [UIColor nbOringe];
-    self.progressSlider.maximumTrackTintColor = [UIColor colorWithHexString:@"#F5F5F5" alpha:0.3];
+    self.progressSlider.maximumTrackTintColor = [UIColor clearColor];
     CGFloat proW = self.bounds.size.width - 2* (8+BACK_HEIGHT+3 + 60);
     self.progressSlider.frame = CGRectMake(8+BACK_HEIGHT+3 + 60, (CGFloat)(BAR_HEIGHT - BACK_HEIGHT)/2,  proW, BACK_HEIGHT);
     
@@ -149,7 +154,7 @@
     self.cacheProgress.progressTintColor = [UIColor colorWithHexString:@"#90EE90"];
     self.cacheProgress.trackTintColor = [UIColor clearColor];
     self.cacheProgress.backgroundColor = [UIColor clearColor];
-    self.cacheProgress.frame = CGRectMake(8 + BACK_HEIGHT + 3 + 60 +2, (CGFloat)(BAR_HEIGHT - 2)/2,  proW, 2);
+    self.cacheProgress.frame = CGRectMake(8 + BACK_HEIGHT + 3 + 60 +2, (CGFloat)(BAR_HEIGHT - 2)/2,  proW-2, 2);
     self.progressSlider.backgroundColor = [UIColor clearColor];
     [self.bottomBar addSubview:self.cacheProgress];
     [self.bottomBar addSubview:self.progressSlider];
@@ -169,7 +174,7 @@
     self.chageRateBtn = [[UIButton alloc]init];
     self.chageRateBtn.frame = CGRectMake(self.bounds.size.width - 70, (BAR_HEIGHT - BACK_HEIGHT)/2.0, 60, BACK_HEIGHT);
     self.chageRateBtn.backgroundColor = [UIColor clearColor];
-    [self.chageRateBtn setTitle:@"1.0" forState:UIControlStateNormal];
+    [self.chageRateBtn setTitle:@"1.00" forState:UIControlStateNormal];
     [self.chageRateBtn setTitleColor:[UIColor nbOringe] forState:UIControlStateNormal];
     [self.chageRateBtn addTarget:self action:@selector(changeRateButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.topBar addSubview:self.chageRateBtn];
@@ -191,7 +196,7 @@ float rate = 1.0f;
     }
     
     [self.delegatePlayer setPlaybackRate:rate];
-    [self.chageRateBtn setTitle:[NSString stringWithFormat:@"%.1f",rate] forState:UIControlStateNormal];
+    [self.chageRateBtn setTitle:[NSString stringWithFormat:@"%.2f",rate] forState:UIControlStateNormal];
 }
 
 void ijk_io_callback(const char *url,

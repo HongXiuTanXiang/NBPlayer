@@ -26,6 +26,9 @@
 		04797EBC22E1E7EF00A71DB1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04797EBB22E1E7EF00A71DB1 /* OpenGLES.framework */; };
 		04797EC022E1E80000A71DB1 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04797EBF22E1E80000A71DB1 /* libbz2.tbd */; };
 		04797EC222E1E80700A71DB1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04797EC122E1E80700A71DB1 /* libz.tbd */; };
+		04C158912322318A006D7D57 /* VideoHorizontallyVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C158902322318A006D7D57 /* VideoHorizontallyVideoVC.m */; };
+		04C15894232235E0006D7D57 /* RotationAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C15892232235E0006D7D57 /* RotationAnimator.m */; };
+		04C158972322397C006D7D57 /* VideoHorizontallyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C158962322397C006D7D57 /* VideoHorizontallyViewModel.m */; };
 		04C4AD8A22E69BAF006E5213 /* NBCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AD8922E69BAF006E5213 /* NBCameraViewController.m */; };
 		04C4AD9122E69DBD006E5213 /* NBMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AD9022E69DBD006E5213 /* NBMyViewController.m */; };
 		04C4AD9422E69DD9006E5213 /* NBMyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AD9322E69DD9006E5213 /* NBMyViewModel.m */; };
@@ -120,6 +123,12 @@
 		04797EBD22E1E7F800A71DB1 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		04797EBF22E1E80000A71DB1 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		04797EC122E1E80700A71DB1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		04C1588F2322318A006D7D57 /* VideoHorizontallyVideoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoHorizontallyVideoVC.h; sourceTree = "<group>"; };
+		04C158902322318A006D7D57 /* VideoHorizontallyVideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoHorizontallyVideoVC.m; sourceTree = "<group>"; };
+		04C15892232235E0006D7D57 /* RotationAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationAnimator.m; sourceTree = "<group>"; };
+		04C15893232235E0006D7D57 /* RotationAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationAnimator.h; sourceTree = "<group>"; };
+		04C158952322397C006D7D57 /* VideoHorizontallyViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoHorizontallyViewModel.h; sourceTree = "<group>"; };
+		04C158962322397C006D7D57 /* VideoHorizontallyViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoHorizontallyViewModel.m; sourceTree = "<group>"; };
 		04C4AD8822E69BAF006E5213 /* NBCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBCameraViewController.h; sourceTree = "<group>"; };
 		04C4AD8922E69BAF006E5213 /* NBCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBCameraViewController.m; sourceTree = "<group>"; };
 		04C4AD8F22E69DBD006E5213 /* NBMyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBMyViewController.h; sourceTree = "<group>"; };
@@ -291,6 +300,8 @@
 				04797DC622E1E51500A71DB1 /* NBViewModel.m */,
 				CADD67C122E3F7C600D4265F /* UIViewController+ViewModel.h */,
 				CADD67C222E3F7C600D4265F /* UIViewController+ViewModel.m */,
+				04D3DC8E231FA86F00557B52 /* UINavigationController+Jump.h */,
+				04D3DC8F231FA86F00557B52 /* UINavigationController+Jump.m */,
 				CADD67D422E4002300D4265F /* NBNavigationController.h */,
 				CADD67D522E4002300D4265F /* NBNavigationController.m */,
 				CADD67D722E408E200D4265F /* NBPlayer-Bridging-Header.h */,
@@ -313,8 +324,6 @@
 				04287EBE22EAAAD100EE0203 /* NSObject+QFBHUD.m */,
 				04797DCC22E1E51B00A71DB1 /* UIColor+QFColor.h */,
 				04797DCD22E1E51B00A71DB1 /* UIColor+QFColor.m */,
-				04D3DC8E231FA86F00557B52 /* UINavigationController+Jump.h */,
-				04D3DC8F231FA86F00557B52 /* UINavigationController+Jump.m */,
 			);
 			path = catagory;
 			sourceTree = "<group>";
@@ -437,6 +446,8 @@
 			children = (
 				04D3DC87231F9E3F00557B52 /* VideoPlayViewController.h */,
 				04D3DC88231F9E3F00557B52 /* VideoPlayViewController.m */,
+				04C1588F2322318A006D7D57 /* VideoHorizontallyVideoVC.h */,
+				04C158902322318A006D7D57 /* VideoHorizontallyVideoVC.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -444,8 +455,12 @@
 		04D3DC83231F9DF500557B52 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				04C15893232235E0006D7D57 /* RotationAnimator.h */,
+				04C15892232235E0006D7D57 /* RotationAnimator.m */,
 				04D3DC8A231F9EC300557B52 /* VideoPlayViewModel.h */,
 				04D3DC8B231F9EC300557B52 /* VideoPlayViewModel.m */,
+				04C158952322397C006D7D57 /* VideoHorizontallyViewModel.h */,
+				04C158962322397C006D7D57 /* VideoHorizontallyViewModel.m */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -805,6 +820,7 @@
 				04D3DC64231F7E5300557B52 /* NBVideoTableViewCell.m in Sources */,
 				CADD67D622E4002300D4265F /* NBNavigationController.m in Sources */,
 				04C9269922E703910015ED5B /* LearnCoobjc.m in Sources */,
+				04C158912322318A006D7D57 /* VideoHorizontallyVideoVC.m in Sources */,
 				04797DC822E1E51500A71DB1 /* NBTabbarViewController.m in Sources */,
 				CADD67C322E3F7C600D4265F /* UIViewController+ViewModel.m in Sources */,
 				04D3DC7A231F81F600557B52 /* UIFont+QFFont.m in Sources */,
@@ -822,6 +838,8 @@
 				04D3DC93231FC06D00557B52 /* MediaControlView.m in Sources */,
 				04C4AD8A22E69BAF006E5213 /* NBCameraViewController.m in Sources */,
 				CADD67FC22E46ACA00D4265F /* NBHomeViewController.m in Sources */,
+				04C158972322397C006D7D57 /* VideoHorizontallyViewModel.m in Sources */,
+				04C15894232235E0006D7D57 /* RotationAnimator.m in Sources */,
 				04797D8122E1E4E900A71DB1 /* AppDelegate.mm in Sources */,
 				04797DCA22E1E51500A71DB1 /* NBViewModel.m in Sources */,
 				04C4AD9722E69E1C006E5213 /* NBCameraViewModel.m in Sources */,

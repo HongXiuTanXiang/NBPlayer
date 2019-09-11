@@ -37,7 +37,6 @@
 @property(nonatomic, assign) BOOL isMediaSliderBeingDragged;
 @property(nonatomic, strong) UIProgressView *cacheProgress;
 
-@property(nonatomic, assign) MediaControlPlayStatus playStatus;
 
 
 
@@ -77,10 +76,10 @@
 {
     
     _topBar = [[UIView alloc]init];
-    _topBar.backgroundColor = [UIColor colorWithHexString:@"#A9A9A9    " alpha:0.6];
+    _topBar.backgroundColor = [UIColor colorWithHexString:@"#A9A9A9    " alpha:0.2];
     
     _bottomBar = [[UIView alloc]init];
-    _bottomBar.backgroundColor = [UIColor colorWithHexString:@"#A9A9A9    " alpha:0.6];
+    _bottomBar.backgroundColor = [UIColor colorWithHexString:@"#A9A9A9    " alpha:0.2];
     
     _hubView = [UIButton buttonWithTitle:@"" fontName:kFontRegular fontSize:0 bgImageColor:[UIColor clearColor] titleColor:[UIColor clearColor] target:self action:@selector(hubViewDidClick:)];
     _hubView.backgroundColor = [UIColor clearColor];
@@ -361,22 +360,23 @@ void ijk_io_callback(const char *url,
 {
     // duration
     NSInteger intDuration = ceil(self.delegatePlayer.duration);
-
     self.timeEndLab.text = [NSString stringWithFormat:@"%02d:%02d", (int)(intDuration / 60), (int)(intDuration % 60)];
-    
-    self.cacheProgress.progress = (float)self.delegatePlayer.playableDuration /(float)self.delegatePlayer.duration;
-    
-    if (!self.isMediaSliderBeingDragged) {
-        if (self.playStatus == MediaControlPlayStatusComplete) {
-            self.progressSlider.value = 1.0;
-            return;
-        }
-        self.progressSlider.value = self.delegatePlayer.currentPlaybackTime/self.delegatePlayer.duration;
-    }
-    
     
     NSInteger intPosition = ceilf(self.delegatePlayer.currentPlaybackTime);
     self.timeStartLab.text = [NSString stringWithFormat:@"%02d:%02d", (int)(intPosition / 60), (int)(intPosition % 60)];
+    
+    self.cacheProgress.progress = (float)self.delegatePlayer.playableDuration /(float)self.delegatePlayer.duration;
+    self.progressSlider.maximumValue = self.delegatePlayer.duration;
+    
+    if (!self.isMediaSliderBeingDragged) {
+        if (self.playStatus == MediaControlPlayStatusComplete) {
+            return;
+        }
+        self.progressSlider.value = self.delegatePlayer.currentPlaybackTime + 0.5;
+    }
+    
+    
+
     
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(refreshMediaControl) object:nil];
     
@@ -395,7 +395,6 @@ void ijk_io_callback(const char *url,
 
 -(void)videoComplete{
     self.playStatus = MediaControlPlayStatusComplete;
-    self.progressSlider.value = 1.0;
     self.playBtn.selected = !self.playBtn.selected;
 }
 

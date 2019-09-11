@@ -40,9 +40,12 @@ typedef enum : NSUInteger {
 @property(nonatomic, weak) id <MediaControlViewDelegate>delegate;
 @property(nonatomic,weak) id<IJKMediaPlayback> delegatePlayer;
 @property(nonatomic, assign) MediaControlScreenStatus screenStatus;
+@property(nonatomic, assign) MediaControlPlayStatus playStatus;
+
 
 -(MediaControlPlayStatus)getMediaPlayStatus;
 
+-(void)videoComplete;
 
 @end
 

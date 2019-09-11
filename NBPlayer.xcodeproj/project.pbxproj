@@ -43,7 +43,6 @@
 		04C4AD9422E69DD9006E5213 /* NBMyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AD9322E69DD9006E5213 /* NBMyViewModel.m */; };
 		04C4AD9722E69E1C006E5213 /* NBCameraViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AD9622E69E1C006E5213 /* NBCameraViewModel.m */; };
 		04C9269622E700D50015ED5B /* GlobalConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9269522E700D50015ED5B /* GlobalConstant.m */; };
-		04C9269922E703910015ED5B /* LearnCoobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9269822E703910015ED5B /* LearnCoobjc.m */; };
 		04CE6C622320AEE4004FF6F6 /* VideoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CE6C612320AEE4004FF6F6 /* VideoMessage.m */; };
 		04D3DC5F231F780C00557B52 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D3DC5E231F780C00557B52 /* IJKMediaFramework.framework */; };
 		04D3DC64231F7E5300557B52 /* NBVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC63231F7E5300557B52 /* NBVideoTableViewCell.m */; };
@@ -166,8 +165,6 @@
 		04C4AD9622E69E1C006E5213 /* NBCameraViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBCameraViewModel.m; sourceTree = "<group>"; };
 		04C9269422E700D50015ED5B /* GlobalConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalConstant.h; sourceTree = "<group>"; };
 		04C9269522E700D50015ED5B /* GlobalConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalConstant.m; sourceTree = "<group>"; };
-		04C9269722E703910015ED5B /* LearnCoobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LearnCoobjc.h; path = NBPlayer/appsrc/home/model/LearnCoobjc.h; sourceTree = SOURCE_ROOT; };
-		04C9269822E703910015ED5B /* LearnCoobjc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LearnCoobjc.m; path = NBPlayer/appsrc/home/model/LearnCoobjc.m; sourceTree = SOURCE_ROOT; };
 		04CE6C602320AEE4004FF6F6 /* VideoMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoMessage.h; sourceTree = "<group>"; };
 		04CE6C612320AEE4004FF6F6 /* VideoMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoMessage.m; sourceTree = "<group>"; };
 		04D3DC5E231F780C00557B52 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
@@ -284,7 +281,7 @@
 				04D3DC5E231F780C00557B52 /* IJKMediaFramework.framework */,
 				04287EB922EAA9F800EE0203 /* tool */,
 				04C9269322E700AD0015ED5B /* globalConstant */,
-				CADD67F222E46A0B00D4265F /* appsrc */,
+				CADD67F222E46A0B00D4265F /* app */,
 				04797DCB22E1E51B00A71DB1 /* catagory */,
 				04797DBE22E1E51500A71DB1 /* base */,
 				04797D7F22E1E4E900A71DB1 /* AppDelegate.h */,
@@ -506,8 +503,6 @@
 		04CE6C5F2320AED3004FF6F6 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				04C9269722E703910015ED5B /* LearnCoobjc.h */,
-				04C9269822E703910015ED5B /* LearnCoobjc.m */,
 				04CE6C602320AEE4004FF6F6 /* VideoMessage.h */,
 				04CE6C612320AEE4004FF6F6 /* VideoMessage.m */,
 			);
@@ -574,7 +569,7 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		CADD67F222E46A0B00D4265F /* appsrc */ = {
+		CADD67F222E46A0B00D4265F /* app */ = {
 			isa = PBXGroup;
 			children = (
 				04C158982325E023006D7D57 /* QRCode */,
@@ -583,7 +578,7 @@
 				CADD67F422E46A7100D4265F /* camare */,
 				CADD67F322E46A6900D4265F /* home */,
 			);
-			path = appsrc;
+			path = app;
 			sourceTree = "<group>";
 		};
 		CADD67F322E46A6900D4265F /* home */ = {
@@ -907,7 +902,6 @@
 				04C158A22325E0B2006D7D57 /* ScanSuccessJumpVC.m in Sources */,
 				04C1589F2325E067006D7D57 /* WBQRCodeVC.m in Sources */,
 				CADD67D622E4002300D4265F /* NBNavigationController.m in Sources */,
-				04C9269922E703910015ED5B /* LearnCoobjc.m in Sources */,
 				04C158912322318A006D7D57 /* VideoHorizontallyVideoVC.m in Sources */,
 				04797DC822E1E51500A71DB1 /* NBTabbarViewController.m in Sources */,
 				04C158B62325E7BD006D7D57 /* SGQRCodeObtainConfigure.m in Sources */,

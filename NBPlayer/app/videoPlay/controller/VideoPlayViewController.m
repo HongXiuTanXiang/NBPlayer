@@ -127,6 +127,9 @@
         self.controlView.delegatePlayer = self.player;
         self.controlView.delegate = self;
         [self.view addSubview:self.controlView];
+        if (fullvc.controlView.playStatus == MediaControlPlayStatusComplete) {
+            [self.controlView videoComplete];
+        }
     };
     
     [self presentViewController:fullvc animated:true completion:nil];

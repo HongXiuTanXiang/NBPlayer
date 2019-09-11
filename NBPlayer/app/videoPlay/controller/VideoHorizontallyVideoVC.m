@@ -15,7 +15,7 @@
 
 
 @property(nonatomic, strong) VideoHorizontallyViewModel *viewModel;
-@property(nonatomic, strong) MediaControlView *controlView;
+
 @property (nonatomic, strong) RotationAnimator* customAnimator;
 
 @end

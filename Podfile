@@ -21,6 +21,8 @@ pod 'ReactiveObjC'
 
 pod 'pop', '~> 1.0'
 
+pod 'Realm'
+
 
   target 'NBPlayerTests' do
     inherit! :search_paths

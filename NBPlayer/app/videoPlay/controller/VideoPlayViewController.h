@@ -11,7 +11,7 @@
 #import <IJKMediaFramework/IJKMediaFramework.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VideoPlayViewController : UIViewController
+@interface VideoPlayViewController : NBBaseViewController
 @property(nonatomic, strong) IJKFFMoviePlayerController *player;
 @end
 

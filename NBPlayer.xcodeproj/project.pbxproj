@@ -43,6 +43,7 @@
 		04C4AD9422E69DD9006E5213 /* NBMyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AD9322E69DD9006E5213 /* NBMyViewModel.m */; };
 		04C4AD9722E69E1C006E5213 /* NBCameraViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4AD9622E69E1C006E5213 /* NBCameraViewModel.m */; };
 		04C9269622E700D50015ED5B /* GlobalConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9269522E700D50015ED5B /* GlobalConstant.m */; };
+		04CAF156233B4CC400CD396A /* NBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAF155233B4CC400CD396A /* NBBaseViewController.m */; };
 		04CE6C622320AEE4004FF6F6 /* VideoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CE6C612320AEE4004FF6F6 /* VideoMessage.m */; };
 		04D3DC5F231F780C00557B52 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D3DC5E231F780C00557B52 /* IJKMediaFramework.framework */; };
 		04D3DC64231F7E5300557B52 /* NBVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC63231F7E5300557B52 /* NBVideoTableViewCell.m */; };
@@ -165,6 +166,8 @@
 		04C4AD9622E69E1C006E5213 /* NBCameraViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBCameraViewModel.m; sourceTree = "<group>"; };
 		04C9269422E700D50015ED5B /* GlobalConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalConstant.h; sourceTree = "<group>"; };
 		04C9269522E700D50015ED5B /* GlobalConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalConstant.m; sourceTree = "<group>"; };
+		04CAF154233B4CC400CD396A /* NBBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBBaseViewController.h; sourceTree = "<group>"; };
+		04CAF155233B4CC400CD396A /* NBBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBBaseViewController.m; sourceTree = "<group>"; };
 		04CE6C602320AEE4004FF6F6 /* VideoMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoMessage.h; sourceTree = "<group>"; };
 		04CE6C612320AEE4004FF6F6 /* VideoMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoMessage.m; sourceTree = "<group>"; };
 		04D3DC5E231F780C00557B52 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
@@ -330,6 +333,8 @@
 				CADD67D422E4002300D4265F /* NBNavigationController.h */,
 				CADD67D522E4002300D4265F /* NBNavigationController.m */,
 				CADD67D722E408E200D4265F /* NBPlayer-Bridging-Header.h */,
+				04CAF154233B4CC400CD396A /* NBBaseViewController.h */,
+				04CAF155233B4CC400CD396A /* NBBaseViewController.m */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -903,6 +908,7 @@
 				04D3DC64231F7E5300557B52 /* NBVideoTableViewCell.m in Sources */,
 				04C158A22325E0B2006D7D57 /* ScanSuccessJumpVC.m in Sources */,
 				04C1589F2325E067006D7D57 /* WBQRCodeVC.m in Sources */,
+				04CAF156233B4CC400CD396A /* NBBaseViewController.m in Sources */,
 				CADD67D622E4002300D4265F /* NBNavigationController.m in Sources */,
 				04C158912322318A006D7D57 /* VideoHorizontallyVideoVC.m in Sources */,
 				04797DC822E1E51500A71DB1 /* NBTabbarViewController.m in Sources */,

@@ -1,17 +1,16 @@
 //
-//  NBMyViewController.h
+//  NBBaseViewController.h
 //  NBPlayer
 //
-//  Created by Mac on 2019/7/23.
+//  Created by Mac on 2019/9/25.
 //  Copyright © 2019 Mac. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "NBMyViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NBMyViewController : NBBaseViewController
+@interface NBBaseViewController : UIViewController
 
 @end
 

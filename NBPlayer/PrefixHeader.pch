@@ -21,5 +21,6 @@
 #import "UIFont+QFFont.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "UINavigationController+Jump.h"
+#import "NBBaseViewController.h"
 
 #endif /* PrefixHeader_pch */

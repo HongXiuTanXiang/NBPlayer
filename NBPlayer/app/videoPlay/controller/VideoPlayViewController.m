@@ -13,7 +13,7 @@
 #import "VideoHorizontallyVideoVC.h"
 
 
-@interface VideoPlayViewController ()<UINavigationControllerDelegate,MediaControlViewDelegate>
+@interface VideoPlayViewController ()<MediaControlViewDelegate>
 
 @property(nonatomic, strong) VideoPlayViewModel *viewModel;
 @property(nonatomic, strong) MediaControlView *controlView;
@@ -26,9 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationController.delegate = self;
-    
-    self.view.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5" alpha:0.4];
+    self.view.backgroundColor = [UIColor nbWhite];
     _viewModel = (VideoPlayViewModel*)self.vmodel;
     
     _customAnimator = [[RotationAnimator alloc]init];
@@ -75,28 +73,6 @@
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
 //    [self.player shutdown];
-}
-
-
-// Called when the navigation controller shows a new top view controller via a push, pop or setting of the view controller stack.
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
-    id <UIViewControllerTransitionCoordinator>tc = navigationController.topViewController.transitionCoordinator;
-    [tc notifyWhenInteractionChangesUsingBlock:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-        // NO返回成功,YES 未返回
-        if ([context isCancelled] == NO) {
-            if (self.popBackBlock) {
-                self.popBackBlock(nil);
-            }
-            self.tabBarController.tabBar.hidden = false;
-        } else {
-            self.tabBarController.tabBar.hidden = true;
-        }
-        
-    }];
-}
-
-- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
-    NSLog(@"");
 }
 
 

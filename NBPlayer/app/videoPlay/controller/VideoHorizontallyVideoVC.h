@@ -12,7 +12,7 @@
 #import "MediaControlView.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VideoHorizontallyVideoVC : UIViewController
+@interface VideoHorizontallyVideoVC : NBBaseViewController
 @property(nonatomic, strong) IJKFFMoviePlayerController *player;
 @property(nonatomic, assign) BOOL shouldClosed;
 @property(nonatomic, strong) MediaControlView *controlView;

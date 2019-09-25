@@ -40,11 +40,11 @@
 
 - (void)left_BarButtonItemAction {
     if (self.comeFromVC == ScanSuccessJumpComeFromWB) {
-        [self dismissViewControllerAnimated:true completion:nil];
+        [self.navigationController popViewControllerAnimated:true];
     }
     
     if (self.comeFromVC == ScanSuccessJumpComeFromWC) {
-        [self dismissViewControllerAnimated:true completion:nil];
+        [self.navigationController popViewControllerAnimated:true];
     }
 }
 

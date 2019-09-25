@@ -53,8 +53,9 @@
 
 - (nullable UIViewController *)kk_popViewControllerAnimated:(BOOL)animated{
     self.tabBarController.tabBar.hidden = false;
-    if (self.topViewController.popBackBlock) {
+    if (self.topViewController.popBackBlock && self.topViewController.popBackBlockOver == false) {
         self.topViewController.popBackBlock(nil);
+        self.topViewController.popBackBlockOver = true;
     }
     [self kk_popViewControllerAnimated:animated];
     return self.topViewController;
@@ -79,8 +80,9 @@ void exchangeMethod(Class aClass,Class bClass, SEL oldSEL, SEL newSEL) {
 
 - (void)kk_navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item{
 
-    if (self.topViewController.popBackBlock) {
+    if (self.topViewController.popBackBlock && self.topViewController.popBackBlockOver == false) {
         self.topViewController.popBackBlock(nil);
+        self.topViewController.popBackBlockOver = true;
     }
     self.tabBarController.tabBar.hidden = false;
     [self kk_navigationBar:navigationBar shouldPopItem:item];

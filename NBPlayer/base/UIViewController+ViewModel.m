@@ -27,6 +27,14 @@
    return objc_getAssociatedObject(self, @selector(popBackBlock));
 }
 
+-(void)setPopBackBlockOver:(BOOL)popBackBlockOver{
+    objc_setAssociatedObject(self, @selector(popBackBlockOver), @(popBackBlockOver), OBJC_ASSOCIATION_ASSIGN);
+}
+
+-(BOOL)popBackBlockOver{
+    return objc_getAssociatedObject(self, @selector(popBackBlockOver));
+}
+
 - (instancetype)initwithViewModel: (NBViewModel*)vmodel{
     UIViewController *somevc = [[[self class] alloc]initWithNibName:nil bundle:nil];
     if (somevc) {

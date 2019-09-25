@@ -20,6 +20,8 @@ typedef void (^PopBackBlock)(id _Nullable arg1);
 
 @property(nonatomic, strong) PopBackBlock popBackBlock;
 
+@property(nonatomic, assign) BOOL popBackBlockOver;
+
 - (instancetype)initwithViewModel: (NBViewModel*)vmodel;
 
 

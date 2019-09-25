@@ -35,6 +35,11 @@
         Method method2 = class_getInstanceMethod(cls, exchange_sel);
         method_exchangeImplementations(method1, method2);
         
+        SEL pop_sorce_sel = @selector(popViewControllerAnimated:);
+        SEL pop_exchange_sel = @selector(kk_popViewControllerAnimated:);
+        Method method3 = class_getInstanceMethod(cls, pop_sorce_sel);
+        Method method4 = class_getInstanceMethod(cls, pop_exchange_sel);
+        method_exchangeImplementations(method3, method4);
         
         [self hook];
     });
@@ -44,6 +49,15 @@
     
     self.tabBarController.tabBar.hidden = true;
     [self kk_pushViewController:viewController animated:animated];
+}
+
+- (nullable UIViewController *)kk_popViewControllerAnimated:(BOOL)animated{
+    self.tabBarController.tabBar.hidden = false;
+    if (self.topViewController.popBackBlock) {
+        self.topViewController.popBackBlock(nil);
+    }
+    [self kk_popViewControllerAnimated:animated];
+    return self.topViewController;
 }
 
 
@@ -64,7 +78,7 @@ void exchangeMethod(Class aClass,Class bClass, SEL oldSEL, SEL newSEL) {
 
 
 - (void)kk_navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item{
-    
+
     if (self.topViewController.popBackBlock) {
         self.topViewController.popBackBlock(nil);
     }

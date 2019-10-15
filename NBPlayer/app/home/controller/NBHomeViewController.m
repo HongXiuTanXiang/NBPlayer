@@ -15,6 +15,7 @@
 #import "WBQRCodeVC.h"
 #import <kkplayer/kkplayer.h>
 
+
 @interface NBHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong ,nonatomic) UITableView *tableView;
@@ -30,7 +31,7 @@
     
     _homeVmodel = (NBHomeViewModel*)self.vmodel;
     
-    KKMediaPlayController *vc = [KKMediaPlayController new];
+    KKMediaPlayController *player = [[KKMediaPlayController alloc]init];
     
     [self setupUI];
     

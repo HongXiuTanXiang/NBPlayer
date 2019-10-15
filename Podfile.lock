@@ -7,9 +7,6 @@ PODS:
   - Masonry (1.1.0)
   - pop (1.0.12)
   - ReactiveObjC (3.1.1)
-  - Realm (3.17.3):
-    - Realm/Headers (= 3.17.3)
-  - Realm/Headers (3.17.3)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
@@ -19,7 +16,6 @@ DEPENDENCIES:
   - Masonry
   - pop (~> 1.0)
   - ReactiveObjC
-  - Realm
   - SVProgressHUD
 
 SPEC REPOS:
@@ -31,7 +27,6 @@ SPEC REPOS:
     - Masonry
     - pop
     - ReactiveObjC
-    - Realm
     - SVProgressHUD
 
 SPEC CHECKSUMS:
@@ -42,9 +37,8 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 3af618ded696c0ce56d3753cca21ca907783e2be
+PODFILE CHECKSUM: 5ed81ab552a3dffb25bd895f3a44aa59089112a8
 
 COCOAPODS: 1.5.3

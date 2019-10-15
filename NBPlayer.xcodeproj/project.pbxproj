@@ -25,7 +25,6 @@
 		04797EBA22E1E7E800A71DB1 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04797EB922E1E7E700A71DB1 /* VideoToolbox.framework */; };
 		04797EC022E1E80000A71DB1 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04797EBF22E1E80000A71DB1 /* libbz2.tbd */; };
 		04797EC222E1E80700A71DB1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04797EC122E1E80700A71DB1 /* libz.tbd */; };
-		04A3D6372355D9D100FCE39F /* kkplayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A3D6362355D9D100FCE39F /* kkplayer.framework */; };
 		04C158912322318A006D7D57 /* VideoHorizontallyVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C158902322318A006D7D57 /* VideoHorizontallyVideoVC.m */; };
 		04C15894232235E0006D7D57 /* RotationAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C15892232235E0006D7D57 /* RotationAnimator.m */; };
 		04C158972322397C006D7D57 /* VideoHorizontallyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C158962322397C006D7D57 /* VideoHorizontallyViewModel.m */; };
@@ -56,6 +55,7 @@
 		04D3DC93231FC06D00557B52 /* MediaControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC92231FC06D00557B52 /* MediaControlView.m */; };
 		3039996194EF99E127C70597 /* Pods_NBPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1EAD7EDA1D25FCEB8BB639 /* Pods_NBPlayerTests.framework */; };
 		8B7431C8A2C034002DDF5D7B /* Pods_NBPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8576711BE984D0E3B6378DA9 /* Pods_NBPlayer.framework */; };
+		CA3EDE3C235616350077C55C /* kkplayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3EDE3B235616350077C55C /* kkplayer.framework */; };
 		CADD67C322E3F7C600D4265F /* UIViewController+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD67C222E3F7C600D4265F /* UIViewController+ViewModel.m */; };
 		CADD67D622E4002300D4265F /* NBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD67D522E4002300D4265F /* NBNavigationController.m */; };
 		CADD67F122E4140A00D4265F /* TabBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CADD67F022E4140A00D4265F /* TabBar.xcassets */; };
@@ -132,7 +132,6 @@
 		04797EBD22E1E7F800A71DB1 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		04797EBF22E1E80000A71DB1 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		04797EC122E1E80700A71DB1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		04A3D6362355D9D100FCE39F /* kkplayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = kkplayer.framework; path = "../../../Library/Developer/Xcode/DerivedData/NBPlayer-ghnnynrxmgrassghwrzsldyjbgmv/Build/Products/Debug-iphoneos/kkplayer.framework"; sourceTree = "<group>"; };
 		04C1588F2322318A006D7D57 /* VideoHorizontallyVideoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoHorizontallyVideoVC.h; sourceTree = "<group>"; };
 		04C158902322318A006D7D57 /* VideoHorizontallyVideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoHorizontallyVideoVC.m; sourceTree = "<group>"; };
 		04C15892232235E0006D7D57 /* RotationAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationAnimator.m; sourceTree = "<group>"; };
@@ -196,6 +195,7 @@
 		AA2E769B96CE805F8E03E24C /* Pods-NBPlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBPlayerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NBPlayerUITests/Pods-NBPlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF5B71C525FA6AD12D0EE562 /* Pods-NBPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-NBPlayer/Pods-NBPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		C30E0519F6104EE33124AC8D /* Pods-NBPlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBPlayerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NBPlayerTests/Pods-NBPlayerTests.release.xcconfig"; sourceTree = "<group>"; };
+		CA3EDE3B235616350077C55C /* kkplayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = kkplayer.framework; path = "../../../Library/Developer/Xcode/DerivedData/NBPlayer-fppmbyebhrbqetglmsxmkgyddhaa/Build/Products/Debug-iphoneos/kkplayer.framework"; sourceTree = "<group>"; };
 		CADD67C122E3F7C600D4265F /* UIViewController+ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ViewModel.h"; sourceTree = "<group>"; };
 		CADD67C222E3F7C600D4265F /* UIViewController+ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ViewModel.m"; sourceTree = "<group>"; };
 		CADD67D422E4002300D4265F /* NBNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBNavigationController.h; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04797EC222E1E80700A71DB1 /* libz.tbd in Frameworks */,
-				04A3D6372355D9D100FCE39F /* kkplayer.framework in Frameworks */,
+				CA3EDE3C235616350077C55C /* kkplayer.framework in Frameworks */,
 				04797EC022E1E80000A71DB1 /* libbz2.tbd in Frameworks */,
 				04D3DC5F231F780C00557B52 /* IJKMediaFramework.framework in Frameworks */,
 				04797EBA22E1E7E800A71DB1 /* VideoToolbox.framework in Frameworks */,
@@ -281,7 +281,7 @@
 		04797D7E22E1E4E900A71DB1 /* NBPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				04A3D6362355D9D100FCE39F /* kkplayer.framework */,
+				CA3EDE3B235616350077C55C /* kkplayer.framework */,
 				04C158AC2325E7BD006D7D57 /* SGQRCode */,
 				04D3DC5E231F780C00557B52 /* IJKMediaFramework.framework */,
 				04287EB922EAA9F800EE0203 /* tool */,
@@ -809,7 +809,6 @@
 				"${BUILT_PRODUCTS_DIR}/LEEAlert/LEEAlert.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/cocore/cocore.framework",
 				"${BUILT_PRODUCTS_DIR}/coobjc/coobjc.framework",
@@ -823,7 +822,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LEEAlert.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cocore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/coobjc.framework",
@@ -1128,7 +1126,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NBPlayer/PrefixHeader.pch";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					$SRCROOT/NBPlayer/playerSDK/FFmpeg/include,
+					$SRCROOT/NBPlayer/playerSDK/openssl/include,
+				);
 				INFOPLIST_FILE = NBPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1136,7 +1138,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/NBPlayer/playerSDK/FFmpeg/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hehe.li.NBPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1164,7 +1166,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NBPlayer/PrefixHeader.pch";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					$SRCROOT/NBPlayer/playerSDK/FFmpeg/include,
+					$SRCROOT/NBPlayer/playerSDK/openssl/include,
+				);
 				INFOPLIST_FILE = NBPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1172,7 +1178,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/NBPlayer/playerSDK/FFmpeg/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hehe.li.NBPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";

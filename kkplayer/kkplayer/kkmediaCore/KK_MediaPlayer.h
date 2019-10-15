@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 
+
 class KKBasePlayer {
 public:
     double currentPlaybackTime;

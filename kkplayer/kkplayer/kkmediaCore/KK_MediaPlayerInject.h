@@ -17,39 +17,33 @@
 #define KK_MediaPlayerInject_h
 
 #include <stdio.h>
-#include "libavformat/avformat.h"
-#include "libavutil/imgutils.h"
-#include "libavutil/opt.h"
-#include "libavutil/dict.h"
-#include "libavutil/display.h"
-#include "libavutil/eval.h"
-#include "libswscale/swscale.h"
-#include "libswresample/swresample.h"
+#import <libavformat/avformat.h>
+#import <libavutil/imgutils.h>
+#import <libavutil/opt.h>
+#import <libavutil/dict.h>
+#import <libavutil/display.h>
+#import <libavutil/eval.h>
+#import <libswscale/swscale.h>
+#import <libswresample/swresample.h>
+#import <VideoToolbox/VideoToolbox.h>
 
-#import "KK_MediaPlayer.hpp"
+#include "KKCoreMedia.h"
 
+    
+typedef struct KKMediaPlayer {
+    
+    AVDictionary *options;
+    KKCoreMediaPlayer *kk_player;
+    
+    int test;
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-    
-    typedef struct KKMediaPlayer {
-        
-        AVDictionary *options;
-        
-        KKBasePlayer *basePlayer;
-        
-        int test;
-        
-        
-    }KKMediaPlayer;
-    
-    void init_kk_media_player(KKMediaPlayer **player);
-    
-    void kkmp_set_options(KKMediaPlayer *player, int opt_category, const char *key, const char *value);
-    
-#ifdef __cplusplus
-}
-#endif //__cplusplus
+}KKMediaPlayer;
+
+void init_kk_media_player(KKMediaPlayer **player);
+
+void kkmp_set_options(KKMediaPlayer *player, int opt_category, const char *key, const char *value);
+
+void kkmp_set_option_int(KKMediaPlayer *player ,int opt_category, const char *key, int64_t value);
+
 
 #endif /* KK_MediaPlayerInject_h */

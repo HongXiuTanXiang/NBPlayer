@@ -8,7 +8,6 @@
 
 #import "NBTabbarViewController.h"
 #import "NBNavigationController.h"
-#import "NBHomeViewController.h"
 #import "NBCameraViewController.h"
 #import "NBMyViewController.h"
 
@@ -23,9 +22,9 @@
     
     [[UINavigationBar appearance] setTintColor:[UIColor orangeColor]];
     
-    NBHomeViewModel *homevm = [NBHomeViewModel new];
-    NBHomeViewController *homevc = [[NBHomeViewController alloc]initwithViewModel:homevm];
-    [self addChildVc:homevc title:@"首页" image:@"icon_tabBar_home" selectedImage:@"icon_tabBar_home_select"];
+//    NBHomeViewModel *homevm = [NBHomeViewModel new];
+//    NBHomeViewController *homevc = [[NBHomeViewController alloc]initwithViewModel:homevm];
+//    [self addChildVc:homevc title:@"首页" image:@"icon_tabBar_home" selectedImage:@"icon_tabBar_home_select"];
     
     NBCameraViewModel *cameravm = [[NBCameraViewModel alloc]init];
     NBCameraViewController *cameravc = [[NBCameraViewController alloc]initwithViewModel:cameravm];

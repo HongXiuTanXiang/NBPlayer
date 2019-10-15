@@ -7,6 +7,7 @@
 //
 
 #import "NBCameraViewController.h"
+#import <kkplayer/kkplayer.h>
 
 @interface NBCameraViewController ()
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
+    
+    [KKMediaPlayController new];
 }
 
 -(void)setupUI{

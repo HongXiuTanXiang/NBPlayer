@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <IJKMediaFramework/IJKMediaFramework.h>
+//#import <IJKMediaFramework/IJKMediaFramework.h>
 #import "VideoHorizontallyViewModel.h"
 #import "MediaControlView.h"
 NS_ASSUME_NONNULL_BEGIN

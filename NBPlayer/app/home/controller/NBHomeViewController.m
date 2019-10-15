@@ -13,7 +13,7 @@
 #import "UIBarButtonItem+Extension.h"
 #import <AVFoundation/AVFoundation.h>
 #import "WBQRCodeVC.h"
-
+#import <kkplayer/kkplayer.h>
 
 @interface NBHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -30,7 +30,8 @@
     
     _homeVmodel = (NBHomeViewModel*)self.vmodel;
     
-
+    KKMediaPlayController *vc = [KKMediaPlayController new];
+    
     [self setupUI];
     
     [self bindSignal];

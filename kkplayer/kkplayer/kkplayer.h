@@ -14,5 +14,9 @@ FOUNDATION_EXPORT double kkplayerVersionNumber;
 FOUNDATION_EXPORT const unsigned char kkplayerVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <kkplayer/PublicHeader.h>
+//这个文件里声明的内容有时候竟然不给我们导出到sdk的头文件里
+#import <kkplayer/KKMediaPlayback.h>
+#import <kkplayer/KKMediaPlayController.h>
+
 
 

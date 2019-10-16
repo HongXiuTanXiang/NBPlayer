@@ -5,6 +5,7 @@ PODS:
   - KMNavigationBarTransition (1.1.5)
   - LEEAlert (1.2.6)
   - Masonry (1.1.0)
+  - MeiShopUIKit (0.1.0)
   - pop (1.0.12)
   - ReactiveObjC (3.1.1)
   - SVProgressHUD (2.2.5)
@@ -14,12 +15,15 @@ DEPENDENCIES:
   - KMNavigationBarTransition
   - LEEAlert
   - Masonry
+  - MeiShopUIKit (~> 0.1.0)
   - pop (~> 1.0)
   - ReactiveObjC
   - SVProgressHUD
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://gitee.com/yushang007/MDSpecs.git:
+    - MeiShopUIKit
+  https://github.com/CocoaPods/Specs.git:
     - cocore
     - coobjc
     - KMNavigationBarTransition
@@ -35,10 +39,11 @@ SPEC CHECKSUMS:
   KMNavigationBarTransition: 7a52c9bc25b39b6e3343e980b453facee1591b82
   LEEAlert: 8a612d6c50b74c84cebda2a9b16eeb18535b6782
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MeiShopUIKit: 2c9212191e8ceb181f92dd77214bda6e5f75774a
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 5ed81ab552a3dffb25bd895f3a44aa59089112a8
+PODFILE CHECKSUM: f7e132288dfbd6c2fb878f5afe3b04910fa1e337
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.3

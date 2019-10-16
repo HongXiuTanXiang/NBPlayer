@@ -621,34 +621,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NBPlayer/Pods-NBPlayer-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/KMNavigationBarTransition/KMNavigationBarTransition.framework",
-				"${BUILT_PRODUCTS_DIR}/LEEAlert/LEEAlert.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/cocore/cocore.framework",
-				"${BUILT_PRODUCTS_DIR}/coobjc/coobjc.framework",
-				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-NBPlayer/Pods-NBPlayer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KMNavigationBarTransition.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LEEAlert.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cocore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/coobjc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-NBPlayer/Pods-NBPlayer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NBPlayer/Pods-NBPlayer-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NBPlayer/Pods-NBPlayer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		51D4F8EF513BE3AF21B4A724 /* [CP] Check Pods Manifest.lock */ = {
@@ -934,8 +915,8 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NBPlayer/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					$SRCROOT/NBPlayer/playerSDK/FFmpeg/include,
-					$SRCROOT/NBPlayer/playerSDK/openssl/include,
+					"$SRCROOT/NBPlayer/playerSDK/FFmpeg/include",
+					"$SRCROOT/NBPlayer/playerSDK/openssl/include",
 				);
 				INFOPLIST_FILE = NBPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -974,8 +955,8 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NBPlayer/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					$SRCROOT/NBPlayer/playerSDK/FFmpeg/include,
-					$SRCROOT/NBPlayer/playerSDK/openssl/include,
+					"$SRCROOT/NBPlayer/playerSDK/FFmpeg/include",
+					"$SRCROOT/NBPlayer/playerSDK/openssl/include",
 				);
 				INFOPLIST_FILE = NBPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

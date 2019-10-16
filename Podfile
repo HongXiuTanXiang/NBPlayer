@@ -1,4 +1,6 @@
 # Uncomment the next line to define a global platform for your project
+#私有仓库地址
+source 'https://gitee.com/yushang007/MDSpecs.git'
  platform :ios, '9.0'
 
 target 'NBPlayer' do
@@ -22,6 +24,8 @@ pod 'ReactiveObjC'
 pod 'pop', '~> 1.0'
 
 #pod 'Realm'
+
+pod 'MeiShopUIKit','~> 0.1.0'
 
 
   target 'NBPlayerTests' do

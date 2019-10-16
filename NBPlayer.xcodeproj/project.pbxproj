@@ -25,6 +25,7 @@
 		04797EBA22E1E7E800A71DB1 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04797EB922E1E7E700A71DB1 /* VideoToolbox.framework */; };
 		04797EC022E1E80000A71DB1 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04797EBF22E1E80000A71DB1 /* libbz2.tbd */; };
 		04797EC222E1E80700A71DB1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04797EC122E1E80700A71DB1 /* libz.tbd */; };
+		04A3D7F12356A8CC00FCE39F /* kkplayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A3D7F02356A8CB00FCE39F /* kkplayer.framework */; };
 		04C158A82325E361006D7D57 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C158A72325E361006D7D57 /* UIBarButtonItem+Extension.m */; };
 		04C158AB2325E3DE006D7D57 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C158A92325E3DD006D7D57 /* UIView+Extension.m */; };
 		04C158B52325E7BD006D7D57 /* SGQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04C158AE2325E7BD006D7D57 /* SGQRCode.bundle */; };
@@ -43,7 +44,6 @@
 		04D3DC90231FA86F00557B52 /* UINavigationController+Jump.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D3DC8F231FA86F00557B52 /* UINavigationController+Jump.m */; };
 		3039996194EF99E127C70597 /* Pods_NBPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1EAD7EDA1D25FCEB8BB639 /* Pods_NBPlayerTests.framework */; };
 		8B7431C8A2C034002DDF5D7B /* Pods_NBPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8576711BE984D0E3B6378DA9 /* Pods_NBPlayer.framework */; };
-		CA3EDE3C235616350077C55C /* kkplayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3EDE3B235616350077C55C /* kkplayer.framework */; };
 		CADD67C322E3F7C600D4265F /* UIViewController+ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD67C222E3F7C600D4265F /* UIViewController+ViewModel.m */; };
 		CADD67D622E4002300D4265F /* NBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD67D522E4002300D4265F /* NBNavigationController.m */; };
 		CADD67F122E4140A00D4265F /* TabBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CADD67F022E4140A00D4265F /* TabBar.xcassets */; };
@@ -118,6 +118,7 @@
 		04797EBD22E1E7F800A71DB1 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		04797EBF22E1E80000A71DB1 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		04797EC122E1E80700A71DB1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		04A3D7F02356A8CB00FCE39F /* kkplayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = kkplayer.framework; path = "../../../Library/Developer/Xcode/DerivedData/NBPlayer-ghnnynrxmgrassghwrzsldyjbgmv/Build/Products/Debug-iphoneos/kkplayer.framework"; sourceTree = "<group>"; };
 		04C158A62325E361006D7D57 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		04C158A72325E361006D7D57 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		04C158A92325E3DD006D7D57 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
@@ -158,7 +159,6 @@
 		AA2E769B96CE805F8E03E24C /* Pods-NBPlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBPlayerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NBPlayerUITests/Pods-NBPlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF5B71C525FA6AD12D0EE562 /* Pods-NBPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-NBPlayer/Pods-NBPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		C30E0519F6104EE33124AC8D /* Pods-NBPlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBPlayerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NBPlayerTests/Pods-NBPlayerTests.release.xcconfig"; sourceTree = "<group>"; };
-		CA3EDE3B235616350077C55C /* kkplayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = kkplayer.framework; path = "../../../Library/Developer/Xcode/DerivedData/NBPlayer-fppmbyebhrbqetglmsxmkgyddhaa/Build/Products/Debug-iphoneos/kkplayer.framework"; sourceTree = "<group>"; };
 		CADD67C122E3F7C600D4265F /* UIViewController+ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ViewModel.h"; sourceTree = "<group>"; };
 		CADD67C222E3F7C600D4265F /* UIViewController+ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ViewModel.m"; sourceTree = "<group>"; };
 		CADD67D422E4002300D4265F /* NBNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBNavigationController.h; sourceTree = "<group>"; };
@@ -176,10 +176,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				04797EC222E1E80700A71DB1 /* libz.tbd in Frameworks */,
-				CA3EDE3C235616350077C55C /* kkplayer.framework in Frameworks */,
 				04797EC022E1E80000A71DB1 /* libbz2.tbd in Frameworks */,
 				04797EBA22E1E7E800A71DB1 /* VideoToolbox.framework in Frameworks */,
 				04797EB822E1E7E000A71DB1 /* AudioToolbox.framework in Frameworks */,
+				04A3D7F12356A8CC00FCE39F /* kkplayer.framework in Frameworks */,
 				04797EB622E1E7D900A71DB1 /* MediaPlayer.framework in Frameworks */,
 				8B7431C8A2C034002DDF5D7B /* Pods_NBPlayer.framework in Frameworks */,
 			);
@@ -239,7 +239,7 @@
 		04797D7E22E1E4E900A71DB1 /* NBPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				CA3EDE3B235616350077C55C /* kkplayer.framework */,
+				04A3D7F02356A8CB00FCE39F /* kkplayer.framework */,
 				04C158AC2325E7BD006D7D57 /* SGQRCode */,
 				04287EB922EAA9F800EE0203 /* tool */,
 				04C9269322E700AD0015ED5B /* globalConstant */,

@@ -7,3 +7,7 @@
 //
 
 #include "KKCoreMedia.h"
+int kk_core_prepare_async(KKCoreMediaPlayer *kk_player){
+    return 99;
+}
+

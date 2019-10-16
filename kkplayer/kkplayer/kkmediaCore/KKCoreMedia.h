@@ -15,8 +15,12 @@
 #include <stdio.h>
 
 typedef struct KKCoreMediaPlayer{
-    int test;
+    char *file_name;//视频地址
+    float rate;//播放速率
+    float volume;//音量
     
 }KKCoreMediaPlayer;
+
+int kk_core_prepare_async(KKCoreMediaPlayer *kk_player);
 
 #endif /* KKCoreMedia_h */

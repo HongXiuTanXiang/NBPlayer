@@ -45,5 +45,13 @@ void kkmp_set_options(KKMediaPlayer *player, int opt_category, const char *key, 
 
 void kkmp_set_option_int(KKMediaPlayer *player ,int opt_category, const char *key, int64_t value);
 
+void kkmp_set_playback_rate(KKMediaPlayer *player,float rate);
+
+void kkmp_set_playback_volume(KKMediaPlayer *player,float volume);
+
+int kkmp_prepare_async(KKMediaPlayer *player,const char* file_name);
+
+int kkmp_play(KKMediaPlayer *player);
+
 
 #endif /* KK_MediaPlayerInject_h */

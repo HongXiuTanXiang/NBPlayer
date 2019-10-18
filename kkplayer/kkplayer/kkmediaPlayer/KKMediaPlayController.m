@@ -51,8 +51,7 @@
 {
     self = [super init];
     if (self) {
-        init_kk_media_player(&mediaPlayer);
-        NSLog(@"%d",mediaPlayer->test);
+        kkmp_init_media_player(&mediaPlayer);
     }
     return self;
 }

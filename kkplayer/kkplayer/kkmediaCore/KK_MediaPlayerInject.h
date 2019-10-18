@@ -29,17 +29,19 @@
 
 #include "KKCoreMedia.h"
 
+typedef enum KKMediaPlayerError{
+    KKMediaPlayerErrorInitPlayerFailuer,
+}KKMediaPlayerError;
     
 typedef struct KKMediaPlayer {
     
     AVDictionary *options;
     KKCoreMediaPlayer *kk_player;
-    
-    int test;
+
 
 }KKMediaPlayer;
 
-void init_kk_media_player(KKMediaPlayer **player);
+int kkmp_init_media_player(KKMediaPlayer **player);
 
 void kkmp_set_options(KKMediaPlayer *player, int opt_category, const char *key, const char *value);
 
@@ -49,9 +51,9 @@ void kkmp_set_playback_rate(KKMediaPlayer *player,float rate);
 
 void kkmp_set_playback_volume(KKMediaPlayer *player,float volume);
 
-int kkmp_prepare_async(KKMediaPlayer *player,const char* file_name);
+int  kkmp_prepare_async(KKMediaPlayer *player,const char* file_name);
 
-int kkmp_play(KKMediaPlayer *player);
+int  kkmp_play(KKMediaPlayer *player);
 
 
 #endif /* KK_MediaPlayerInject_h */

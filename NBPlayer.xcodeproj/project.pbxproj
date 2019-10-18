@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -915,8 +915,8 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NBPlayer/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$SRCROOT/NBPlayer/playerSDK/FFmpeg/include",
-					"$SRCROOT/NBPlayer/playerSDK/openssl/include",
+					$SRCROOT/NBPlayer/playerSDK/FFmpeg/include,
+					$SRCROOT/NBPlayer/playerSDK/openssl/include,
 				);
 				INFOPLIST_FILE = NBPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -955,8 +955,8 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/NBPlayer/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$SRCROOT/NBPlayer/playerSDK/FFmpeg/include",
-					"$SRCROOT/NBPlayer/playerSDK/openssl/include",
+					$SRCROOT/NBPlayer/playerSDK/FFmpeg/include,
+					$SRCROOT/NBPlayer/playerSDK/openssl/include,
 				);
 				INFOPLIST_FILE = NBPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

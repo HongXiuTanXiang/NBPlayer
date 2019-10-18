@@ -19,7 +19,19 @@
     [super viewDidLoad];
     [self setupUI];
     
-    [KKMediaPlayController new];
+    
+    int num = 8;
+    
+    
+
+}
+
+-(void)testFunc1{
+    [self testFunc2];
+}
+
+-(void)testFunc2{
+    
 }
 
 -(void)setupUI{

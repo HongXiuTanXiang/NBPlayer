@@ -8,12 +8,20 @@
 
 #include "KK_MediaPlayerInject.h"
 
-void init_kk_media_player(KKMediaPlayer **player){
-    
+int kkmp_init_media_player(KKMediaPlayer **player){
+    int ret = 0;
     *player = (KKMediaPlayer*)malloc(sizeof(KKMediaPlayer));
+    if (player == NULL) {
+        return KKMediaPlayerErrorInitPlayerFailuer;
+    }
     (*player)->options = NULL;
-    (*player)->test = 99;
+    ret = kk_core_init_mediaplayer(&((*player)->kk_player));
+    if (ret != 0) {
+        free((*player));
+        return KKMediaPlayerErrorInitPlayerFailuer;
+    }
     
+    return 0;
 }
 
 void kkmp_set_options(KKMediaPlayer *player, int opt_category, const char *key, const char *value){

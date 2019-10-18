@@ -10,6 +10,14 @@
 		0418B9742316391C00EAEA5A /* kkplayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0418B96A2316391C00EAEA5A /* kkplayer.framework */; };
 		0418B9792316391C00EAEA5A /* kkplayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0418B9782316391C00EAEA5A /* kkplayerTests.m */; };
 		0418B97B2316391C00EAEA5A /* kkplayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0418B96D2316391C00EAEA5A /* kkplayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		048F7DAC2359AFB300C18137 /* ijksdl_thread.h in Headers */ = {isa = PBXBuildFile; fileRef = 048F7DAA2359AFB300C18137 /* ijksdl_thread.h */; };
+		048F7DAD2359AFB300C18137 /* ijksdl_thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 048F7DAB2359AFB300C18137 /* ijksdl_thread.c */; };
+		048F7DB02359B8E700C18137 /* ijksdl_mutex.c in Sources */ = {isa = PBXBuildFile; fileRef = 048F7DAE2359B8E700C18137 /* ijksdl_mutex.c */; };
+		048F7DB12359B8E700C18137 /* ijksdl_mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = 048F7DAF2359B8E700C18137 /* ijksdl_mutex.h */; };
+		048F7DB32359B91000C18137 /* ijksdl_misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 048F7DB22359B91000C18137 /* ijksdl_misc.h */; };
+		048F7DB52359B96900C18137 /* ijksdl_inc_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 048F7DB42359B96900C18137 /* ijksdl_inc_internal.h */; };
+		048F7DB92359C13000C18137 /* TestCppClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 048F7DB72359C13000C18137 /* TestCppClass.cpp */; };
+		048F7DBA2359C13000C18137 /* TestCppClass.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 048F7DB82359C13000C18137 /* TestCppClass.hpp */; };
 		04A3D61D2355D08C00FCE39F /* KK_MediaPlayerInject.h in Headers */ = {isa = PBXBuildFile; fileRef = 04DB8CEB23559C5E007E9781 /* KK_MediaPlayerInject.h */; };
 		04A3D61E2355D0B500FCE39F /* KKGlobalConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E8A22A2316551600CCE52B /* KKGlobalConstant.h */; };
 		04A3D7222356A84E00FCE39F /* opensslconf-template.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A3D64A2356A84E00FCE39F /* opensslconf-template.h */; };
@@ -218,7 +226,7 @@
 		04A3D7ED2356A84F00FCE39F /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A3D7212356A84E00FCE39F /* libswscale.a */; };
 		04DB8CE023555AE7007E9781 /* KKMediaPlayback.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB8CDE23555AE7007E9781 /* KKMediaPlayback.m */; };
 		04DB8CE4235598CA007E9781 /* KKMediaPlayController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04DB8CE2235598CA007E9781 /* KKMediaPlayController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04DB8CE5235598CA007E9781 /* KKMediaPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB8CE3235598CA007E9781 /* KKMediaPlayController.m */; };
+		04DB8CE5235598CA007E9781 /* KKMediaPlayController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04DB8CE3235598CA007E9781 /* KKMediaPlayController.mm */; };
 		04DB8CEE23559C5E007E9781 /* KK_MediaPlayerInject.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB8CEC23559C5E007E9781 /* KK_MediaPlayerInject.m */; };
 		04DB8CF02355B55F007E9781 /* KKMediaPlayback.h in Headers */ = {isa = PBXBuildFile; fileRef = 04DB8CDD23555AE7007E9781 /* KKMediaPlayback.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04E8A22D2316551600CCE52B /* KKGlobalConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8A22B2316551600CCE52B /* KKGlobalConstant.m */; };
@@ -259,6 +267,14 @@
 		0418BA70231640BA00EAEA5A /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = kkplayer/FFmpeg/lib/libswscale.a; sourceTree = "<group>"; };
 		0418BA78231640D300EAEA5A /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = kkplayer/openssl/lib/libcrypto.a; sourceTree = "<group>"; };
 		0418BA79231640D300EAEA5A /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = kkplayer/openssl/lib/libssl.a; sourceTree = "<group>"; };
+		048F7DAA2359AFB300C18137 /* ijksdl_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_thread.h; sourceTree = "<group>"; };
+		048F7DAB2359AFB300C18137 /* ijksdl_thread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ijksdl_thread.c; sourceTree = "<group>"; };
+		048F7DAE2359B8E700C18137 /* ijksdl_mutex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ijksdl_mutex.c; sourceTree = "<group>"; };
+		048F7DAF2359B8E700C18137 /* ijksdl_mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_mutex.h; sourceTree = "<group>"; };
+		048F7DB22359B91000C18137 /* ijksdl_misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_misc.h; sourceTree = "<group>"; };
+		048F7DB42359B96900C18137 /* ijksdl_inc_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_inc_internal.h; sourceTree = "<group>"; };
+		048F7DB72359C13000C18137 /* TestCppClass.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestCppClass.cpp; sourceTree = "<group>"; };
+		048F7DB82359C13000C18137 /* TestCppClass.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestCppClass.hpp; sourceTree = "<group>"; };
 		04A3D64A2356A84E00FCE39F /* opensslconf-template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "opensslconf-template.h"; sourceTree = "<group>"; };
 		04A3D64B2356A84E00FCE39F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		04A3D64D2356A84E00FCE39F /* pem2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pem2.h; sourceTree = "<group>"; };
@@ -466,7 +482,7 @@
 		04DB8CDD23555AE7007E9781 /* KKMediaPlayback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKMediaPlayback.h; sourceTree = "<group>"; };
 		04DB8CDE23555AE7007E9781 /* KKMediaPlayback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKMediaPlayback.m; sourceTree = "<group>"; };
 		04DB8CE2235598CA007E9781 /* KKMediaPlayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKMediaPlayController.h; sourceTree = "<group>"; };
-		04DB8CE3235598CA007E9781 /* KKMediaPlayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKMediaPlayController.m; sourceTree = "<group>"; };
+		04DB8CE3235598CA007E9781 /* KKMediaPlayController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KKMediaPlayController.mm; sourceTree = "<group>"; };
 		04DB8CEB23559C5E007E9781 /* KK_MediaPlayerInject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KK_MediaPlayerInject.h; sourceTree = "<group>"; };
 		04DB8CEC23559C5E007E9781 /* KK_MediaPlayerInject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KK_MediaPlayerInject.m; sourceTree = "<group>"; };
 		04E8A22A2316551600CCE52B /* KKGlobalConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKGlobalConstant.h; sourceTree = "<group>"; };
@@ -589,6 +605,19 @@
 				0418BA70231640BA00EAEA5A /* libswscale.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		048F7DB62359B9B400C18137 /* sdlutils */ = {
+			isa = PBXGroup;
+			children = (
+				048F7DAB2359AFB300C18137 /* ijksdl_thread.c */,
+				048F7DAA2359AFB300C18137 /* ijksdl_thread.h */,
+				048F7DAE2359B8E700C18137 /* ijksdl_mutex.c */,
+				048F7DAF2359B8E700C18137 /* ijksdl_mutex.h */,
+				048F7DB22359B91000C18137 /* ijksdl_misc.h */,
+				048F7DB42359B96900C18137 /* ijksdl_inc_internal.h */,
+			);
+			path = sdlutils;
 			sourceTree = "<group>";
 		};
 		04A3D6482356A84E00FCE39F /* openssl */ = {
@@ -911,7 +940,7 @@
 				04DB8CDD23555AE7007E9781 /* KKMediaPlayback.h */,
 				04DB8CDE23555AE7007E9781 /* KKMediaPlayback.m */,
 				04DB8CE2235598CA007E9781 /* KKMediaPlayController.h */,
-				04DB8CE3235598CA007E9781 /* KKMediaPlayController.m */,
+				04DB8CE3235598CA007E9781 /* KKMediaPlayController.mm */,
 			);
 			path = kkmediaPlayer;
 			sourceTree = "<group>";
@@ -919,10 +948,13 @@
 		04DB8CE623559B77007E9781 /* kkmediaCore */ = {
 			isa = PBXGroup;
 			children = (
+				048F7DB62359B9B400C18137 /* sdlutils */,
 				04DB8CEB23559C5E007E9781 /* KK_MediaPlayerInject.h */,
 				04DB8CEC23559C5E007E9781 /* KK_MediaPlayerInject.m */,
 				CA3EDE3D235617D20077C55C /* KKCoreMedia.h */,
 				CA3EDE3E235617D20077C55C /* KKCoreMedia.c */,
+				048F7DB72359C13000C18137 /* TestCppClass.cpp */,
+				048F7DB82359C13000C18137 /* TestCppClass.hpp */,
 			);
 			path = kkmediaCore;
 			sourceTree = "<group>";
@@ -983,6 +1015,7 @@
 				04A3D7902356A84F00FCE39F /* avutil.h in Headers */,
 				04A3D7AD2356A84F00FCE39F /* random_seed.h in Headers */,
 				04A3D7AC2356A84F00FCE39F /* dict.h in Headers */,
+				048F7DB52359B96900C18137 /* ijksdl_inc_internal.h in Headers */,
 				04DB8CE4235598CA007E9781 /* KKMediaPlayController.h in Headers */,
 				04A3D7662356A84E00FCE39F /* modes.h in Headers */,
 				04A3D75C2356A84E00FCE39F /* ocsp.h in Headers */,
@@ -998,6 +1031,7 @@
 				04A3D7C82356A84F00FCE39F /* hash.h in Headers */,
 				04A3D7972356A84F00FCE39F /* cast5.h in Headers */,
 				04A3D7582356A84E00FCE39F /* cast.h in Headers */,
+				048F7DB32359B91000C18137 /* ijksdl_misc.h in Headers */,
 				04A3D7D52356A84F00FCE39F /* version.h in Headers */,
 				04A3D7E02356A84F00FCE39F /* avdct.h in Headers */,
 				04A3D7532356A84E00FCE39F /* e_os2.h in Headers */,
@@ -1037,6 +1071,7 @@
 				04A3D79A2356A84F00FCE39F /* ffversion.h in Headers */,
 				04A3D75A2356A84E00FCE39F /* stack.h in Headers */,
 				04A3D7892356A84F00FCE39F /* pixdesc.h in Headers */,
+				048F7DB12359B8E700C18137 /* ijksdl_mutex.h in Headers */,
 				04A3D7C52356A84F00FCE39F /* timestamp.h in Headers */,
 				04A3D76E2356A84F00FCE39F /* mdc2.h in Headers */,
 				04A3D7E22356A84F00FCE39F /* vorbis_parser.h in Headers */,
@@ -1101,6 +1136,7 @@
 				04A3D7DE2356A84F00FCE39F /* jni.h in Headers */,
 				04A3D79E2356A84F00FCE39F /* attributes.h in Headers */,
 				04A3D7322356A84E00FCE39F /* ui.h in Headers */,
+				048F7DAC2359AFB300C18137 /* ijksdl_thread.h in Headers */,
 				04A3D7912356A84F00FCE39F /* xtea.h in Headers */,
 				04A3D7D42356A84F00FCE39F /* avcodec.h in Headers */,
 				04A3D78B2356A84F00FCE39F /* rational.h in Headers */,
@@ -1123,6 +1159,7 @@
 				04A3D7932356A84F00FCE39F /* hwcontext_vdpau.h in Headers */,
 				04A3D7412356A84E00FCE39F /* conf.h in Headers */,
 				04A3D7A02356A84F00FCE39F /* hwcontext_d3d11va.h in Headers */,
+				048F7DBA2359C13000C18137 /* TestCppClass.hpp in Headers */,
 				04A3D7B92356A84F00FCE39F /* channel_layout.h in Headers */,
 				04A3D7BC2356A84F00FCE39F /* imgutils.h in Headers */,
 				04A3D76A2356A84F00FCE39F /* des_old.h in Headers */,
@@ -1234,8 +1271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04DB8CE5235598CA007E9781 /* KKMediaPlayController.m in Sources */,
+				04DB8CE5235598CA007E9781 /* KKMediaPlayController.mm in Sources */,
+				048F7DB02359B8E700C18137 /* ijksdl_mutex.c in Sources */,
+				048F7DB92359C13000C18137 /* TestCppClass.cpp in Sources */,
 				CA3EDE40235617D20077C55C /* KKCoreMedia.c in Sources */,
+				048F7DAD2359AFB300C18137 /* ijksdl_thread.c in Sources */,
 				04DB8CEE23559C5E007E9781 /* KK_MediaPlayerInject.m in Sources */,
 				04E8A22D2316551600CCE52B /* KKGlobalConstant.m in Sources */,
 				04DB8CE023555AE7007E9781 /* KKMediaPlayback.m in Sources */,

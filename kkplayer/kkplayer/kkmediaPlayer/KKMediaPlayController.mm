@@ -8,6 +8,7 @@
 
 #import "KKMediaPlayController.h"
 #import "KK_MediaPlayerInject.h"
+#import "TestCppClass.hpp"
 
 @interface KKMediaPlayController ()
 
@@ -52,6 +53,8 @@
     self = [super init];
     if (self) {
         kkmp_init_media_player(&mediaPlayer);
+        FUCK fuck;
+        fuck.testfunc();
     }
     return self;
 }
@@ -62,7 +65,7 @@
 }
 
 - (void)play{
-    
+
 }
 
 - (void)pause{

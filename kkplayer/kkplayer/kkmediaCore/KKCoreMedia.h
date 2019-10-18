@@ -23,6 +23,7 @@
 #include "../../FFmpeg/include/libswscale/swscale.h"
 #include "../../FFmpeg/include/libswresample/swresample.h"
 
+
 // MARK: ------KK_CORE_ERROR----
 #define KK_CORE_PREPARE_SUCCESS 1000
 #define KK_CORE_ERROR_FILE_LENGTH  1001
@@ -31,6 +32,7 @@
 #define KK_CORE_ERROR_NULL_PLAYER 1004
 #define KK_CORE_ERROR_NULL_VIDEO_CODEC 1004
 #define KK_CORE_ERROR_STREAM_ERROR 1005
+
 
 
 
@@ -87,7 +89,7 @@ AVCodecContext *kk_core_open_video_codec(AVFormatContext *fmtctx,int stream_inde
 
 // 设置视频帧的时间基和帧率
 void kk_core_timebase_and_fps_of_stream(AVStream*stream,double*fps,double *timebase,double default_value);
-
+// 视频旋转信息
 double kk_core_rotation_from_video_stream(AVStream*stream);
 // 查找音频流
 int kk_core_find_audio_stream(AVFormatContext *fmtcontext,AVCodecContext **codec_ctx);

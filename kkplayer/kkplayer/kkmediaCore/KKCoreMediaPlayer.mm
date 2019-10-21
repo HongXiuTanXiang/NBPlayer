@@ -1,36 +1,18 @@
 //
-//  KKCoreMedia.c
+//  KKCoreMediaPlayer.m
 //  kkplayer
 //
-//  Created by yushang on 2019/10/15.
+//  Created by Mac on 2019/10/21.
 //  Copyright © 2019 Mac. All rights reserved.
 //
 
-#include "KKCoreMedia.h"
-
-int kk_core_init_mediaplayer(KKCoreMediaPlayer **kk_player){
-    *kk_player = (KKCoreMediaPlayer*)av_malloc(sizeof(KKCoreMediaPlayer));
-    (*kk_player)->file_name = NULL;
-    (*kk_player)->rate = 0;
-    (*kk_player)->volume = 0;
-    (*kk_player)->fmtcontext = NULL;
-    (*kk_player)->options = NULL;
-    (*kk_player)->video_codec_ctx = NULL;
-    (*kk_player)->picture_stream = -1;
-    (*kk_player)->video_fps = 0.0;
-    (*kk_player)->video_timebase = 0.0;
-    
-    return 0;
-}
+#import "KKCoreMediaPlayer.h"
 
 
-int kk_core_prepare_async(KKCoreMediaPlayer *kk_player){
-    
-    if (kk_player == NULL) {
-        return KK_CORE_ERROR_NULL_PLAYER;
-    }
-    
-    unsigned long file_length = strlen(kk_player->file_name);
+
+int KKCoreMediaPlayer:: kk_core_prepare_async(char * file_name){
+    this->file_name = file_name;
+    unsigned long file_length = strlen(this->file_name);
     if (file_length == 0 || file_length > 2048) {
         return KK_CORE_ERROR_FILE_LENGTH;
     }
@@ -44,13 +26,13 @@ int kk_core_prepare_async(KKCoreMediaPlayer *kk_player){
     AVFormatContext *fmtcontext = NULL;
     
     //2 open
-    ret = avformat_open_input(&fmtcontext, kk_player->file_name, NULL, &(kk_player->options));
+    ret = avformat_open_input(&fmtcontext, this->file_name, NULL, &(this->options));
     if (ret != 0) {
         return KK_CORE_ERROR_FILE_OPEN_FAILURE;
     }
     
 #ifdef DEBUG
-    av_dump_format(fmtcontext, 0, kk_player->file_name, 0);
+    av_dump_format(fmtcontext, 0, this->file_name, 0);
 #endif
     
     //3 analyze stream info
@@ -113,7 +95,7 @@ int kk_core_prepare_async(KKCoreMediaPlayer *kk_player){
             if (has_video == 0) {
                 if (video_codec_ctx) {
                     avcodec_free_context(&video_codec_ctx);
-                    kk_player->video_codec_ctx = NULL;
+                    this->video_codec_ctx = NULL;
                 }
                 if (video_frame) {av_frame_free(&video_frame);}
                 if (video_sws_frame) {av_frame_free(&video_sws_frame);}
@@ -121,7 +103,7 @@ int kk_core_prepare_async(KKCoreMediaPlayer *kk_player){
                 
             } else {
                 //设置帧率和时间基
-                kk_core_timebase_and_fps_of_stream(fmtcontext->streams[video_stream], &(kk_player->video_fps), &(kk_player->video_timebase), 0.04);
+                kk_core_timebase_and_fps_of_stream(fmtcontext->streams[video_stream], &(this->video_fps), &(this->video_timebase), 0.04);
                 rotation = kk_core_rotation_from_video_stream(fmtcontext->streams[video_stream]);
             }
         }
@@ -146,9 +128,9 @@ int kk_core_prepare_async(KKCoreMediaPlayer *kk_player){
             has_audio = 0;
             goto audio_stream_failure;
         }
-        kk_core_timebase_and_fps_of_stream(fmtcontext->streams[audio_stream], NULL, &(kk_player->audio_timebase), 0.025);
+        kk_core_timebase_and_fps_of_stream(fmtcontext->streams[audio_stream], NULL, &(this->audio_timebase), 0.025);
         //设置音频的重采样
-        audio_swr_ctx = swr_alloc_set_opts(NULL, av_get_default_channel_layout(kk_player->audio_channels), AV_SAMPLE_FMT_S16, kk_player->audio_sample_rate, av_get_default_channel_layout(audio_codec_ctx->channels), audio_codec_ctx->sample_fmt, audio_codec_ctx->sample_rate, 0, NULL);
+        audio_swr_ctx = swr_alloc_set_opts(NULL, av_get_default_channel_layout(this->audio_channels), AV_SAMPLE_FMT_S16, this->audio_sample_rate, av_get_default_channel_layout(audio_codec_ctx->channels), audio_codec_ctx->sample_fmt, audio_codec_ctx->sample_rate, 0, NULL);
         if (audio_swr_ctx == NULL) {
             has_audio = 0;
             goto audio_stream_failure;
@@ -176,34 +158,34 @@ int kk_core_prepare_async(KKCoreMediaPlayer *kk_player){
         return KK_CORE_ERROR_STREAM_ERROR;
     }
     
-    kk_player->fmtcontext = fmtcontext;
-    kk_player->video_codec_ctx = video_codec_ctx;
-    kk_player->video_stream_index = video_stream;
-    kk_player->picture_stream = picstream;
-    kk_player->p_video_frame = video_frame;
-    kk_player->p_video_sws_frame = video_sws_frame;
-    kk_player->video_sws_ctx = video_sws_ctx;
+    this->fmtcontext = fmtcontext;
+    this->video_codec_ctx = video_codec_ctx;
+    this->video_stream_index = video_stream;
+    this->picture_stream = picstream;
+    this->p_video_frame = video_frame;
+    this->p_video_sws_frame = video_sws_frame;
+    this->video_sws_ctx = video_sws_ctx;
     
-    kk_player->audio_stream_index = audio_stream;
-    kk_player->audio_frame = audio_frame;
-    kk_player->audio_codec_ctx = audio_codec_ctx;
-    kk_player->audio_swr_ctx = audio_swr_ctx;
+    this->audio_stream_index = audio_stream;
+    this->audio_frame = audio_frame;
+    this->audio_codec_ctx = audio_codec_ctx;
+    this->audio_swr_ctx = audio_swr_ctx;
     
-    kk_player->is_yuv = is_yuv;
-    kk_player->has_video = has_video;
-    kk_player->has_audio = has_audio;
-    kk_player->has_picture = picstream >= 0;
-    kk_player->is_eof = 0;
-    kk_player->rotation = rotation;
-    kk_player->duration = fmtcontext->duration/AV_TIME_BASE;
-    kk_player->metadata = fmtcontext->metadata;
+    this->is_yuv = is_yuv;
+    this->has_video = has_video;
+    this->has_audio = has_audio;
+    this->has_picture = picstream >= 0;
+    this->is_eof = 0;
+    this->rotation = rotation;
+    this->duration = fmtcontext->duration/AV_TIME_BASE;
+    this->metadata = fmtcontext->metadata;
     // 中断函数
-    kk_player->fmtcontext->interrupt_callback = kk_player->interrupt_callback;
-
+    this->fmtcontext->interrupt_callback = this->interrupt_callback;
+    
     return KK_CORE_PREPARE_SUCCESS;
 }
 
-int kk_core_find_video_stream(AVFormatContext *fmtcontext,AVCodecContext** codec_ctx,int *pictureStream){
+int KKCoreMediaPlayer:: kk_core_find_video_stream(AVFormatContext *fmtcontext,AVCodecContext** codec_ctx,int *pictureStream){
     int stream = -1;
     
     for (int i = 0; i < fmtcontext->nb_streams; ++i) {
@@ -228,8 +210,7 @@ int kk_core_find_video_stream(AVFormatContext *fmtcontext,AVCodecContext** codec
 }
 
 
-
-AVCodecContext *kk_core_open_video_codec(AVFormatContext *fmtctx,int stream_index){
+AVCodecContext *KKCoreMediaPlayer:: kk_core_open_video_codec(AVFormatContext *fmtctx,int stream_index){
     
     if (fmtctx == NULL) {
         return NULL;
@@ -246,7 +227,7 @@ AVCodecContext *kk_core_open_video_codec(AVFormatContext *fmtctx,int stream_inde
     
     AVCodecContext *codec_ctx = avcodec_alloc_context3(video_codec);
     if (codec_ctx == NULL) {
-       goto open_failure;
+        goto open_failure;
     }
     
     ret = avcodec_parameters_to_context(codec_ctx, codec_par);
@@ -268,8 +249,7 @@ open_failure:
     return NULL;
 }
 
-
-void kk_core_timebase_and_fps_of_stream(AVStream*stream,double*fps,double *timebase,double default_value){
+void KKCoreMediaPlayer::kk_core_timebase_and_fps_of_stream(AVStream*stream,double*fps,double *timebase,double default_value){
     if (stream == NULL) {
         return;
     }
@@ -299,7 +279,8 @@ void kk_core_timebase_and_fps_of_stream(AVStream*stream,double*fps,double *timeb
     
 }
 
-double kk_core_rotation_from_video_stream(AVStream*stream){
+
+double KKCoreMediaPlayer:: kk_core_rotation_from_video_stream(AVStream*stream){
     if (stream == NULL) {
         return 0;
     }
@@ -315,8 +296,7 @@ double kk_core_rotation_from_video_stream(AVStream*stream){
     return rotation;
 }
 
-
-int kk_core_find_audio_stream(AVFormatContext *fmtcontext,AVCodecContext **codec_ctx){
+int KKCoreMediaPlayer:: kk_core_find_audio_stream(AVFormatContext *fmtcontext,AVCodecContext **codec_ctx){
     int stream = -1;
     for (int i = 0; i < fmtcontext->nb_streams; ++i) {
         if (fmtcontext->streams[i]->codecpar->codec_type == AVMEDIA_TYPE_AUDIO) {
@@ -332,7 +312,7 @@ int kk_core_find_audio_stream(AVFormatContext *fmtcontext,AVCodecContext **codec
     return stream;
 }
 
-AVCodecContext *kk_core_open_audio_codec(AVFormatContext *fmtcontext,int stream){
+AVCodecContext * KKCoreMediaPlayer:: kk_core_open_audio_codec(AVFormatContext *fmtcontext,int stream){
     
     AVCodecParameters *params = fmtcontext->streams[stream]->codecpar;
     if (params == NULL) {
@@ -343,11 +323,12 @@ AVCodecContext *kk_core_open_audio_codec(AVFormatContext *fmtcontext,int stream)
     
     AVCodecContext *context = avcodec_alloc_context3(codec);
     if (context == NULL){
-        goto audio_codec_failure;
+        return NULL;
     }
     
     int ret = avcodec_parameters_to_context(context, params);
     if (ret < 0) {
+        av_free(codec);
         goto audio_codec_failure;
     }
     

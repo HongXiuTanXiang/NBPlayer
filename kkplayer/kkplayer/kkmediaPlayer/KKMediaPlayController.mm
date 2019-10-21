@@ -7,8 +7,8 @@
 //
 
 #import "KKMediaPlayController.h"
-#import "KK_MediaPlayerInject.h"
-#import "TestCppClass.hpp"
+#import "KKCoreMediaPlayer.h"
+
 
 @interface KKMediaPlayController ()
 
@@ -17,7 +17,7 @@
 
 
 @implementation KKMediaPlayController{
-    KKMediaPlayer *mediaPlayer;
+    KKCoreMediaPlayer *mediaPlayer;
 }
 
 @synthesize glView = _glView;
@@ -52,9 +52,7 @@
 {
     self = [super init];
     if (self) {
-        kkmp_init_media_player(&mediaPlayer);
-        FUCK fuck;
-        fuck.testfunc();
+        KKCoreMediaPlayer().kk_core_prepare_async("file_name");
     }
     return self;
 }

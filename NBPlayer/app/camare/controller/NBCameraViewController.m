@@ -22,7 +22,7 @@
     
     int num = 8;
     
-    
+    KKMediaPlayController *mevc = [KKMediaPlayController new];
 
 }
 

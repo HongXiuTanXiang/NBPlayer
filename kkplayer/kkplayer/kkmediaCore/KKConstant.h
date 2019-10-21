@@ -1,0 +1,21 @@
+//
+//  KKConstant.h
+//  kkplayer
+//
+//  Created by Mac on 2019/10/21.
+//  Copyright © 2019 Mac. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+#define KK_CORE_PREPARE_SUCCESS 1000
+#define KK_CORE_ERROR_FILE_LENGTH  1001
+#define KK_CORE_ERROR_FILE_OPEN_FAILURE 1002
+#define KK_CORE_ERROR_STREAM_INFO_FAILURE 1003
+#define KK_CORE_ERROR_NULL_PLAYER 1004
+#define KK_CORE_ERROR_NULL_VIDEO_CODEC 1004
+#define KK_CORE_ERROR_STREAM_ERROR 1005
+
+NS_ASSUME_NONNULL_END

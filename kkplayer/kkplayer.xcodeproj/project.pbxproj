@@ -16,9 +16,10 @@
 		048F7DB12359B8E700C18137 /* ijksdl_mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = 048F7DAF2359B8E700C18137 /* ijksdl_mutex.h */; };
 		048F7DB32359B91000C18137 /* ijksdl_misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 048F7DB22359B91000C18137 /* ijksdl_misc.h */; };
 		048F7DB52359B96900C18137 /* ijksdl_inc_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 048F7DB42359B96900C18137 /* ijksdl_inc_internal.h */; };
-		048F7DB92359C13000C18137 /* TestCppClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 048F7DB72359C13000C18137 /* TestCppClass.cpp */; };
-		048F7DBA2359C13000C18137 /* TestCppClass.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 048F7DB82359C13000C18137 /* TestCppClass.hpp */; };
-		04A3D61D2355D08C00FCE39F /* KK_MediaPlayerInject.h in Headers */ = {isa = PBXBuildFile; fileRef = 04DB8CEB23559C5E007E9781 /* KK_MediaPlayerInject.h */; };
+		048F7DC5235D4DB100C18137 /* KKCoreMediaPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 048F7DC3235D4DB100C18137 /* KKCoreMediaPlayer.h */; };
+		048F7DC6235D4DB100C18137 /* KKCoreMediaPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 048F7DC4235D4DB100C18137 /* KKCoreMediaPlayer.mm */; };
+		048F7DC9235D50A100C18137 /* KKConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 048F7DC7235D50A100C18137 /* KKConstant.h */; };
+		048F7DCA235D50A100C18137 /* KKConstant.mm in Sources */ = {isa = PBXBuildFile; fileRef = 048F7DC8235D50A100C18137 /* KKConstant.mm */; };
 		04A3D61E2355D0B500FCE39F /* KKGlobalConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E8A22A2316551600CCE52B /* KKGlobalConstant.h */; };
 		04A3D7222356A84E00FCE39F /* opensslconf-template.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A3D64A2356A84E00FCE39F /* opensslconf-template.h */; };
 		04A3D7232356A84E00FCE39F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 04A3D64B2356A84E00FCE39F /* LICENSE */; };
@@ -227,7 +228,6 @@
 		04DB8CE023555AE7007E9781 /* KKMediaPlayback.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB8CDE23555AE7007E9781 /* KKMediaPlayback.m */; };
 		04DB8CE4235598CA007E9781 /* KKMediaPlayController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04DB8CE2235598CA007E9781 /* KKMediaPlayController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04DB8CE5235598CA007E9781 /* KKMediaPlayController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04DB8CE3235598CA007E9781 /* KKMediaPlayController.mm */; };
-		04DB8CEE23559C5E007E9781 /* KK_MediaPlayerInject.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB8CEC23559C5E007E9781 /* KK_MediaPlayerInject.m */; };
 		04DB8CF02355B55F007E9781 /* KKMediaPlayback.h in Headers */ = {isa = PBXBuildFile; fileRef = 04DB8CDD23555AE7007E9781 /* KKMediaPlayback.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04E8A22D2316551600CCE52B /* KKGlobalConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8A22B2316551600CCE52B /* KKGlobalConstant.m */; };
 		CA3EDE2E2356150A0077C55C /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3EDE2D2356150A0077C55C /* VideoToolbox.framework */; };
@@ -236,8 +236,6 @@
 		CA3EDE342356152B0077C55C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3EDE332356152B0077C55C /* OpenGLES.framework */; };
 		CA3EDE38235615410077C55C /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3EDE37235615410077C55C /* libbz2.tbd */; };
 		CA3EDE3A2356154C0077C55C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3EDE392356154C0077C55C /* libz.tbd */; };
-		CA3EDE3F235617D20077C55C /* KKCoreMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = CA3EDE3D235617D20077C55C /* KKCoreMedia.h */; };
-		CA3EDE40235617D20077C55C /* KKCoreMedia.c in Sources */ = {isa = PBXBuildFile; fileRef = CA3EDE3E235617D20077C55C /* KKCoreMedia.c */; };
 		CA3EDFE723561B6D0077C55C /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3EDE35235615330077C55C /* libiconv.tbd */; };
 /* End PBXBuildFile section */
 
@@ -273,8 +271,10 @@
 		048F7DAF2359B8E700C18137 /* ijksdl_mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_mutex.h; sourceTree = "<group>"; };
 		048F7DB22359B91000C18137 /* ijksdl_misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_misc.h; sourceTree = "<group>"; };
 		048F7DB42359B96900C18137 /* ijksdl_inc_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_inc_internal.h; sourceTree = "<group>"; };
-		048F7DB72359C13000C18137 /* TestCppClass.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestCppClass.cpp; sourceTree = "<group>"; };
-		048F7DB82359C13000C18137 /* TestCppClass.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestCppClass.hpp; sourceTree = "<group>"; };
+		048F7DC3235D4DB100C18137 /* KKCoreMediaPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKCoreMediaPlayer.h; sourceTree = "<group>"; };
+		048F7DC4235D4DB100C18137 /* KKCoreMediaPlayer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KKCoreMediaPlayer.mm; sourceTree = "<group>"; };
+		048F7DC7235D50A100C18137 /* KKConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKConstant.h; sourceTree = "<group>"; };
+		048F7DC8235D50A100C18137 /* KKConstant.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KKConstant.mm; sourceTree = "<group>"; };
 		04A3D64A2356A84E00FCE39F /* opensslconf-template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "opensslconf-template.h"; sourceTree = "<group>"; };
 		04A3D64B2356A84E00FCE39F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		04A3D64D2356A84E00FCE39F /* pem2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pem2.h; sourceTree = "<group>"; };
@@ -483,8 +483,6 @@
 		04DB8CDE23555AE7007E9781 /* KKMediaPlayback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKMediaPlayback.m; sourceTree = "<group>"; };
 		04DB8CE2235598CA007E9781 /* KKMediaPlayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKMediaPlayController.h; sourceTree = "<group>"; };
 		04DB8CE3235598CA007E9781 /* KKMediaPlayController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KKMediaPlayController.mm; sourceTree = "<group>"; };
-		04DB8CEB23559C5E007E9781 /* KK_MediaPlayerInject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KK_MediaPlayerInject.h; sourceTree = "<group>"; };
-		04DB8CEC23559C5E007E9781 /* KK_MediaPlayerInject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KK_MediaPlayerInject.m; sourceTree = "<group>"; };
 		04E8A22A2316551600CCE52B /* KKGlobalConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKGlobalConstant.h; sourceTree = "<group>"; };
 		04E8A22B2316551600CCE52B /* KKGlobalConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKGlobalConstant.m; sourceTree = "<group>"; };
 		CA3EDE2D2356150A0077C55C /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
@@ -494,8 +492,6 @@
 		CA3EDE35235615330077C55C /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		CA3EDE37235615410077C55C /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		CA3EDE392356154C0077C55C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		CA3EDE3D235617D20077C55C /* KKCoreMedia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKCoreMedia.h; sourceTree = "<group>"; };
-		CA3EDE3E235617D20077C55C /* KKCoreMedia.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = KKCoreMedia.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -949,12 +945,10 @@
 			isa = PBXGroup;
 			children = (
 				048F7DB62359B9B400C18137 /* sdlutils */,
-				04DB8CEB23559C5E007E9781 /* KK_MediaPlayerInject.h */,
-				04DB8CEC23559C5E007E9781 /* KK_MediaPlayerInject.m */,
-				CA3EDE3D235617D20077C55C /* KKCoreMedia.h */,
-				CA3EDE3E235617D20077C55C /* KKCoreMedia.c */,
-				048F7DB72359C13000C18137 /* TestCppClass.cpp */,
-				048F7DB82359C13000C18137 /* TestCppClass.hpp */,
+				048F7DC3235D4DB100C18137 /* KKCoreMediaPlayer.h */,
+				048F7DC4235D4DB100C18137 /* KKCoreMediaPlayer.mm */,
+				048F7DC7235D50A100C18137 /* KKConstant.h */,
+				048F7DC8235D50A100C18137 /* KKConstant.mm */,
 			);
 			path = kkmediaCore;
 			sourceTree = "<group>";
@@ -975,7 +969,6 @@
 				04A3D79B2356A84F00FCE39F /* audio_fifo.h in Headers */,
 				04A3D7592356A84E00FCE39F /* rc4.h in Headers */,
 				04A3D7242356A84E00FCE39F /* pem2.h in Headers */,
-				CA3EDE3F235617D20077C55C /* KKCoreMedia.h in Headers */,
 				04A3D7E52356A84F00FCE39F /* version.h in Headers */,
 				04A3D77E2356A84F00FCE39F /* hwcontext_cuda.h in Headers */,
 				04A3D7E12356A84F00FCE39F /* ac3_parser.h in Headers */,
@@ -1060,6 +1053,7 @@
 				04A3D7262356A84E00FCE39F /* ssl3.h in Headers */,
 				04A3D7922356A84F00FCE39F /* crc.h in Headers */,
 				04A3D78A2356A84F00FCE39F /* base64.h in Headers */,
+				048F7DC9235D50A100C18137 /* KKConstant.h in Headers */,
 				04A3D7DA2356A84F00FCE39F /* xvmc.h in Headers */,
 				04A3D7B12356A84F00FCE39F /* aes.h in Headers */,
 				04A3D79D2356A84F00FCE39F /* threadmessage.h in Headers */,
@@ -1098,6 +1092,7 @@
 				04A3D7B82356A84F00FCE39F /* des.h in Headers */,
 				04A3D7A52356A84F00FCE39F /* buffer.h in Headers */,
 				0418B97B2316391C00EAEA5A /* kkplayer.h in Headers */,
+				048F7DC5235D4DB100C18137 /* KKCoreMediaPlayer.h in Headers */,
 				04A3D7652356A84E00FCE39F /* seed.h in Headers */,
 				04A3D7742356A84F00FCE39F /* idea.h in Headers */,
 				04A3D7832356A84F00FCE39F /* hwcontext_mediacodec.h in Headers */,
@@ -1145,7 +1140,6 @@
 				04A3D7C92356A84F00FCE39F /* mathematics.h in Headers */,
 				04A3D77F2356A84F00FCE39F /* intfloat.h in Headers */,
 				04A3D75D2356A84E00FCE39F /* ec.h in Headers */,
-				04A3D61D2355D08C00FCE39F /* KK_MediaPlayerInject.h in Headers */,
 				04A3D7792356A84F00FCE39F /* buffersrc.h in Headers */,
 				04A3D7D72356A84F00FCE39F /* qsv.h in Headers */,
 				04A3D74B2356A84E00FCE39F /* pkcs7.h in Headers */,
@@ -1159,7 +1153,6 @@
 				04A3D7932356A84F00FCE39F /* hwcontext_vdpau.h in Headers */,
 				04A3D7412356A84E00FCE39F /* conf.h in Headers */,
 				04A3D7A02356A84F00FCE39F /* hwcontext_d3d11va.h in Headers */,
-				048F7DBA2359C13000C18137 /* TestCppClass.hpp in Headers */,
 				04A3D7B92356A84F00FCE39F /* channel_layout.h in Headers */,
 				04A3D7BC2356A84F00FCE39F /* imgutils.h in Headers */,
 				04A3D76A2356A84F00FCE39F /* des_old.h in Headers */,
@@ -1272,12 +1265,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04DB8CE5235598CA007E9781 /* KKMediaPlayController.mm in Sources */,
+				048F7DCA235D50A100C18137 /* KKConstant.mm in Sources */,
 				048F7DB02359B8E700C18137 /* ijksdl_mutex.c in Sources */,
-				048F7DB92359C13000C18137 /* TestCppClass.cpp in Sources */,
-				CA3EDE40235617D20077C55C /* KKCoreMedia.c in Sources */,
 				048F7DAD2359AFB300C18137 /* ijksdl_thread.c in Sources */,
-				04DB8CEE23559C5E007E9781 /* KK_MediaPlayerInject.m in Sources */,
 				04E8A22D2316551600CCE52B /* KKGlobalConstant.m in Sources */,
+				048F7DC6235D4DB100C18137 /* KKCoreMediaPlayer.mm in Sources */,
 				04DB8CE023555AE7007E9781 /* KKMediaPlayback.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
